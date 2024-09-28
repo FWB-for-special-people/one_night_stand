@@ -1,0 +1,46 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{.Values.forms.web.appName}}
+  namespace: {{.Values.namespace}}
+spec:
+  selector:
+    app: {{.Values.forms.web.appName}}
+  ports:
+    - port: 5173
+      targetPort: 5173
+  type: ClusterIP
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: { { .Values.forms.web.appName } }
+  namespace: { { .Values.namespace } }
+  labels:
+    app: { { .Values.forms.web.appName } }
+spec:
+  replicas: { { .Values.forms.web.replicas } }
+  selector:
+    matchLabels:
+      app: {{.Values.forms.web.appName}}
+  template:
+    metadata:
+      labels:
+        app: { { .Values.forms.web.appName } }
+    spec:
+      imagePullSecrets:
+        - name: k8sacrauth
+      containers:
+        - name: { { .Values.forms.web.appName } }
+          image: "{{.Values.forms.web.image.name}}:{{.Values.forms.web.image.tag}}"
+          ports:
+            - containerPort: 5173
+          resources:
+            requests:
+              memory: {{.Values.forms.web.resources.requests.memory}}
+              cpu: {{.Values.forms.web.resources.requests.cpu}}
+            limits:
+              memory: {{.Values.forms.web.resources.limits.memory}}
+              cpu: {{.Values.forms.web.resources.limits.cpu}}
