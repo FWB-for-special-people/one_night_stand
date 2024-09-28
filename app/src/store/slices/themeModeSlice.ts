@@ -5,7 +5,7 @@ const savedTheme = localStorage.getItem('themeMode') || 'light';
 const themeModeSlice = createSlice({
   name: 'themeMode',
   initialState: {
-    mode: savedTheme, // Domyślny tryb pobierany z localStorage lub 'light'
+    mode: savedTheme,
   },
   reducers: {
     setDarkMode: (state) => {

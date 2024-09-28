@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-import Post from 'src/Feed/components/Post.tsx';
+import Post from 'src/pages/Feed/components/Post.tsx';
 import { myPosts } from 'src/assets/myPosts.ts';
 import { sharedPosts } from 'src/assets/sharedPosts.ts';
 import UserProfile from 'src/pages/MyPage/components/UserProfile.tsx';

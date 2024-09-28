@@ -1,5 +1,4 @@
 import { ErrorBoundary } from 'react-error-boundary';
-import { QueryClient, QueryClientProvider } from 'react-query';
 import { Outlet } from 'react-router-dom';
 import { CssBaseline, ThemeProvider, useMediaQuery } from '@mui/material';
 import { useSelector } from 'react-redux';
@@ -12,8 +11,6 @@ interface RootState {
     mode: 'dark' | 'contrast' | 'light';
   };
 }
-
-const queryClient = new QueryClient();
 
 const App = () => {
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
@@ -32,10 +29,8 @@ const App = () => {
   return (
     <ErrorBoundary fallback={<Login />}>
       <ThemeProvider theme={theme}>
-        <QueryClientProvider client={queryClient}>
           <CssBaseline />
           <Outlet />
-        </QueryClientProvider>
       </ThemeProvider>
     </ErrorBoundary>
   );

@@ -1,8 +1,8 @@
 import React, { PropsWithChildren } from 'react';
 import { Box, useMediaQuery, useTheme } from '@mui/material';
-import Navbar from './components/NavBarTop.tsx';
-import NavBarBottomMobile from 'src/Feed/components/NavBarBottomMobile.tsx';
-import NavBarBottomDesktop from 'src/Feed/components/NavBarBottomDesktop.tsx';
+import Navbar from 'src/pages/Feed/components/NavBarTop.tsx';
+import NavBarBottomMobile from 'src/pages/Feed/components/NavBarBottomMobile.tsx';
+import NavBarBottomDesktop from 'src/pages/Feed/components/NavBarBottomDesktop.tsx';
 import { useSelector, useDispatch } from 'react-redux';
 import { toggleCollapse } from 'src/store/slices/uiSlice.ts';
 import { RootState } from 'src/store/store.ts';

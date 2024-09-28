@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Box, Typography } from '@mui/material';
-import CategoryButtons from './components/Categories.tsx';
-import PostsByCategory from './components/PostByCategories.tsx';
-import { myPosts } from '../../assets/myPosts.ts';
-import { sharedPosts } from '../../assets/sharedPosts.ts';
+import CategoryButtons from 'src/pages/Categories/components/Categories.tsx';
+import PostsByCategory from 'src/pages/Categories/components/PostByCategories.tsx';
+import { myPosts } from 'src/assets/myPosts.ts';
+import { sharedPosts } from 'src/assets/sharedPosts.ts';
 
 const categories = Array.from(
   new Set([...myPosts, ...sharedPosts].map((post) => post.category)),
