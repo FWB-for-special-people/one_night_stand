@@ -9,6 +9,8 @@ User = get_user_model()
 
 class Card(models.Model):
     text = models.TextField(max_length=500)
+    difficulty = models.TextField(max_length=15)
+    expected_time = models.PositiveSmallIntegerField(default=0)
 
     created_by = models.ForeignKey(User, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)

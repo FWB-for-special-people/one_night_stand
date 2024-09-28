@@ -11,7 +11,8 @@ from rest_framework import viewsets, generics, status
 from rest_framework.decorators import action
 from rest_framework.response import Response
 
-from cards import serializers, models
+from users.views import logger
+from . import serializers, models
 
 
 class CardViewSet(viewsets.ViewSetMixin, generics.ListAPIView, generics.CreateAPIView):
@@ -26,7 +27,16 @@ class CardViewSet(viewsets.ViewSetMixin, generics.ListAPIView, generics.CreateAP
         return queryset
 
     def perform_create(self, serializer):
-        serializer.save(created_by=self.request.user)
+
+        card = serializer.save(created_by=self.request.user, difficulty=self.request.data["difficulty"],
+                        expected_time=int(self.request.data[
+                            "expected_time"]))
+
+        tags = self.request.data["tags"]
+        for tag in tags:
+            tag, _ = models.Tag.objects.get_or_create(name=tag)
+            card.tags.add(tag)
+
 
     @action(methods=["PATCH"], detail=True)
     def view(self, *args, **kwargs):
