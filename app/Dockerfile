@@ -5,12 +5,14 @@ WORKDIR /app
 COPY ./package*.json ./
 
 RUN npm ci
+CMD ["npm", "run", "dev"]
 
 FROM development as builder
 
 COPY . .
 
 RUN npm run build
+
 
 
 FROM nginx:1.25.3 as production
