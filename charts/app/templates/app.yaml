@@ -1,0 +1,46 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{.Values.hackyeah.app.appName}}
+  namespace: {{.Values.namespace}}
+spec:
+  selector:
+    app: {{.Values.hackyeah.app.appName}}
+  ports:
+    - port: 5173
+      targetPort: 5173
+  type: ClusterIP
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.hackyeah.app.appName }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Values.hackyeah.app.appName }}
+spec:
+  replicas: {{ .Values.hackyeah.app.replicas }}
+  selector:
+    matchLabels:
+      app: {{.Values.hackyeah.app.appName}}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.hackyeah.app.appName }}
+    spec:
+      imagePullSecrets:
+        - name: k8sacrauth
+      containers:
+        - name: {{ .Values.hackyeah.app.appName }}
+          image: "{{.Values.hackyeah.app.image.name}}:{{.Values.hackyeah.app.image.tag}}"
+          ports:
+            - containerPort: 5173
+          resources:
+            requests:
+              memory: {{.Values.hackyeah.app.resources.requests.memory}}
+              cpu: {{.Values.hackyeah.app.resources.requests.cpu}}
+            limits:
+              memory: {{.Values.hackyeah.app.resources.limits.memory}}
+              cpu: {{.Values.hackyeah.app.resources.limits.cpu}}
