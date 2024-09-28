@@ -8,13 +8,14 @@ on:
       - 'proxy/**'
       - 'charts/proxy/**'
 
-
 env:
   AZURE_CONTAINER_REGISTRY: hackyeah2024.azurecr.io
   IMAGE_NAME: proxy
   AKS_RESOURCE_GROUP: hackyeah
   AKS_CLUSTER_NAME: hackyeah
   KUBERNETES_NAMESPACE: dev
+  HELM_RELEASE_NAME: proxy
+  CHART_DIRECTORY: ./charts/proxy
 
 jobs:
   build:
@@ -41,3 +42,30 @@ jobs:
       - name: Push Docker image to ACR
         run: |
           docker push ${{ env.AZURE_CONTAINER_REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+  
+
+      - name: Set up kubectl
+        uses: azure/setup-kubectl@v3
+        with:
+          version: 'latest'
+
+      - name: Set up Helm
+        uses: azure/setup-helm@v1
+        with:
+          version: 'v3.9.0'
+
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Get AKS credentials
+        run: |
+          az aks get-credentials --resource-group ${{ env.AKS_RESOURCE_GROUP }} --name ${{ env.AKS_CLUSTER_NAME }}
+
+      - name: Deploy to AKS using Helm
+        run: |
+          helm upgrade --install ${{ env.HELM_RELEASE_NAME }} ${{ env.CHART_DIRECTORY }} \
+          --namespace ${{ env.KUBERNETES_NAMESPACE }} \
+          --set hackyeah.api.image.name=${{ env.AZURE_CONTAINER_REGISTRY }}/${{ env.IMAGE_NAME }} \
+          --set hackyeah.api.image.tag=latest
