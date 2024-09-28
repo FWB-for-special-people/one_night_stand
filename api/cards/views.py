@@ -1,6 +1,7 @@
 import json
 import os
 from json import JSONDecodeError
+import logging
 
 from django.core.exceptions import BadRequest
 from attr import filters
@@ -15,8 +16,10 @@ from rest_framework.views import APIView
 from cards import serializers, models
 from . import models, serializers
 from .ai.ai_recommendation import recommend_flashcards_for_user
-# from ..ai.ai_collaborative import recommend_collaborative_cards
+from .ai.ai_collaborative import recommend_collaborative_cards
 from . import serializers, models
+
+logger = logging.getLogger(__name__)
 
 
 class CardViewSet(viewsets.ViewSetMixin, generics.ListAPIView, generics.CreateAPIView):
@@ -33,14 +36,13 @@ class CardViewSet(viewsets.ViewSetMixin, generics.ListAPIView, generics.CreateAP
     def perform_create(self, serializer):
 
         card = serializer.save(created_by=self.request.user, difficulty=self.request.data["difficulty"],
-                        expected_time=int(self.request.data[
-                            "expected_time"]))
+                               expected_time=int(self.request.data[
+                                                     "expected_time"]))
 
         tags = self.request.data["tags"]
         for tag in tags:
             tag, _ = models.Tag.objects.get_or_create(name=tag)
             card.tags.add(tag)
-
 
     @action(methods=["PATCH"], detail=True)
     def view(self, *args, **kwargs):
@@ -135,17 +137,12 @@ class DataView(APIView):
 
         return Response(response_data)
 
-    #
-    # class CardRecommendationView(APIView):
-    #
-    #     def get(self, request):
-    #         # Pobierz aktualnie zalogowanego użytkownika
-    #         user = request.user
-    #
-    #         # Wygeneruj rekomendacje kart
-    #         recommended_cards = recommend_collaborative_cards(user.id)
-    #
-    #         # Serializuj dane i zwróć jako odpowiedź
-    #         recommended_data = [{'id': card.id, 'text': card.text, 'tags': card.tags} for card in recommended_cards]
-    #
-    #         return Response(recommended_data)
+
+class CardRecommendationView(APIView):
+    def post(self, request):
+        user = request.data.get('user_id')
+        recommended_cards = recommend_collaborative_cards(user)
+
+        # recommended_data = [{'id': card.id, 'text': card.text, 'tags': card.tags} for card in recommended_cards]
+
+        return Response(recommended_cards)
