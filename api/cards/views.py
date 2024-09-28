@@ -10,7 +10,13 @@ from openai import OpenAI
 from rest_framework import viewsets, generics, status
 from rest_framework.decorators import action
 from rest_framework.response import Response
+from rest_framework.views import APIView
 
+from cards import serializers, models
+from . import models, serializers
+from .helpers import fake_data_generator
+from .helpers.ai_recommendation import recommend_flashcards_for_user
+from .recommendations import recommend_collaborative_cards
 from users.views import logger
 from . import serializers, models
 
@@ -114,3 +120,39 @@ class CommentViewSet(viewsets.ViewSetMixin, generics.ListAPIView, generics.Creat
 
     def perform_create(self, serializer):
         serializer.save(created_by=self.request.user, card_id=self.kwargs["card_id"])
+
+
+
+
+
+class DataView(APIView):
+
+    def post(self, request):
+        user_id = request.data.get('user_id')
+        user_topic_preference = request.data.get('user_topic_preference')
+        user_difficulty_preference = request.data.get('user_difficulty_preference')
+
+        if user_topic_preference is None or user_difficulty_preference is None:
+            return Response({"detail": "Both user_topic_preference and user_difficulty_preference are required."},
+                            status=400)
+
+        recommendations = recommend_flashcards_for_user(user_id, user_topic_preference, user_difficulty_preference)
+
+        response_data = [rec for rec in recommendations]
+
+        return Response(response_data)
+
+
+    class CardRecommendationView(APIView):
+
+        def get(self, request):
+            # Pobierz aktualnie zalogowanego użytkownika
+            user = request.user
+
+            # Wygeneruj rekomendacje kart
+            recommended_cards = recommend_collaborative_cards(user.id)
+
+            # Serializuj dane i zwróć jako odpowiedź
+            recommended_data = [{'id': card.id, 'text': card.text, 'tags': card.tags} for card in recommended_cards]
+
+            return Response(recommended_data)

@@ -7,6 +7,7 @@ from django.db.models import ManyToManyField
 
 User = get_user_model()
 
+
 class Card(models.Model):
     text = models.TextField(max_length=500)
     difficulty = models.TextField(max_length=15)
