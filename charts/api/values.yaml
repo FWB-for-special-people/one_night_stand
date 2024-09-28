@@ -1,0 +1,20 @@
+namespace: dev
+domain: "devazeno.pl"
+
+hackyeah:
+  api:
+    appName: api
+    replicas: 1
+    image:
+      name: hackyeah2024.azurecr.io/api
+      tag: 1.0.0
+    debug: "0"
+    allowedHosts: "*"
+    trustedOrigins: ""
+    resources:
+      requests:
+        cpu: 50m
+        memory: 512Mi
+      limits:
+        memory: 2048Mi
+        cpu: 1000m
