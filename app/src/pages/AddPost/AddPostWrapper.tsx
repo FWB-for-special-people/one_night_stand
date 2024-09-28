@@ -4,6 +4,7 @@ import PostInput from './components/PostInput';
 import DataAIDisplay from './components/DataAIDisplay.tsx';
 import response from '../../assets/response.json';
 import AddButton from './components/AddButton.tsx';
+import SpeechToText from "src/pages/AddPost/components/SpeechToText.tsx";
 
 const AddPost: React.FC = () => {
   const [postQuestionText, setPostQuestionText] = useState('');
@@ -19,25 +20,34 @@ const AddPost: React.FC = () => {
   };
 
   const handleSpeechToText = () => {
-    if (!('webkitSpeechRecognition' in window)) {
+    console.log('click')
+    let SpeechRecognitionObj = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    if (!SpeechRecognitionObj) {
       alert('API rozpoznawania mowy nie jest obsługiwane w tej przeglądarce.');
       return;
     }
 
-    const recognition = new (window as any).webkitSpeechRecognition();
+    const recognition = new SpeechRecognitionObj();
     recognition.lang = 'pl-PL';
-    recognition.interimResults = false;
+    recognition.interimResults = true;
 
     recognition.onstart = () => {
+      setIsRecording(false);
+      console.log('start')
       setIsRecording(true);
     };
 
     recognition.onend = () => {
-      setIsRecording(false);
+     setTimeout(() => {
+       setIsRecording(false);
+     }, 2000);
     };
 
     recognition.onresult = (event: any) => {
+      console.log('result')
       const transcript = event.results[0][0].transcript;
+      console.log(transcript)
       if (postQuestionText.length + transcript.length <= 3000) {
         setPostQuestionText((prevText) => prevText + ' ' + transcript);
       }
@@ -107,13 +117,14 @@ const AddPost: React.FC = () => {
         Dodaj post
       </Typography>
 
-      <PostInput
-        postText={postQuestionText}
-        onTextChange={handleTextChange}
-        onSpeechToText={handleSpeechToText}
-        isRecording={isRecording}
-        sendQuestion={sendQuestion}
-      />
+      {/*<PostInput*/}
+      {/*  postText={postQuestionText}*/}
+      {/*  onTextChange={handleTextChange}*/}
+      {/*  onSpeechToText={handleSpeechToText}*/}
+      {/*  isRecording={isRecording}*/}
+      {/*  sendQuestion={sendQuestion}*/}
+      {/*/>*/}
+      <SpeechToText />
 
       <DataAIDisplay
         backendAnswerText={backendAnswerText}
