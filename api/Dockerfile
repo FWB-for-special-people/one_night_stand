@@ -35,4 +35,4 @@ FROM development as prod
 
 COPY --from=development /app /app
 
-RUN poetry install --without dev --sync
+RUN poetry install --no-dev
