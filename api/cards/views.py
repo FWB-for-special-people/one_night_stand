@@ -1,3 +1,4 @@
+from attr import filters
 from django.db.models import Count
 from django.utils import timezone
 from rest_framework import viewsets, generics, status
@@ -10,6 +11,12 @@ from cards import serializers, models
 class CardViewSet(viewsets.ViewSetMixin, generics.ListAPIView, generics.CreateAPIView):
     serializer_class = serializers.CardSerializer
     queryset = models.Card.objects.all()
+
+    def filter_queryset(self, queryset):
+        if channel := self.request.query_params.get("channel"):
+            queryset = queryset.filter(channels=channel)
+
+        return queryset
 
     def perform_create(self, serializer):
         serializer.save(created_by=self.request.user)
