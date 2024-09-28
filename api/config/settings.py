@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     # local
     "users.apps.UsersConfig",
     "cards.apps.CardsConfig",
+    "channels.apps.ChannelsConfig",
 ]
 
 MIDDLEWARE = [

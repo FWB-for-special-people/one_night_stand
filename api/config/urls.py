@@ -32,6 +32,7 @@ urlpatterns = [
                 path("token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
                 path("", include("users.urls")),
                 path("cards/", include("cards.urls")),
+                path("channels/", include("channels.urls"))
             ]
         ),
     ),
