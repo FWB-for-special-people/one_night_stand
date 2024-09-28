@@ -1,0 +1,272 @@
+[
+  {
+    "model": "users.customuser",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$J3Resy5wCEOqlerlhfZL6X$8Ph0QAnF0ZpPmhXMsnTBikiysV7VYl0bldzBLBySc7A=",
+      "last_login": "2024-04-17T08:14:13.737Z",
+      "is_superuser": true,
+      "username": "a",
+      "is_staff": true,
+      "date_joined": "2024-04-17T07:46:54.676Z",
+      "email": "a@a.pl",
+      "first_name": "",
+      "last_name": "",
+      "is_active": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.customuser",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$pdyMF5UFU1UMDKshxOikIW$NbvsDlYtbzYqvqtH2eE2Hu9+DRx2JbV9SH+N+AQZneE=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "h.h@flipacademy.pl",
+      "is_staff": false,
+      "date_joined": "2024-02-23T18:23:04Z",
+      "email": "h.h@flipacademy.pl",
+      "first_name": "Henio",
+      "last_name": "Henrykowski",
+      "is_active": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.customuser",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$27FkhGQ7mL813Pf7248lML$IZwiLgmGl0Vq8w9flznL05U6c/shDnrgx6vOrzEi34g=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "p.k@flipacademy.pl",
+      "is_staff": false,
+      "date_joined": "2024-02-23T20:14:34Z",
+      "email": "p.k@flipacademy.pl",
+      "first_name": "Piotr",
+      "last_name": "Kamiński",
+      "is_active": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.customuser",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$CjEicwaRnxqpX8SCogHpQM$SMhJCSD5Lrn7eVj3ykZiNPtOiH0O2s/dCgiYqQJt5rg=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "n.j@flipacademy.pl",
+      "is_staff": false,
+      "date_joined": "2024-02-23T20:16:18Z",
+      "email": "n.j@flipacademy.pl",
+      "first_name": "Natalia",
+      "last_name": "Jabłońska",
+      "is_active": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.customuser",
+    "pk": 5,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$c4qwQXyr74eTQmpw8FCcTL$dyRlGUOIjd1+AlORNMwys6JRqlmlij5UfZQz+flfCKs=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "h.l@flipacademy.pl",
+      "is_staff": false,
+      "date_joined": "2024-02-23T20:17:30Z",
+      "email": "h.l@flipacademy.pl",
+      "first_name": "Katarzyna",
+      "last_name": "Lewandowska",
+      "is_active": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.customuser",
+    "pk": 6,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$O2fL7fLHaUF8TyMznoAtTH$U+E/EL7YIhvuXbi+4MrGh/hd0xBXkcXpS4NEldTeVew=",
+      "last_login": "2024-04-17T08:45:05.541Z",
+      "is_superuser": false,
+      "username": "m.s@flipacademy.pl",
+      "is_staff": false,
+      "date_joined": "2024-02-23T20:25:00Z",
+      "email": "m.s@flipacademy.pl",
+      "first_name": "Mateusz",
+      "last_name": "Szymański",
+      "is_active": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.customuser",
+    "pk": 7,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$OIAMNUxDuCLg6daNkJe83C$H6lWLXrx8BMTzWM8zNkKaEQ/B0ezlcvJKDFvyhe5L9k=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "e.m@flipacademy.pl",
+      "is_staff": false,
+      "date_joined": "2024-02-26T20:00:26Z",
+      "email": "e.m@flipacademy.pl",
+      "first_name": "Ewa",
+      "last_name": "Majewska",
+      "is_active": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.customuser",
+    "pk": 8,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$J4fEVshescay8FXeF8jkLM$77b+fIxK7cocSKw5ucjZV0l1K1Kq/2yNQOl6E8+ZXhg=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "z.z@flipacademy.pl",
+      "is_staff": false,
+      "date_joined": "2024-02-26T20:04:13Z",
+      "email": "z.z@flipacademy.pl",
+      "first_name": "Zdzisław",
+      "last_name": "Zdzisławski",
+      "is_active": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.customuser",
+    "pk": 9,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$bsYGt7l6HW1BicXUEKhfRg$W+J20OJwwO7c86YezVubII3uUelaZHzHUM2K5vNyDwE=",
+      "last_login": "2024-02-29T11:23:09Z",
+      "is_superuser": false,
+      "username": "g.g@flipacademy.pl",
+      "is_staff": false,
+      "date_joined": "2024-02-26T20:19:51Z",
+      "email": "g.g@flipacademy.pl",
+      "first_name": "Grażka",
+      "last_name": "Grażewska",
+      "is_active": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.customuser",
+    "pk": 10,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$aGnV4NQJamoMsjGXIX8DlD$1O6YWS3hm3qqTb+yurRA9jgW4+FCSkVLh5AfhKDUPiI=",
+      "last_login": "2024-02-29T11:25:43Z",
+      "is_superuser": false,
+      "username": "m.m@flipacademy.pl",
+      "is_staff": false,
+      "date_joined": "2024-02-26T20:21:07Z",
+      "email": "m.m@flipacademy.pl",
+      "first_name": "Mścisław",
+      "last_name": "Mścisławski",
+      "is_active": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.customuser",
+    "pk": 11,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$GOZm85DYCMxLCL3g4w6FX1$uIB1EJAdvKVxE0opYIYXl5CSK+SvU3EGkgNsn9eeH+E=",
+      "last_login": "2024-02-29T11:13:33Z",
+      "is_superuser": false,
+      "username": "r.r@flipacademy.pl",
+      "is_staff": false,
+      "date_joined": "2024-02-26T20:31:19Z",
+      "email": "r.r@flipacademy.pl",
+      "first_name": "Regina",
+      "last_name": "Reniewska",
+      "is_active": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.customuser",
+    "pk": 12,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$uitYStAt68DGYQVcsv9rP9$lyp2ufpDL+wd/p0yzhzJDFT9ktSNCkvWcU48jf1MZJo=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "a.k@flipacademy.pl",
+      "is_staff": false,
+      "date_joined": "2024-02-26T20:32:01Z",
+      "email": "a.k@flipacademy.pl",
+      "first_name": "Aleksandra",
+      "last_name": "Kowalska",
+      "is_active": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.customuser",
+    "pk": 13,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$OYOPmt7JAWqJcm878let0I$ZC8A5cwvBFIBI0aUeBnFE3Qi1m6EgbBPZVCRp8HU/rA=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "j.n@flipacademy.pl",
+      "is_staff": false,
+      "date_joined": "2024-02-26T20:32:59Z",
+      "email": "j.n@flipacademy.pl",
+      "first_name": "Jakub",
+      "last_name": "Nowak",
+      "is_active": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.customuser",
+    "pk": 14,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$Tf6Fhpnk1kmw4lzBzQzsRY$85joS4Zsm4Yhj1qY8a6HrZ6qJfS5QJOlR8u0BqyOE3M=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "z.w@flipacademy.pl",
+      "is_staff": false,
+      "date_joined": "2024-02-26T20:34:17Z",
+      "email": "z.w@flipacademy.pl",
+      "first_name": "Zofia",
+      "last_name": "Wojciechowska",
+      "is_active": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.customuser",
+    "pk": 15,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$pdyMF5UFU1UMDKshxOikIW$NbvsDlYtbzYqvqtH2eE2Hu9+DRx2JbV9SH+N+AQZneE=",
+      "last_login": "2024-02-28T20:38:53Z",
+      "is_superuser": false,
+      "username": "m.z@flipacademy.pl",
+      "is_staff": false,
+      "date_joined": "2024-02-26T20:35:02Z",
+      "email": "m.z@flipacademy.pl",
+      "first_name": "Michał",
+      "last_name": "Zieliński",
+      "is_active": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]
