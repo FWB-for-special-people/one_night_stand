@@ -14,13 +14,8 @@ from rest_framework.views import APIView
 
 from cards import serializers, models
 from . import models, serializers
-
 from .ai.ai_recommendation import recommend_flashcards_for_user
 # from ..ai.ai_collaborative import recommend_collaborative_cards
-from .helpers import fake_data_generator
-from .helpers.ai_recommendation import recommend_flashcards_for_user
-from .recommendations import recommend_collaborative_cards
-from users.views import logger
 from . import serializers, models
 
 
@@ -128,7 +123,6 @@ class CommentViewSet(viewsets.ViewSetMixin, generics.ListAPIView, generics.Creat
 class DataView(APIView):
 
     def post(self, request):
-        user_id = request.data.get('user_id')
         user_tags_preference = request.data.get('user_tags_preference')
 
         if user_tags_preference is None:
