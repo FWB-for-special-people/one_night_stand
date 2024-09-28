@@ -1,13 +1,15 @@
 from django.urls import path
-from rest_framework import routers
 from rest_framework.routers import SimpleRouter
 
 from . import views
 
-app_name = 'users'
+app_name = "users"
 
-router = routers.SimpleRouter()
+router = SimpleRouter()
 
-router.register(r'users', views.FollowUserView, basename='users')
+router.register(r"users", views.FollowUserView, basename="users")
 
-urlpatterns = router.urls
+urlpatterns = [
+    path("/token/demo", views.AutoLoginPredefinedUserView.as_view(), name="token-demo"),
+]
+urlpatterns += router.urls
