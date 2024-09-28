@@ -10,7 +10,7 @@ import Avatar from "src/Feed/components/Avatar.tsx";
 interface PostProps {
   image: string;
   text: string;
-  userId: number;
+  userId: string;
   userName: string;
   userAvatar: string;
 }

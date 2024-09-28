@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { Box, Button, Typography, Fade, Paper } from '@mui/material';
 
 interface UserProps {
-  id: number;
+  id: string;
   name: string;
   avatar: string;
 }
 
-const Avatar: React.FC<UserProps> = ({ id, name, avatar }) => {
+const Avatar: React.FC<UserProps> = ({ name, avatar }) => {
   const [showUserCard, setShowUserCard] = useState(false);
 
   // Funkcja obsługująca kliknięcie na awatar

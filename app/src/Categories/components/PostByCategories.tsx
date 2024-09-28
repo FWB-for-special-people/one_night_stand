@@ -22,7 +22,7 @@ const PostsByCategory: React.FC<PostsByCategoryProps> = ({ category }) => {
                 Udostępnione od użytkownika: {post.user}
               </Typography>
             )}
-            <Post image={post.image} text={post.text} />
+            <Post image={post.image} text={post.text} userId={post.user} userName={post.user} userAvatar={post.image}/>
           </Box>
         ))
       ) : (
