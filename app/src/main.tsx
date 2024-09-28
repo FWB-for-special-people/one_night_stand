@@ -1,12 +1,18 @@
 import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import { Provider } from 'react-redux';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
+import { Provider } from 'react-redux';
 import Start from 'src/pages/Start.tsx';
-import { store } from 'src/store/store.ts';
 import Login from 'src/pages/Login.tsx';
 import RememberPassword from 'src/pages/RememberPassword.tsx';
+import AddPostWrapper from 'src/pages/AddPost/AddPostWrapper.tsx';
+import { store } from 'src/store/store.ts';
+import Feed from 'src/Feed/Feed.tsx';
+import Dashboard from 'src/Dashboard.tsx';
+import CategoriesDashboard from 'src/Categories/CategoriesDashboard.tsx';
+import MyPage from 'src/pages/MyPage/MyPage.tsx';
+import SettingsWrapper from 'src/pages/Settings/SettingsWrapper.tsx';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +30,46 @@ const router = createBrowserRouter([
       {
         path: '/login/password_reminder',
         element: <RememberPassword />,
+      },
+      {
+        path: '/feed',
+        element: (
+          <Feed>
+            <Dashboard />
+          </Feed>
+        ),
+      },
+      {
+        path: '/categories',
+        element: (
+          <Feed>
+            <CategoriesDashboard />
+          </Feed>
+        ),
+      },
+      {
+        path: '/my-profile',
+        element: (
+          <Feed>
+            <MyPage />
+          </Feed>
+        ),
+      },
+      {
+        path: '/settings',
+        element: (
+          <Feed>
+            <SettingsWrapper />
+          </Feed>
+        ),
+      },
+      {
+        path: '/add-post',
+        element: (
+          <Feed>
+            <AddPostWrapper />
+          </Feed>
+        ),
       },
     ],
   },
