@@ -3,6 +3,7 @@ import { Box, Typography } from '@mui/material';
 import Post from 'src/Feed/components/Post.tsx';
 import { myPosts } from 'src/assets/myPosts.ts';
 import { sharedPosts } from 'src/assets/sharedPosts.ts';
+import Avatar from "src/Feed/components/Avatar.tsx";
 
 const allPosts = [...myPosts, ...sharedPosts].sort((a, b) => {
   return new Date(b.dateAdded).getTime() - new Date(a.dateAdded).getTime();
@@ -37,7 +38,7 @@ const Dashboard: React.FC = () => {
               Udostępnione przez użytkownika: {post.user}
             </Typography>
           )}
-          <Post image={post.image} text={post.text} />
+          <Post image={post.image} text={post.text} usterId={post.user} userName={post.user} userAvatar={post.image}/>
         </Box>
       ))}
     </Box>

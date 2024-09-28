@@ -5,13 +5,17 @@ import MessageIcon from '@mui/icons-material/Message';
 import ShareIcon from '@mui/icons-material/Share';
 import { useSelector } from 'react-redux';
 import { RootState } from 'src/store/store.ts';
+import Avatar from "src/Feed/components/Avatar.tsx";
 
 interface PostProps {
   image: string;
   text: string;
+  userId: number;
+  userName: string;
+  userAvatar: string;
 }
 
-const Post: React.FC<PostProps> = ({ image, text }) => {
+const Post: React.FC<PostProps> = ({ image, text, userId, userName, userAvatar }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
@@ -103,12 +107,13 @@ const Post: React.FC<PostProps> = ({ image, text }) => {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: '3rem',
+          // gap: '1rem',
           paddingRight: '1rem',
         }}
       >
+        <Avatar id={userId} name={userName} avatar={userAvatar}/>
         <IconButton>
-          <MessageIcon sx={{ color: 'secondary.main', fontSize: '2.5rem' }} />
+          <MessageIcon sx={{ color: 'secondary.main', fontSize: '2.5rem', marginTop: '2rem' }} />
         </IconButton>
         <IconButton aria-label="like">
           <FavoriteIcon sx={{ color: 'secondary.main', fontSize: '2.5rem' }} />
