@@ -67,5 +67,5 @@ jobs:
         run: |
           helm upgrade --install ${{ env.HELM_RELEASE_NAME }} ${{ env.CHART_DIRECTORY }} \
           --namespace ${{ env.KUBERNETES_NAMESPACE }} \
-          --set hackyeah.api.image.name=${{ env.AZURE_CONTAINER_REGISTRY }}/${{ env.IMAGE_NAME }} \
-          --set hackyeah.api.image.tag=latest
+          --set hackyeah.proxy.image.name=${{ env.AZURE_CONTAINER_REGISTRY }}/${{ env.IMAGE_NAME }} \
+          --set hackyeah.proxy.image.tag=latest
