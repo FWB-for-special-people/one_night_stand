@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - master
+    paths:
+      - 'proxy/**'
+      - 'charts/proxy/**'
+
 
 env:
   AZURE_CONTAINER_REGISTRY: hackyeah2024.azurecr.io
