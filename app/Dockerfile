@@ -5,7 +5,6 @@ WORKDIR /app
 COPY ./package*.json ./
 
 RUN npm ci
-CMD ["npm", "run", "dev"]
 
 FROM development as builder
 
