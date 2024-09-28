@@ -37,7 +37,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t ${{ env.AZURE_CONTAINER_REGISTRY }}/${{ env.IMAGE_NAME }}:latest ./api
+          docker build -t ${{ env.AZURE_CONTAINER_REGISTRY }}/${{ env.IMAGE_NAME }}:latest ./proxy
 
       - name: Push Docker image to ACR
         run: |
