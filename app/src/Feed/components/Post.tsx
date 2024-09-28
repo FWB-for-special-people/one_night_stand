@@ -22,19 +22,28 @@ const Post: React.FC<PostProps> = ({ image, text }) => {
   return (
     <Box
       sx={{
+        backgroundColor: 'rgba(255, 255, 255, 0.15)',
+        backdropFilter: 'blur(10px)',
+        WebkitBackdropFilter: 'blur(10px)',
+        borderRadius: '1rem',
+        padding: '1rem',
+        pb: '1rem',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
         marginX: '1rem',
         color: 'text.primary',
+        boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
         height: isMobile ? '80vh' : '90vh',
         maxHeight: '90vh',
         width: isMobile ? '100%' : isCollapsed ? '90%' : '80%',
+        border: '1px solid rgba(255, 255, 255, 0.3)',
       }}
     >
       <Box
         sx={{
+          borderRadius: '1rem',
           backgroundImage: `url(${image})`,
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
