@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Box, Typography, IconButton, Button, useMediaQuery, useTheme } from '@mui/material';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import MessageIcon from '@mui/icons-material/Message';
 import ShareIcon from '@mui/icons-material/Share';
 import { useSelector } from 'react-redux';
 import { RootState } from 'src/store/store.ts';
@@ -39,6 +40,7 @@ const Post: React.FC<PostProps> = ({ image, text }) => {
         maxHeight: '90vh',
         width: isMobile ? '100%' : isCollapsed ? '90%' : '80%',
         border: '1px solid rgba(255, 255, 255, 0.3)',
+        position: 'relative'
       }}
     >
       <Box
@@ -94,17 +96,25 @@ const Post: React.FC<PostProps> = ({ image, text }) => {
 
       <Box
         sx={{
+          position: 'absolute',
+          top: '50%',
+          right: '1rem',
+          transform: 'translateY(-50%)',
           display: 'flex',
-          justifyContent: 'space-around',
-          width: '100%',
-          padding: '1rem',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: '3rem',
+          paddingRight: '1rem',
         }}
       >
+        <IconButton>
+          <MessageIcon sx={{ color: 'secondary.main', fontSize: '2.5rem' }} />
+        </IconButton>
         <IconButton aria-label="like">
-          <FavoriteIcon sx={{ color: 'secondary.main' }} />
+          <FavoriteIcon sx={{ color: 'secondary.main', fontSize: '2.5rem' }} />
         </IconButton>
         <IconButton aria-label="share">
-          <ShareIcon sx={{ color: 'secondary.main' }} />
+          <ShareIcon sx={{ color: 'secondary.main', fontSize: '2.5rem' }} />
         </IconButton>
       </Box>
     </Box>
