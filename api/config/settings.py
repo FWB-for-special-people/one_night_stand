@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     "django_filters",
     # local
     "users.apps.UsersConfig"
+    "cards.apps.CardsConfig",
 ]
 
 MIDDLEWARE = [
