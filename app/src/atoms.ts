@@ -1,5 +1,8 @@
-import { atom } from 'jotai';
+import {atom} from 'jotai';
+import {atomWithStorage} from "jotai/utils";
 
-export const darkModeAtom = atom(false);
+export const darkModeAtom = atomWithStorage("darkMode", false);
 
 export const isSideMenuCollapsedAtom = atom(true);
+
+export const accessTokenAtom = atom<string | null>(null)

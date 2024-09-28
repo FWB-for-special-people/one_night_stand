@@ -1,14 +1,11 @@
-import React from 'react';
-import axios from 'axios';
-import { useQuery } from '@tanstack/react-query';
 import { Box, Typography } from '@mui/material';
 import Post from 'src/pages/Feed/components/Post.tsx';
-import { API } from 'src/data/routes/api_routes.ts';
 import { myPosts } from 'src/assets/myPosts.ts';
-import { sharedPosts } from 'assets/sharedPosts.ts';
+import { sharedPosts } from 'src/assets/sharedPosts.ts';
 
 const allPosts = [...myPosts, ...sharedPosts];
-const Dashboard: React.FC = () => {
+export default function Dashboard() {
+  // const {data} = useCardsQuery()
 
   return (
     <Box>
@@ -42,24 +39,3 @@ const Dashboard: React.FC = () => {
     </Box>
   );
 };
-
-export default Dashboard;
-
-export function useCards() {
-  return useQuery({
-    queryKey: ['allPosts'],
-    queryFn: async () => {
-      try {
-        const res = await axios.get(API.cards);
-        return res.data;
-      } catch (error) {
-        console.error(error);
-        throw new Error('Error getting posts');
-      }
-    },
-  });
-}
-
-// function usePageQueryParam() {
-//
-// }
