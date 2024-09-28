@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     "drf_spectacular",
     "django_filters",
     # local
-    "users.apps.UsersConfig"
+    "users.apps.UsersConfig",
     "cards.apps.CardsConfig",
 ]
 
@@ -220,8 +220,8 @@ JAZZMIN_SETTINGS = {
     "site_title": "FlipAcademy",
     "site_header": "Filp Academy CRM",
     "site_brand": "Flip Academy",
-    "site_logo": "starship_logo.svg",
-    "login_logo": "starship_logo.svg",
+    # "site_logo": "starship_logo.svg",
+    # "login_logo": "starship_logo.svg",
     "site_logo_classes": "",
     "custom_css": "css/custom_admin.css",
     "welcome_sign": "Flip Academy CRM",
