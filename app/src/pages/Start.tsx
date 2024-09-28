@@ -19,7 +19,6 @@ const StartScreen: React.FC = () => {
         textAlign: 'center',
       }}
     >
-      {/* Logo */}
       <Box
         component="img"
         src="src/assets/welcomeLogo.png"
