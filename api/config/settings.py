@@ -47,8 +47,7 @@ INSTALLED_APPS = [
     "drf_spectacular",
     "django_filters",
     # local
-    "users.apps.UsersConfig",
-    "cards.apps.CardsConfig",
+    "users.apps.UsersConfig"
 ]
 
 MIDDLEWARE = [
