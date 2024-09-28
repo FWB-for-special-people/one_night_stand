@@ -19,6 +19,7 @@ metadata:
   name: {{ .Values.hackyeah.api.appName }}
 data:
   DJ_DEBUG: "{{ .Values.hackyeah.api.debug }}"
+  DJ_ALLOWED_HOSTS: "{{ .Values.hackyeah.api.allowedHosts }}"
 ---
 
 apiVersion: apps/v1
