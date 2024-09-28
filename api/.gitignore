@@ -1,0 +1,8 @@
+# editor
+db.sqlite3
+html_cov
+venv
+staticfiles
+media
+
+**/*.pyc

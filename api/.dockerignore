@@ -1,0 +1,7 @@
+# editor
+db.sqlite3
+venv
+staticfiles
+media
+
+**/*.pyc
