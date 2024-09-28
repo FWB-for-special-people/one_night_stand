@@ -51,28 +51,3 @@ export const themeDark = createTheme({
     },
   },
 });
-
-export const themeHighContrast = createTheme({
-  palette: {
-    primary: {
-      main: '#0000FF',
-    },
-    secondary: {
-      main: '#FF00FF',
-    },
-    success: {
-      main: '#00FF00',
-    },
-    warning: {
-      main: '#FF0000',
-    },
-    text: {
-      primary: '#FFFFFF',
-      secondary: '#FFFF00',
-    },
-    background: {
-      default: '#000000',
-      paper: '#111111',
-    },
-  },
-});

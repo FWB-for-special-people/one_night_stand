@@ -5,10 +5,9 @@ import { Box, Typography } from '@mui/material';
 import Post from 'src/pages/Feed/components/Post.tsx';
 import { API } from 'src/data/routes/api_routes.ts';
 import { myPosts } from 'src/assets/myPosts.ts';
-import { sharedPosts } from 'src/assets/sharedPosts.ts';
+import { sharedPosts } from 'assets/sharedPosts.ts';
 
 const allPosts = [...myPosts, ...sharedPosts];
-
 const Dashboard: React.FC = () => {
 
   return (
@@ -35,7 +34,7 @@ const Dashboard: React.FC = () => {
               },
             }}
           >
-            Udostępnione przez użytkownika: {post.user}
+            Udostępnione przez użytkownika: {post.created_by}
           </Typography>
           <Post image={post.image} text={post.text} />
         </Box>
@@ -46,7 +45,7 @@ const Dashboard: React.FC = () => {
 
 export default Dashboard;
 
-export function useCards(){
+export function useCards() {
   return useQuery({
     queryKey: ['allPosts'],
     queryFn: async () => {
