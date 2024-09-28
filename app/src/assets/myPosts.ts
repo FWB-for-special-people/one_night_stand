@@ -2,7 +2,7 @@ export const myPosts = [
   {
     id: 11,
     user: 'Patryk Bombik',
-    image: 'src/assets/js2.jpg',
+    image: 'js2.jpg',
     text: 'JS Life Hack: Używaj destrukturyzacji obiektów, aby szybko wyciągnąć wartości z obiektów. To skróci Twój kod i poprawi czytelność! Dzięki destrukturyzacji obiektów możesz od razu uzyskać dostęp do właściwości, co zmniejsza liczbę operacji i poprawia czytelność kodu. W praktyce oznacza to, że możesz szybciej tworzyć i edytować kod, minimalizując ryzyko błędów. Warto pamiętać, aby destrukturyzować obiekty w sposób przemyślany, aby kod był czytelny dla innych programistów. Przykład: const {name, age} = user. W ten sposób szybko wyciągniesz wartości z obiektu bez konieczności wielokrotnego odwoływania się do obiektu.',
     dateAdded: '2024-09-01 10:30',
     category: 'JavaScript',
@@ -10,7 +10,7 @@ export const myPosts = [
   {
     id: 12,
     user: 'Patryk Bombik',
-    image: 'src/assets/js1.jpg',
+    image: 'js1.jpg',
     text: 'React Tip: Zawsze używaj kluczy (`key`) dla elementów renderowanych w pętli. To pomoże Reactowi efektywnie zarządzać aktualizacjami DOM. Brak kluczy w elementach renderowanych dynamicznie może prowadzić do problemów z wydajnością oraz błędów w logice renderowania. Dodanie unikalnych kluczy pozwala Reactowi śledzić każdy element, dzięki czemu unika się niepotrzebnych ponownych renderów i zwiększa wydajność aplikacji. React optymalizuje proces renderowania, a unikalne klucze zapewniają lepszą wydajność, eliminując problemy związane z niepotrzebnym renderowaniem komponentów.',
     dateAdded: '2024-09-02 14:15',
     category: 'React',
@@ -18,7 +18,7 @@ export const myPosts = [
   {
     id: 13,
     user: 'Patryk Bombik',
-    image: 'src/assets/js4.png',
+    image: 'js4.png',
     text: 'TypeScript Tip: Używaj unii typów (`|`), aby zdefiniować zmienne mogące przyjmować różne typy. To zwiększa elastyczność i bezpieczeństwo kodu! Dzięki unii typów możesz jasno określić, jakie typy wartości mogą być przypisane do zmiennej, co zwiększa bezpieczeństwo i przewidywalność kodu. Zachowanie spójności typów w całym projekcie pozwala na uniknięcie błędów, które mogą pojawić się na etapie kompilacji i runtime. To narzędzie znacząco ułatwia pracę przy dużych projektach z wieloma typami.',
     dateAdded: '2024-09-03 09:45',
     category: 'TypeScript',
@@ -26,7 +26,7 @@ export const myPosts = [
   {
     id: 14,
     user: 'Patryk Bombik',
-    image: 'src/assets/js5.jpg',
+    image: 'js5.jpg',
     text: 'JS Tip: Skorzystaj z operatora `??` (nullish coalescing), aby ustawić domyślną wartość, gdy zmienna jest `null` lub `undefined`. Operator ten jest doskonały do ustawiania domyślnych wartości tam, gdzie nie możesz być pewny, czy zmienna ma wartość. Przykład: zamiast ręcznie sprawdzać każdą zmienną, możesz szybko ustawić bezpieczną wartość domyślną, co zmniejsza ilość potrzebnego kodu. Nullish coalescing operator (`??`) jest bardziej precyzyjny niż używanie operatora `||`, który może zwrócić nieoczekiwane wyniki dla wartości typu `false` lub `0`.',
     dateAdded: '2024-09-04 16:10',
     category: 'JavaScript',
@@ -34,7 +34,7 @@ export const myPosts = [
   {
     id: 15,
     user: 'Patryk Bombik',
-    image: 'src/assets/js6.jpg',
+    image: 'js6.jpg',
     text: 'React Life Hack: Używaj `React.memo`, aby zapobiec niepotrzebnemu renderowaniu komponentów, które nie zmieniają się między renderami. Dzięki temu można zwiększyć wydajność aplikacji, szczególnie w sytuacjach, gdy komponenty renderują się wielokrotnie, ale nie zmieniają swojego stanu. React.memo działa, porównując nowe propsy z poprzednimi, co minimalizuje niepotrzebne operacje renderowania. Dzięki temu zwiększasz wydajność aplikacji i oszczędzasz zasoby.',
     dateAdded: '2024-09-05 08:50',
     category: 'React',
@@ -42,7 +42,7 @@ export const myPosts = [
   {
     id: 16,
     user: 'Patryk Bombik',
-    image: 'src/assets/js8.jpg',
+    image: 'js8.jpg',
     text: 'TypeScript Tip: Używaj typu `unknown` zamiast `any` dla zmiennych o nieznanym typie. `unknown` wymusza dodatkową weryfikację, zanim coś zrobisz z wartością. Jest to bardziej bezpieczne podejście niż używanie typu `any`, ponieważ `unknown` wymusza dodatkowe sprawdzenia typów przed wykonaniem operacji. W pracy z danymi z zewnętrznych źródeł, `unknown` pomaga zapobiegać błędom związanym z typami, co daje większą kontrolę nad poprawnością danych.',
     dateAdded: '2024-09-06 11:20',
     category: 'TypeScript',
@@ -50,7 +50,7 @@ export const myPosts = [
   {
     id: 17,
     user: 'Patryk Bombik',
-    image: 'src/assets/js9.jpg',
+    image: 'js9.jpg',
     text: 'JS Tip: Użyj `Array.from()` do szybkiego konwertowania obiektów iterowalnych, jak `NodeList`, na tablice. Funkcja `Array.from()` ułatwia pracę z kolekcjami danych, umożliwiając szybkie przekształcenie ich na tablice, co daje dostęp do metod takich jak `map`, `filter`, czy `reduce`. To przydatne narzędzie przy pracy z kolekcjami, np. elementami DOM, które trzeba szybko przetworzyć. Dzięki temu narzędziu można z łatwością manipulować danymi, oszczędzając czas i wysiłek programisty.',
     dateAdded: '2024-09-07 13:35',
     category: 'JavaScript',
@@ -58,7 +58,7 @@ export const myPosts = [
   {
     id: 18,
     user: 'Patryk Bombik',
-    image: 'src/assets/js10.jpg',
+    image: 'js10.jpg',
     text: 'React Tip: Zawsze używaj stanu w komponentach funkcyjnych za pomocą `useState` zamiast zarządzania stanem w konstruktorze w komponentach klasowych. Komponenty funkcyjne są bardziej zwięzłe, a hooki jak `useState` pozwalają na efektywne zarządzanie stanem, co upraszcza kod. Użycie `useState` znacznie upraszcza architekturę komponentów, pozwalając na bardziej modularne i elastyczne tworzenie aplikacji.',
     dateAdded: '2024-09-08 15:50',
     category: 'React',
@@ -66,7 +66,7 @@ export const myPosts = [
   {
     id: 19,
     user: 'Patryk Bombik',
-    image: 'src/assets/js7.png',
+    image: 'js7.png',
     text: 'TypeScript Tip: Użyj `Partial` do tworzenia wersji obiektów, w których wszystkie pola są opcjonalne. Świetne dla pracy z formularzami! Dzięki temu możesz szybko stworzyć obiekt, który nie wymaga wypełnienia wszystkich pól od razu, co jest szczególnie przydatne w przypadku dynamicznych formularzy. `Partial` pozwala na elastyczność w pracy z danymi, bez konieczności pisania zbyt wielu warunków sprawdzających, co znacząco ułatwia pracę przy dynamicznych interfejsach.',
     dateAdded: '2024-09-09 10:10',
     category: 'TypeScript',
@@ -74,7 +74,7 @@ export const myPosts = [
   {
     id: 20,
     user: 'Patryk Bombik',
-    image: 'src/assets/js3.jpg',
+    image: 'js3.jpg',
     text: 'JS Tip: Skorzystaj z funkcji `reduce()` do agregowania wartości w tablicy. Idealne dla sumowania liczb lub łączenia obiektów. Funkcja `reduce()` pozwala na przetwarzanie tablicy w bardziej skondensowany sposób, umożliwiając tworzenie sum, produktów lub innych bardziej złożonych struktur danych. Jest to bardzo potężne narzędzie do pracy z danymi, zwłaszcza gdy mamy do czynienia z obiektami lub bardziej złożonymi strukturami tablic. `reduce()` jest przydatny w przypadku skomplikowanych operacji na tablicach.',
     dateAdded: '2024-09-10 18:45',
     category: 'JavaScript',

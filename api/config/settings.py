@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # 3rd party
+    "storages",
     "rest_framework",
     "rest_framework_simplejwt",
     "drf_spectacular",
@@ -49,6 +50,7 @@ INSTALLED_APPS = [
     # local
     "users.apps.UsersConfig",
     "cards.apps.CardsConfig",
+    "channels.apps.ChannelsConfig",
 ]
 
 MIDDLEWARE = [
@@ -140,11 +142,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 STORAGES = {
     "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
-    },
-    "default": {
-        "BACKEND": "django.core.files.storage.FileSystemStorage",
-        "LOCATION": "media",
-    },
+    }
+    #     "default": {
+    #         "BACKEND": "django.core.files.storage.FileSystemStorage",
+    #         "LOCATION": "media",
+    #     },
 }
 
 LOGGING = {
@@ -227,4 +229,27 @@ JAZZMIN_SETTINGS = {
     "welcome_sign": "Flip Academy CRM",
     "copyright": "Azeno IT 2024",
     "use_google_fonts_cdn": True,
+}
+
+AZURE_ACCOUNT_NAME = os.environ.get("AZURE_ACCOUNT_NAME")
+AZURE_ACCOUNT_KEY = os.environ.get("AZURE_ACCOUNT_KEY")
+AZURE_CONTAINER = os.environ.get("AZURE_CONTAINER")
+AZURE_CUSTOM_DOMAIN = os.environ.get("AZURE_CUSTOM_DOMAIN")
+
+STORAGES['default'] = {
+    'BACKEND': 'storages.backends.azure_storage.AzureStorage',
+    'OPTIONS': {
+        'account_name': AZURE_ACCOUNT_NAME,
+        'account_key': AZURE_ACCOUNT_KEY,
+        'azure_container': AZURE_CONTAINER,
+    },
+
+    # 'staticfiles': {
+    #     'BACKEND': 'storages.backends.azure_storage.AzureStorage',
+    #     'OPTIONS': {
+    #         'account_name': AZURE_ACCOUNT_NAME,
+    #         'account_key': AZURE_ACCOUNT_KEY,
+    #         'azure_container': AZURE_CONTAINER,
+    #     },
+    # },
 }

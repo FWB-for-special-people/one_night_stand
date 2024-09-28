@@ -1,6 +1,7 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
+
 class CustomUser(AbstractUser):
     """
 
@@ -48,3 +49,15 @@ class CustomUser(AbstractUser):
 
     def __str__(self):
         return f"{self.email} {self.first_name} {self.last_name}"
+
+
+class Follower(models.Model):
+    follower = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name="followed_users")
+    followed_user = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name="followers")
+    followed_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        unique_together = ("follower", "followed_user")
+
+    def __str__(self):
+        return f"User {self.followed_user.email} followed by {self.follower.email} {self.followed_at}"

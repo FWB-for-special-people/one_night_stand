@@ -21,6 +21,8 @@ django-filter = "24.3"
 pillow = "10.4.0"
 django-jazzmin = "3.0.0"
 gunicorn = "23.0.0"
+django-storages = "^1.14.4"
+azure-storage-blob = "^12.23.1"
 
 [build-system]
 requires = ["poetry-core"]

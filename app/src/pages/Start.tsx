@@ -21,7 +21,7 @@ const StartScreen: React.FC = () => {
     >
       <Box
         component="img"
-        src="src/assets/welcomeLogo.png"
+        src="welcomeLogo.png"
         alt="Logo"
         sx={{
           width: '150px',
