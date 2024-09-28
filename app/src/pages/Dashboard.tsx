@@ -4,20 +4,16 @@ import { useQuery } from '@tanstack/react-query';
 import { Box, Typography } from '@mui/material';
 import Post from 'src/pages/Feed/components/Post.tsx';
 import { API } from 'src/data/routes/api_routes.ts';
+import { myPosts } from 'src/assets/myPosts.ts';
+import { sharedPosts } from 'src/assets/sharedPosts.ts';
+
+const allPosts = [...myPosts, ...sharedPosts];
 
 const Dashboard: React.FC = () => {
 
-const {data: cards, isLoading: loadingCards} = useCards()
-
-  console.log(cards)
-
-  if (loadingCards) {
-    return <div>Loading...</div>;
-  }
-
   return (
     <Box>
-      {cards?.results?.map((post: any) => (
+      {allPosts?.map((post: any) => (
         <Box
           key={post.id}
           sx={{
@@ -39,7 +35,7 @@ const {data: cards, isLoading: loadingCards} = useCards()
               },
             }}
           >
-            Udostępnione przez użytkownika: {post.created_by}
+            Udostępnione przez użytkownika: {post.user}
           </Typography>
           <Post image={post.image} text={post.text} />
         </Box>
@@ -50,7 +46,7 @@ const {data: cards, isLoading: loadingCards} = useCards()
 
 export default Dashboard;
 
-function useCards(){
+export function useCards(){
   return useQuery({
     queryKey: ['allPosts'],
     queryFn: async () => {

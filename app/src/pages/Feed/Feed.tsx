@@ -3,19 +3,23 @@ import { Box, useMediaQuery, useTheme } from '@mui/material';
 import Navbar from 'src/pages/Feed/components/NavBarTop.tsx';
 import NavBarBottomMobile from 'src/pages/Feed/components/NavBarBottomMobile.tsx';
 import NavBarBottomDesktop from 'src/pages/Feed/components/NavBarBottomDesktop.tsx';
-import { useSelector, useDispatch } from 'react-redux';
-import { toggleCollapse } from 'src/store/slices/uiSlice.ts';
-import { RootState } from 'src/store/store.ts';
+// import { useSelector, useDispatch } from 'react-redux';
+// import { toggleCollapse } from 'src/store/slices/uiSlice.ts';
+// import { RootState } from 'src/store/store.ts';
+import { useAtom } from 'jotai';
+import { isSideMenuCollapsedAtom } from 'src/atoms.ts';
 
 const Feed: React.FC<PropsWithChildren> = ({ children }) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
-  const dispatch = useDispatch();
-  const isCollapsed = useSelector((state: RootState) => state.ui.isCollapsed);
+  const [isSideMenuCollapsed, setIsSideMenuCollapsed] = useAtom(isSideMenuCollapsedAtom);
 
+  // const dispatch = useDispatch();
+  // const isCollapsed = useSelector((state: RootState) => state.ui.isCollapsed);
+  //
   const handleToggle = () => {
-    dispatch(toggleCollapse());
+    setIsSideMenuCollapsed(!isSideMenuCollapsed);
   };
 
   return (
@@ -28,12 +32,12 @@ const Feed: React.FC<PropsWithChildren> = ({ children }) => {
           paddingBottom: '3.5rem',
           display: 'flex',
           justifyContent: isMobile ? 'center' : 'flex-start',
-          transform: isMobile ? 'none' : isCollapsed ? 'translateX(10vw)' : 'translateX(25vw)',
+          transform: isMobile ? 'none' : isSideMenuCollapsed ? 'translateX(10vw)' : 'translateX(25vw)',
         }}
       >
         <Box
           sx={{
-            width: isMobile ? '100%' : isCollapsed ? '85%' : '70%',
+            width: isMobile ? '100%' : isSideMenuCollapsed ? '85%' : '70%',
           }}
         >
           {children}
@@ -41,7 +45,7 @@ const Feed: React.FC<PropsWithChildren> = ({ children }) => {
       </Box>
 
       {isMobile ? <NavBarBottomMobile /> :
-        <NavBarBottomDesktop handleToggle={handleToggle} isCollapsed={isCollapsed} />}
+        <NavBarBottomDesktop handleToggle={handleToggle} isCollapsed={isSideMenuCollapsed} />}
     </Box>
   );
 };

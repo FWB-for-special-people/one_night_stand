@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Box, Typography, IconButton, Button, useMediaQuery, useTheme } from '@mui/material';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
-import { useSelector } from 'react-redux';
-import { RootState } from 'src/store/store.ts';
+import { isSideMenuCollapsedAtom } from 'src/atoms.ts';
+import { useAtom } from 'jotai';
 
 interface PostProps {
   image: string;
@@ -14,7 +14,7 @@ const Post: React.FC<PostProps> = ({ image, text }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-  const isCollapsed = useSelector((state: RootState) => state.ui.isCollapsed);
+  const [isSideMenuCollapsed] = useAtom(isSideMenuCollapsedAtom);
   const handleToggleExpand = () => {
     setIsExpanded(!isExpanded);
   };
@@ -30,7 +30,7 @@ const Post: React.FC<PostProps> = ({ image, text }) => {
         color: 'text.primary',
         height: isMobile ? '80vh' : '90vh',
         maxHeight: '90vh',
-        width: isMobile ? '100%' : isCollapsed ? '90%' : '80%',
+        width: isMobile ? '100%' : isSideMenuCollapsed ? '90%' : '80%',
       }}
     >
       <Box

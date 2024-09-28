@@ -44,7 +44,7 @@ const NavBarBottomDesktop: React.FC<NavBarBottomDesktopProps> = ({handleToggle, 
         >
           <List sx={{ flexGrow: 1, width: '100%', gap: '2rem' }}>
             <ListItemButton sx={{ justifyContent: isCollapsed ? 'center' : 'flex-start', padding: '0.5rem 1rem' }}
-                            component="a" href="/feed">
+                            component="a" href="/">
               <ListItemIcon sx={{ minWidth: '3rem', justifyContent: 'center' }}>
                 <HomeIcon sx={{ color: 'white' }} />
               </ListItemIcon>
