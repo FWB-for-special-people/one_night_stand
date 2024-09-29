@@ -3,15 +3,13 @@ import os
 from json import JSONDecodeError
 
 from django.core.exceptions import BadRequest
-from attr import filters
-from django.db.models import Count
+from django.db.models import Q
 from django.utils import timezone
 from openai import OpenAI
 from rest_framework import viewsets, generics, status
 from rest_framework.decorators import action
 from rest_framework.response import Response
 
-from users.views import logger
 from . import serializers, models
 
 
@@ -27,10 +25,7 @@ class CardViewSet(viewsets.ViewSetMixin, generics.ListAPIView, generics.CreateAP
         return queryset
 
     def perform_create(self, serializer):
-
-        card = serializer.save(created_by=self.request.user, difficulty=self.request.data["difficulty"],
-                        expected_time=int(self.request.data[
-                            "expected_time"]))
+        card = serializer.save(created_by=self.request.user)
 
         tags = self.request.data["tags"]
         for tag in tags:
@@ -104,7 +99,6 @@ class CardViewSet(viewsets.ViewSetMixin, generics.ListAPIView, generics.CreateAP
             input=flashcard_text)
         return response.results[0].flagged
 
-
 class CommentViewSet(viewsets.ViewSetMixin, generics.ListAPIView, generics.CreateAPIView):
     serializer_class = serializers.CommentSerializer
     queryset = models.Comment.objects.all().order_by("created_at")
@@ -114,3 +108,14 @@ class CommentViewSet(viewsets.ViewSetMixin, generics.ListAPIView, generics.Creat
 
     def perform_create(self, serializer):
         serializer.save(created_by=self.request.user, card_id=self.kwargs["card_id"])
+
+
+class CardImageViewSet(viewsets.ViewSetMixin, generics.ListAPIView, generics.CreateAPIView):
+    queryset = models.CardImage.objects.all()
+    serializer_class = serializers.CardImageSerializer
+
+    def filter_queryset(self, queryset):
+        return queryset.filter(Q(is_public=True) | Q(created_by=self.request.user))
+
+    def perform_create(self, serializer):
+        serializer.save(created_by=self.request.user)
