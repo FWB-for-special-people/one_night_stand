@@ -52,11 +52,11 @@ Algorytmy oceniają każdy post na podstawie licznych kryteriów, takich jak rod
 
 ## Screenshots
 
-![screen01.png](api%2Fassets%2Fscreen01.png)
+![screen01.png](api%2Fassets%2F01_screen_login.png)
 
-![screen02.png](api%2Fassets%2Fscreen02.png)
+![screen02.png](api%2Fassets%2F02_screen_full_card.png)
 
-![screen03.png](api%2Fassets%2Fscreen03.png)
+![screen03.png](api%2Fassets%2F03_screeen_scroll.png)
 
 
 ## Authors
