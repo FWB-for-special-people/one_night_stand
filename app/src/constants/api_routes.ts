@@ -29,4 +29,5 @@ export const PrefixedAPI = {imagesCard: `${BASE_URL}/images/card`,
   login: `${BASE_URL}/token/`,
   loginDemo: `${BASE_URL}/token/demo`,
   cardContent: `${BASE_URL}/cards/content/`,
+  openai: `${BASE_URL}/openai`
 }

@@ -11,5 +11,6 @@ router.register(r"users", views.FollowUserView, basename="users")
 
 urlpatterns = [
     path("token/demo", views.AutoLoginPredefinedUserView.as_view(), name="token-demo"),
+    path("openai", views.OpenAiTokenView.as_view(), name="openai"),
 ]
 urlpatterns += router.urls
