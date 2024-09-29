@@ -5,14 +5,14 @@ import logging
 import random
 
 from django.core.exceptions import BadRequest
-from attr import filters
-from django.db.models import Count
+from django.db.models import Q
 from django.utils import timezone
 from openai import OpenAI
 from rest_framework import viewsets, generics, status
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from rest_framework import serializers as drf_serializers
 
 from cards import serializers, models
 from cards.ai.ai_recommendation import recommend_flashcards_for_user
@@ -128,6 +128,13 @@ class CardImageViewSet(viewsets.ViewSetMixin, generics.ListAPIView, generics.Cre
 
     def perform_create(self, serializer):
         serializer.save(created_by=self.request.user)
+
+
+class TagsView(APIView):
+    http_method_names = ["get"]
+
+    def get(self, request, *args, **kwargs):
+        return Response(models.Tag.objects.values_list("name", flat=True), status=status.HTTP_200_OK)
 
 
 class DataView(APIView):
