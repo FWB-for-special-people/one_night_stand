@@ -1,17 +1,13 @@
 import { Box } from '@mui/material';
 import Post from 'src/pages/Feed/components/Post.tsx';
-import { myPosts } from 'src/assets/myPosts.ts';
-import { sharedPosts } from 'src/assets/sharedPosts.ts';
-// import { useUserFollowers } from 'src/queries/useUserFollowers.ts';
+import { useCardsQuery } from 'src/queries/useCardsQuery.ts';
 
-const allPosts = [...myPosts, ...sharedPosts];
 export default function Dashboard() {
-  // const {data} = useCardsQuery()
-  // useUserFollowers();
+  const { data: cardsData } = useCardsQuery()
 
   return (
     <Box>
-      {allPosts?.map((post: any) => (
+      {cardsData?.pages?.map((post: any) => (
         <Box
           key={post.id}
           sx={{
