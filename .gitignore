@@ -7,3 +7,4 @@ venv
 /.k8s
 
 .DS_store
+node_modules

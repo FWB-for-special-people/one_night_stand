@@ -21,7 +21,7 @@ export const themeLight = createTheme({
     },
     background: {
       default: '#ffffff',
-      paper: '#fef2c0',
+      paper: 'rgba(204,233,253,0.53)',
     },
   },
 });
