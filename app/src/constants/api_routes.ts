@@ -1,10 +1,8 @@
 export const API = {
     cards: "/cards/",
-    cardsImages: "/cards/images",
-    cardLike: (cardId: number) => `/cards/${cardId}/like`,
+    cardLike: (cardId: number) => `/cards/${cardId}/like/`,
     cardView: (cardId: number) => `/cards/${cardId}/view`,
     cardComments: (cardId: number) => `/cards/${cardId}/comments`,
-    cardContent: `/cards/content/`,
 
     channels: "/channels/",
     channelsFollow: (channelId: number) => `/channels/${channelId}/follow`,

@@ -4,6 +4,7 @@ from rest_framework.exceptions import ValidationError
 from cards import models
 from cards.models import CardImage
 from channels import models as channel_models
+from users.serializers import UserSerializer
 
 
 class CardImageSerializer(serializers.ModelSerializer):
@@ -21,6 +22,8 @@ class CardSerializer(serializers.ModelSerializer):
                                                   required=False)
     image = CardImageSerializer(read_only=True)
     image_id = serializers.PrimaryKeyRelatedField(queryset=CardImage.objects.all(), write_only=True)
+
+    created_by = UserSerializer(read_only=True)
 
     class Meta:
         model = models.Card

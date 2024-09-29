@@ -3,7 +3,7 @@ import Post from 'src/pages/Feed/components/Post.tsx';
 import { useCardsQuery } from 'src/queries/useCardsQuery.ts';
 
 export default function Dashboard() {
-  const { data: cardsData } = useCardsQuery()
+  const { data: cardsData } = useCardsQuery();
 
   const mappedCards = cardsData?.pages?.flatMap(page => page.map(post => ({
     id: post.id,
@@ -13,7 +13,7 @@ export default function Dashboard() {
     likeCount: post.like_count,
     viewCount: post.view_count,
     imageUrl: post.image.image,
-  })))
+  })));
 
   return (
     <Box>
@@ -29,7 +29,7 @@ export default function Dashboard() {
             paddingX: '.5rem',
           }}
         >
-          <Post image={post?.imageUrl} text={post?.text} userName={post?.createdBy} />
+          <Post id={post?.id} image={post?.imageUrl} text={post?.text} userName={post?.createdBy} />
         </Box>
       ))}
     </Box>
