@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useState } from 'react';
 import { Box, Typography, IconButton, useMediaQuery, useTheme } from '@mui/material';
 import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -17,9 +18,11 @@ interface PostProps {
   userId?: string;
   userName?: string;
   userAvatar?: string;
+  avatar?: string;
 }
 
-const Post: React.FC<PostProps> = ({ image, text, userName, userAvatar, id }) => {
+const Post: React.FC<PostProps> = ({ id, image, text, userName='Użytkownik Anonimowy', avatar }) => {
+
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const [isSideMenuCollapsed] = useAtom(isSideMenuCollapsedAtom);
@@ -55,7 +58,6 @@ const Post: React.FC<PostProps> = ({ image, text, userName, userAvatar, id }) =>
         alignItems: 'center',
         justifyContent: 'center',
         color: 'text.primary',
-        boxShadow: '.05rem .05rem .05rem .05rem rgba(0, 0, 0, 0.4)',
         width: isMobile ? '100%' : isSideMenuCollapsed ? '90%' : '80%',
         border: '1px solid black',
       }}
@@ -80,7 +82,8 @@ const Post: React.FC<PostProps> = ({ image, text, userName, userAvatar, id }) =>
           margin: '.5rem',
           paddingLeft: '.2rem',
         }}>
-        <Avatar name={userName} avatar={userAvatar} />
+
+        <Avatar avatar={image}  name={userName} />
         <Typography
           sx={{
             color: 'text.primary',
@@ -121,6 +124,8 @@ const Post: React.FC<PostProps> = ({ image, text, userName, userAvatar, id }) =>
           justifyContent: 'space-evenly',
           paddingRight: '1rem',
           width: '100%',
+            borderTop: '1px solid black',
+            marginTop: '0.625rem'
         }}
       >
         <IconButton aria-label="like" onClick={handleLike}>

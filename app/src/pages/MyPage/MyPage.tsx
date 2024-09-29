@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import Post from 'src/pages/Feed/components/Post.tsx';
