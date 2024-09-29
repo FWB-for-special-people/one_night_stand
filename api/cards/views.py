@@ -17,6 +17,7 @@ from cards import serializers, models
 from . import models, serializers
 from .ai.ai_recommendation import recommend_flashcards_for_user
 from .ai.ai_collaborative import recommend_collaborative_cards
+from .ai.ai_real_time import recommend_cards_based_on_recent_activity
 from . import serializers, models
 
 logger = logging.getLogger(__name__)
@@ -143,6 +144,13 @@ class CardRecommendationView(APIView):
         user = request.data.get('user_id')
         recommended_cards = recommend_collaborative_cards(user)
 
-        # recommended_data = [{'id': card.id, 'text': card.text, 'tags': card.tags} for card in recommended_cards]
+        return Response(recommended_cards)
+
+
+class RealDataRecommendationView(APIView):
+    def post(self, request):
+        user = request.data.get('user_id')
+        recommended_cards = recommend_cards_based_on_recent_activity(user)
 
         return Response(recommended_cards)
+

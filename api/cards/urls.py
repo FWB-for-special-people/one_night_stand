@@ -10,5 +10,6 @@ router.register(r"", views.CardViewSet, basename="cards")
 urlpatterns = [
     path("", include(router.urls)),
     path("model/", views.DataView.as_view(), name='model'),
-    path("collab/", views.CardRecommendationView.as_view(), name='collab')
+    path("collab/", views.CardRecommendationView.as_view(), name='collab'),
+    path("real/", views.RealDataRecommendationView.as_view(), name='real')
 ]
