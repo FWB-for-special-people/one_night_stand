@@ -7,6 +7,7 @@ from django.db.models import ManyToManyField
 
 User = get_user_model()
 
+
 class Card(models.Model):
     text = models.TextField(max_length=500)
     difficulty = models.TextField(max_length=15)
@@ -43,7 +44,6 @@ class CardView(models.Model):
 
 class Comment(models.Model):
     text = models.TextField(max_length=500)
-
     card = models.ForeignKey(Card, on_delete=models.CASCADE, related_name="comments")
     is_positive = models.FloatField(default=0.0)
     created_by = models.ForeignKey(User, on_delete=models.CASCADE)

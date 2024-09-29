@@ -23,6 +23,9 @@ django-jazzmin = "3.0.0"
 gunicorn = "23.0.0"
 django-storages = "^1.14.4"
 azure-storage-blob = "^12.23.1"
+scikit-learn = "^1.5.2"
+pandas = "^2.2.3"
+tensorflow = "^2.17.0"
 
 [build-system]
 requires = ["poetry-core"]
