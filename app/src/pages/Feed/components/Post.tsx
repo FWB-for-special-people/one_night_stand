@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Box, Typography, IconButton, useMediaQuery, useTheme } from '@mui/material';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import MessageIcon from '@mui/icons-material/Message';
 import { useAtom } from 'jotai';
 import { darkModeAtom, isSideMenuCollapsedAtom } from 'src/atoms.ts';
 import { Avatar } from 'src/pages/Feed/components/Avatar.tsx';
+import { useAxios } from 'src/hooks/useAxios.ts';
+import { API } from 'src/constants/api_routes.ts';
 
 interface PostProps {
+  id: number;
   image: string;
   text: string;
   userId?: string;
@@ -14,11 +18,30 @@ interface PostProps {
   userAvatar?: string;
 }
 
-const Post: React.FC<PostProps> = ({ image, text,userName, userAvatar }) => {
+const Post: React.FC<PostProps> = ({ image, text, userName, userAvatar, id }) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const [isSideMenuCollapsed] = useAtom(isSideMenuCollapsedAtom);
   const [isDarkMode] = useAtom(darkModeAtom);
+  const [isLiked, setIsLiked] = useState(false);
+  const [isComment, setIsComment] = useState(false);
+
+  const axios = useAxios();
+
+  const handleLike = async () => {
+    try {
+      const response = await axios.patch(API.cardLike(id));
+      if (response.status === 200) {
+        setIsLiked(true);
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const handleComment = () => {
+    setIsComment(!isComment);
+  }
 
   return (
     <Box
@@ -59,10 +82,10 @@ const Post: React.FC<PostProps> = ({ image, text,userName, userAvatar }) => {
         <Avatar name={userName} avatar={userAvatar} />
         <Typography
           sx={{
-              color: 'text.primary',
-              fontSize: '1rem',
+            color: 'text.primary',
+            fontSize: '1rem',
             paddingLeft: '.5rem',
-            }}
+          }}
         >
           {userName}
         </Typography>
@@ -99,11 +122,14 @@ const Post: React.FC<PostProps> = ({ image, text,userName, userAvatar }) => {
           width: '100%',
         }}
       >
-        <IconButton aria-label="like">
-          <FavoriteIcon sx={{ color: isDarkMode? 'text.primary' : 'primary.main', fontSize: '1.5rem' }} />
+        <IconButton aria-label="like" onClick={handleLike}>
+          {isLiked ?
+            <FavoriteIcon sx={{ color: isDarkMode ? 'text.primary' : 'primary.main', fontSize: '1.5rem' }} />
+            :
+            <FavoriteBorderIcon sx={{ color: isDarkMode ? 'text.primary' : 'primary.main', fontSize: '1.5rem' }} />}
         </IconButton>
-        <IconButton>
-          <MessageIcon sx={{ color: isDarkMode? 'text.primary' : 'primary.main', fontSize: '1.5rem' }} />
+        <IconButton aria-label="commentary" onClick={handleComment}>
+          <MessageIcon sx={{ color: isDarkMode ? 'text.primary' : 'primary.main', fontSize: '1.5rem' }} />
         </IconButton>
       </Box>
     </Box>
