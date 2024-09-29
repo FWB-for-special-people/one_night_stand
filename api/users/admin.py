@@ -5,6 +5,7 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from django.utils.translation import gettext_lazy as _
 
+from users.models import Follower
 
 CustomUser = get_user_model()
 
@@ -16,4 +17,5 @@ class CustomUserAdminConfig(UserAdmin):
     fieldsets = UserAdmin.fieldsets + ((_("Personal"), {"fields": ("bio", "avatar", "preferences")}),)
 
 admin.site.register(CustomUser, CustomUserAdminConfig)
+admin.site.register(Follower)
 

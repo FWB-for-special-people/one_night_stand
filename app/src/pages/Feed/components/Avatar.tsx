@@ -1,28 +1,27 @@
-import React, { useState } from 'react';
-import { Box, Button, Typography, Fade, Paper } from '@mui/material';
+import React from 'react';
+import { Box } from '@mui/material';
 
 interface UserProps {
-  id: string;
-  name: string;
+  name?: string;
   avatar?: string;
 }
 
-const Avatar: React.FC<UserProps> = ({ name, avatar }) => {
-  const [showUserCard, setShowUserCard] = useState(false);
+export const Avatar: React.FC<UserProps> = ({ name, avatar }) => {
+  // const [showUserCard, setShowUserCard] = useState(false);
 
-  const handleAvatarClick = () => {
-    setShowUserCard(true);
-  };
-
-  const handleFollowClick = () => {
-    setShowUserCard(false);
-  };
+  // const handleAvatarClick = () => {
+  // setShowUserCard(true);
+  // };
+  //
+  // const handleFollowClick = () => {
+  //   setShowUserCard(false);
+  // };
 
   return (
     <Box sx={{ display: 'flex', alignItems: 'center', gap: '2rem', position: 'relative' }}>
       {/* Awatar */}
       <Box
-        onClick={handleAvatarClick}
+        // onClick={handleAvatarClick}
         sx={{
           display: 'flex',
           alignItems: 'center',
@@ -93,7 +92,5 @@ const Avatar: React.FC<UserProps> = ({ name, avatar }) => {
       {/*  </Paper>*/}
       {/*</Fade>*/}
     </Box>
-  );
+  )
 };
-
-export default Avatar;

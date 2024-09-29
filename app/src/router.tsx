@@ -7,15 +7,18 @@ import Feed from 'src/pages/Feed/Feed.tsx';
 import Dashboard from 'src/pages/Dashboard.tsx';
 import CategoriesDashboard from 'src/pages/Categories/CategoriesDashboard.tsx';
 import MyPage from 'src/pages/MyPage/MyPage.tsx';
+import AuthWrapper from 'src/auth/AuthWrapper.tsx';
 import SettingsWrapper from 'src/pages/Settings/Settings.tsx';
 
 export const router = createBrowserRouter([
   {
     path: '/',
     element: (
-      <Feed>
-        <Dashboard />
-      </Feed>
+      <AuthWrapper>
+        <Feed>
+          <Dashboard />
+        </Feed>
+      </AuthWrapper>
     ),
   },
   { path: '/start', element: <Start /> },
@@ -24,33 +27,41 @@ export const router = createBrowserRouter([
   {
     path: '/categories',
     element: (
-      <Feed>
-        <CategoriesDashboard />
-      </Feed>
+      <AuthWrapper>
+        <Feed>
+          <CategoriesDashboard />
+        </Feed>
+      </AuthWrapper>
     ),
   },
   {
     path: '/my-profile',
     element: (
-      <Feed>
-        <MyPage />
-      </Feed>
+      <AuthWrapper>
+        <Feed>
+          <MyPage />
+        </Feed>
+      </AuthWrapper>
     ),
   },
   {
     path: '/settings',
     element: (
-      <Feed>
-        <SettingsWrapper />
-      </Feed>
+      <AuthWrapper>
+        <Feed>
+          <SettingsWrapper />
+        </Feed>
+      </AuthWrapper>
     ),
   },
   {
     path: '/add-post',
     element: (
-      <Feed>
-        <AddPostWrapper />
-      </Feed>
+      <AuthWrapper>
+        <Feed>
+          <AddPostWrapper />
+        </Feed>
+      </AuthWrapper>
     ),
   },
 ]);
