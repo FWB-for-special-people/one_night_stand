@@ -8,7 +8,7 @@ const NavBarTop: React.FC = () => {
         <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center' }}>
           <Box
             component="img"
-            src="src/assets/welcomeLogo.png"
+            src="welcomeLogo.png"
             alt="Logo"
             sx={{
               height: '3.5rem',

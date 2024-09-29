@@ -1,3 +1,5 @@
+import random
+
 from django.contrib.auth import get_user_model
 from django.contrib.postgres.fields import ArrayField
 from django.db import models
@@ -40,9 +42,22 @@ class Comment(models.Model):
     text = models.TextField(max_length=500)
 
     card = models.ForeignKey(Card, on_delete=models.CASCADE, related_name="comments")
-
+    is_positive = models.FloatField(default=0.0)
     created_by = models.ForeignKey(User, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return f"{self.card}-{self.text:30}"
+
+    def save(self, *args, **kwargs):
+        if self.pk is None:  # Only assign on creation
+            rand_value = random.random()  # Generates a float between 0 and 1
+
+            if rand_value <= 0.2:
+                self.is_positive = random.uniform(-1, -0.8)
+            elif rand_value <= 0.5:
+                self.is_positive = random.uniform(-0.1, 0.1)
+            else:
+                self.is_positive = random.uniform(0.8, 1.0)
+
+        super().save(*args, **kwargs)

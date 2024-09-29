@@ -13,6 +13,7 @@ COPY . .
 RUN npm run build
 
 
+
 FROM nginx:1.25.3 as production
 EXPOSE 3000
 COPY ./default.conf /etc/nginx/conf.d/default.conf

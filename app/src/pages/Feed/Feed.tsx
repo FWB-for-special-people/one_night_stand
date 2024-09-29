@@ -28,7 +28,7 @@ const Feed: React.FC<PropsWithChildren> = ({ children }) => {
 
       <Box
         sx={{
-          paddingTop: '5rem',
+          paddingTop: '4rem',
           paddingBottom: '3.5rem',
           display: 'flex',
           justifyContent: isMobile ? 'center' : 'flex-start',

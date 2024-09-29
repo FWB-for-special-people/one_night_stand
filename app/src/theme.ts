@@ -4,10 +4,10 @@ export const themeLight = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: '#4459A9',
+      main: '#253160',
     },
     secondary: {
-      main: '#005B7A',
+      main: '#fbb916',
     },
     success: {
       main: '#7CB928',
@@ -16,12 +16,12 @@ export const themeLight = createTheme({
       main: '#BA1A1A',
     },
     text: {
-      primary: '#0D2878',
-      secondary: '#7F8C8D',
+      primary: '#2d4e9c',
+      secondary: '#3c3c3c',
     },
     background: {
-      default: '#FFFBFF',
-      paper: '#fddf9b',
+      default: '#ffffff',
+      paper: '#fef2c0',
     },
   },
 });
