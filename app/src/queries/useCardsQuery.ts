@@ -12,6 +12,9 @@ type Card = {
   like_count: number;
   view_count: number;
   channels: number[];
+  image: {
+    image: string;
+  };
 }
 
 export function useCardsQuery() {

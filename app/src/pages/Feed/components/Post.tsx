@@ -4,7 +4,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import MessageIcon from '@mui/icons-material/Message';
 import { useAtom } from 'jotai';
 import { darkModeAtom, isSideMenuCollapsedAtom } from 'src/atoms.ts';
-import Avatar from 'src/pages/Feed/components/Avatar.tsx';
+import { Avatar } from 'src/pages/Feed/components/Avatar.tsx';
 
 interface PostProps {
   image: string;
@@ -14,7 +14,7 @@ interface PostProps {
   userAvatar?: string;
 }
 
-const Post: React.FC<PostProps> = ({ image, text, userId, userName, userAvatar }) => {
+const Post: React.FC<PostProps> = ({ image, text,userName, userAvatar }) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const [isSideMenuCollapsed] = useAtom(isSideMenuCollapsedAtom);
@@ -56,7 +56,7 @@ const Post: React.FC<PostProps> = ({ image, text, userId, userName, userAvatar }
           margin: '.5rem',
           paddingLeft: '.2rem',
         }}>
-        <Avatar name={userName} avatar={image} />
+        <Avatar name={userName} avatar={userAvatar} />
         <Typography
           sx={{
               color: 'text.primary',
