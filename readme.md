@@ -54,7 +54,7 @@ Algorytmy oceniają każdy post na podstawie licznych kryteriów, takich jak rod
 
 ![screen01.png](api%2Fassets%2F01_screen_login.png)
 
-![screen02.png](api%2Fassets%2F02_screen_full_card.png)
+![screen02.png](api%2Fassets%2F02-screen_full_card.png)
 
 ![screen03.png](api%2Fassets%2F03_screen_scroll.png)
 
