@@ -6,6 +6,7 @@ import {API, PrefixedAPI} from "src/constants/api_routes.ts";
 import {useSetAtom} from "jotai";
 import {accessTokenAtom} from "src/atoms.ts";
 import {useNavigate} from "react-router-dom";
+import {useOpenAiToken} from "src/queries/useOpenAiToken.ts";
 
 type TokenResponse = {
     access: string;
@@ -18,6 +19,8 @@ export default function Login() {
     const [fetching, setFetching] = useState(false)
     const setAccessToken = useSetAtom(accessTokenAtom)
     const navigate = useNavigate();
+    const {data} = useOpenAiToken()
+    console.log(data)
 
     const logoImage = '../public/welcomeLogo.png'
 

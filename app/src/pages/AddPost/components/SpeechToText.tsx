@@ -5,13 +5,13 @@ import {API, PrefixedAPI} from "src/constants/api_routes.ts";
 import {useEffect, useState} from "react";
 import {Box, IconButton} from "@mui/material";
 import MicIcon from "@mui/icons-material/Mic";
+import {useOpenAiToken} from "src/queries/useOpenAiToken.ts";
 
 const SpeechToText: React.FC = ({setCallAPI, setText}) => {
   const axiosInstance = useAxios();
+  const { data: apiKey } = useOpenAiToken()
   const [isSending, setIsSending] = useState(false);
-  const { transcript, startRecording, stopRecording } = useWhisper({
-    apiKey: "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"
-  });
+  const { transcript, startRecording, stopRecording } = useWhisper({apiKey});
 
   const handleStart = () => {
     console.log("Start recording...");

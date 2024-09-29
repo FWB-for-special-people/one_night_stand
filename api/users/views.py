@@ -10,7 +10,6 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import RefreshToken
 
-
 from users import serializers, models
 from cards import models as cards_models
 from .serializers import FollowerSerializer, UserSerializer
@@ -44,7 +43,8 @@ class FollowUserView(viewsets.ViewSetMixin, generics.ListAPIView, generics.Retri
         if user_to_follow == self.request.user:
             return Response({"detail": "You can't follow yourself, duh..."}, status=status.HTTP_400_BAD_REQUEST)
 
-        follow, created = models.Follower.objects.get_or_create(followed_user=user_to_follow, follower=self.request.user)
+        follow, created = models.Follower.objects.get_or_create(followed_user=user_to_follow,
+                                                                follower=self.request.user)
 
         if created:
             return Response({"detail": f"You are now following {user_to_follow.email}."},
@@ -110,3 +110,11 @@ class AutoLoginPredefinedUserView(APIView):
             'refresh': str(refresh),
             'access': str(refresh.access_token),
         }, status=status.HTTP_200_OK)
+
+
+class OpenAiTokenView(APIView):
+    http_method_names = ["get"]
+    permission_classes = [AllowAny]
+
+    def get(self, *args, **kwargs):
+        return Response(status=status.HTTP_200_OK, data={"token": os.environ.get("OPENAI_API_KEY")})
