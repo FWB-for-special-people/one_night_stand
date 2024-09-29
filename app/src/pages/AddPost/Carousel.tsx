@@ -63,6 +63,7 @@ const Carousel = ({ text }) => {
 
 
 
+
   const settings = {
     dots: true,
     arrows: true,

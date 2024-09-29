@@ -1,7 +1,7 @@
 // @ts-nocheck
 import {useWhisper} from './useWhisperYolo';
 import {useAxios} from "src/hooks/useAxios.ts";
-import {API} from "src/constants/api_routes.ts";
+import {API, PrefixedAPI} from "src/constants/api_routes.ts";
 import {useEffect, useState} from "react";
 import {Box, IconButton} from "@mui/material";
 import MicIcon from "@mui/icons-material/Mic";

@@ -17,7 +17,7 @@ export function useCardsImagesQuery() {
   const axios = useAxios();
 
   return useInfiniteQuery<Image[], unknown, Image[], [string]>({
-    queryKey: [API.cardsImages],
+    queryKey: [API.imagesCard],
     queryFn: async ({ queryKey: [url] }) => {
       const response = await axios.get<Paginated<Image[]>>(url);
       return response.data.results;
