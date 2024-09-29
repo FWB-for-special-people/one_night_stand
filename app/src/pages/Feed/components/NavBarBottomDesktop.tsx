@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React from 'react';
 import {List, ListItemIcon, ListItemText, AppBar, Toolbar, ListItemButton, IconButton} from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
@@ -49,7 +48,7 @@ const NavBarBottomDesktop: React.FC<NavBarBottomDesktopProps> = ({
       >
         <List sx={{width: '100%', gap: '2rem'}}>
           <ListItemButton sx={{justifyContent: isCollapsed ? 'center' : 'flex-start', padding: '0.5rem 0rem', height: "3rem"}}
-                          component="a" href="/">
+                          component={Link} to="/">
             <ListItemIcon sx={{minWidth: '3rem', justifyContent: 'center'}}>
               <HomeIcon sx={{color: 'white'}}/>
             </ListItemIcon>
@@ -57,7 +56,7 @@ const NavBarBottomDesktop: React.FC<NavBarBottomDesktopProps> = ({
           </ListItemButton>
 
           <ListItemButton sx={{justifyContent: isCollapsed ? 'center' : 'flex-start', padding: '0.5rem 0rem', height: "3rem"}}
-                          component="a" href="/categories">
+                          component={Link} to="/categories">
             <ListItemIcon sx={{minWidth: '3rem', justifyContent: 'center'}}>
               <CategoryIcon sx={{color: 'white'}}/>
             </ListItemIcon>
@@ -76,7 +75,7 @@ const NavBarBottomDesktop: React.FC<NavBarBottomDesktopProps> = ({
                     </ListItemButton>
 
           <ListItemButton sx={{justifyContent: isCollapsed ? 'center' : 'flex-start', padding: '0.5rem 0rem', height: "3rem"}}
-                          component="a" href="/my-profile">
+                          component={Link} to="/my-profile">
             <ListItemIcon sx={{minWidth: '3rem', justifyContent: 'center'}}>
               <AccountCircleIcon sx={{color: 'white'}}/>
             </ListItemIcon>
@@ -84,7 +83,7 @@ const NavBarBottomDesktop: React.FC<NavBarBottomDesktopProps> = ({
           </ListItemButton>
 
           <ListItemButton sx={{justifyContent: isCollapsed ? 'center' : 'flex-start', padding: '0.5rem 0rem', height: "3rem"}}
-                          component="a" href="/settings">
+                          component={Link} to="/settings">
             <ListItemIcon sx={{minWidth: '3rem', justifyContent: 'center'}}>
               <SettingsIcon sx={{color: 'white'}}/>
             </ListItemIcon>

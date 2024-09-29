@@ -82,27 +82,27 @@ export default function Login() {
                 >
                     Zaloguj
                 </Button>
-                <Button
-                    variant="contained"
-                    color="primary"
-                    fullWidth
-                    aria-label="Konto Gościa"
-                    disabled={fetching}
-                    onClick={async () => {
-                        try {
-                            setFetching(true)
-                            const response = await axios.post<TokenResponse>(PrefixedAPI.loginDemo)
-                            setAccessToken(response.data.access)
-                            navigate("/")
-                        } catch {
-                            console.error("Login failed")
-                        } finally {
-                            setFetching(false)
-                        }
-                    }}
-                >
-                    Konto Gościa
-                </Button>
+                {/*<Button*/}
+                {/*    variant="contained"*/}
+                {/*    color="primary"*/}
+                {/*    fullWidth*/}
+                {/*    aria-label="Konto Gościa"*/}
+                {/*    disabled={fetching}*/}
+                {/*    onClick={async () => {*/}
+                {/*        try {*/}
+                {/*            setFetching(true)*/}
+                {/*            const response = await axios.post<TokenResponse>(PrefixedAPI.loginDemo)*/}
+                {/*            setAccessToken(response.data.access)*/}
+                {/*            navigate("/")*/}
+                {/*        } catch {*/}
+                {/*            console.error("Login failed")*/}
+                {/*        } finally {*/}
+                {/*            setFetching(false)*/}
+                {/*        }*/}
+                {/*    }}*/}
+                {/*>*/}
+                {/*    Konto Gościa*/}
+                {/*</Button>*/}
             </Box>
         </Container>
     );

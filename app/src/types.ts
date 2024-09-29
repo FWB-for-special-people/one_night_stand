@@ -8,6 +8,7 @@ export type User = {
     full_name: string;
     bio: string;
     avatar: string;
+    preferences: string[];
 }
 export type Channel = {
     id: number;

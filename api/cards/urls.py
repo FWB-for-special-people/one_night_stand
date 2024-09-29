@@ -11,6 +11,7 @@ router.register(r"images", views.CardImageViewSet, basename="images")
 
 urlpatterns = [
     path("", include(router.urls)),
+    path("tags/", views.TagsView.as_view(), name="tags"),
     # path("recommend/", views.DataView.as_view(), name='recommend'),
     # path("collab/", views.CardRecommendationView.as_view(), name='collab'),
     # path("real/", views.RealDataRecommendationView.as_view(), name='real')

@@ -1,26 +1,29 @@
 export const API = {
-    cards: "/cards/",
-    imagesCard: "/cards/images/",
-    cardsContent: "/cards/content/",
-    cardLike: (cardId: number) => `/cards/${cardId}/like/`,
-    cardView: (cardId: number) => `/cards/${cardId}/view/`,
-    cardComments: (cardId: number) => `/cards/${cardId}/comments/`,
+  cards: "/cards/",
+  imagesCard: "/cards/images/",
+  cardsContent: "/cards/content/",
+  cardLike: (cardId: number) => `/cards/${cardId}/like/`,
+  cardView: (cardId: number) => `/cards/${cardId}/view/`,
+  cardComments: (cardId: number) => `/cards/${cardId}/comments`,
+  cardTags: "/cards/tags",
 
-    channels: "/channels/",
-    channelsFollow: (channelId: number) => `/channels/${channelId}/follow`,
-    channelsUnfollow: (channelId: number) => `/channels/${channelId}/unfollow`,
-    channelsFollowed: "/channels/followed/",
+  channels: "/channels/",
+  channelsFollow: (channelId: number) => `/channels/${channelId}/follow`,
+  channelsUnfollow: (channelId: number) => `/channels/${channelId}/unfollow`,
+  channelsFollowed: "/channels/followed/",
 
-    userFollow: (userId: number) => `/users/${userId}/follow/`,
-    userUnfollow: (userId: number) => `/users/${userId}/unfollow/`,
-    userFollowers: (userId: number) => `/users/${userId}/followers/`,
-    userFollowing: (userId: number) => `/users/${userId}/following/`,
+  user: "/users/",
+  userDetail: (userId: number) => `/users/${userId}/`,
+  userPreferences: "/users/preferences/",
+  userFollow: (userId: number) => `/users/${userId}/follow/`,
+  userUnfollow: (userId: number) => `/users/${userId}/unfollow/`,
+  userFollowers: (userId: number) => `/users/${userId}/followers/`,
+  userFollowing: (userId: number) => `/users/${userId}/following/`,
 }
 
 const BASE_URL = '/api/v1';
 
-export const PrefixedAPI = {
-    imagesCard: `${BASE_URL}/images/card`,
+export const PrefixedAPI = {imagesCard: `${BASE_URL}/images/card`,
   cardsContent: `${BASE_URL}/cards/content/`,
   cards: `${BASE_URL}/cards/`,
   login: `${BASE_URL}/token/`,
