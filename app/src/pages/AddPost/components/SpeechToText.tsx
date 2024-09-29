@@ -28,7 +28,7 @@ const SpeechToText: React.FC = ({setCallAPI, setText}) => {
     if (isSending && transcript.text) {
       const sendTranscript = async () => {
         try {
-          const response = await axiosInstance.post(API.cardContent, { theme: transcript.text });
+          const response = await axiosInstance.post(API.cardsContent, { theme: transcript.text });
           setCallAPI(true);
           setText(response.data.text)
         } catch (error) {
