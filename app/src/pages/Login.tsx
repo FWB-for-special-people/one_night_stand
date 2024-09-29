@@ -13,8 +13,8 @@ type TokenResponse = {
 }
 
 export default function Login() {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("")
+    const [email, setEmail] = useState("demo@azeno.it");
+    const [password, setPassword] = useState("demo@azeno.it")
     const [fetching, setFetching] = useState(false)
     const setAccessToken = useSetAtom(accessTokenAtom)
     const navigate = useNavigate();
@@ -82,27 +82,27 @@ export default function Login() {
                 >
                     Zaloguj
                 </Button>
-                {/*<Button*/}
-                {/*    variant="contained"*/}
-                {/*    color="primary"*/}
-                {/*    fullWidth*/}
-                {/*    aria-label="Konto Gościa"*/}
-                {/*    disabled={fetching}*/}
-                {/*    onClick={async () => {*/}
-                {/*        try {*/}
-                {/*            setFetching(true)*/}
-                {/*            const response = await axios.post<TokenResponse>(PrefixedAPI.loginDemo)*/}
-                {/*            setAccessToken(response.data.access)*/}
-                {/*            navigate("/")*/}
-                {/*        } catch {*/}
-                {/*            console.error("Login failed")*/}
-                {/*        } finally {*/}
-                {/*            setFetching(false)*/}
-                {/*        }*/}
-                {/*    }}*/}
-                {/*>*/}
-                {/*    Konto Gościa*/}
-                {/*</Button>*/}
+                <Button
+                    variant="contained"
+                    color="primary"
+                    fullWidth
+                    aria-label="Konto Gościa"
+                    disabled={fetching}
+                    onClick={async () => {
+                        try {
+                            setFetching(true)
+                            const response = await axios.post<TokenResponse>(PrefixedAPI.loginDemo)
+                            setAccessToken(response.data.access)
+                            navigate("/")
+                        } catch {
+                            console.error("Login failed")
+                        } finally {
+                            setFetching(false)
+                        }
+                    }}
+                >
+                    Konto Gościa
+                </Button>
             </Box>
         </Container>
     );

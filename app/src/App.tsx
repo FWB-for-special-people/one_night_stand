@@ -1,7 +1,6 @@
 import {ErrorBoundary} from 'react-error-boundary';
 import {Outlet, RouterProvider} from 'react-router-dom';
 import { CssBaseline, ThemeProvider } from '@mui/material';
-// import Login from 'src/pages/Login.tsx';
 import {QueryClient, QueryClientProvider} from 'react-query';
 import {router} from 'src/router';
 import { useAtom } from 'jotai';
