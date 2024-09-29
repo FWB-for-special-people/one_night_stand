@@ -1,0 +1,2591 @@
+[
+  {
+    "model": "cards.card",
+    "pk": 1,
+    "fields": {
+      "text": "Uwaga, uwaga! Za tydzień wszyscy będą mieć przymusowe wolne - możliwość zarabiania pieniędzy zostanie wstrzymana! Przygotujcie się i zadbajcie o swoje finanse już teraz. ♥️",
+      "difficulty": "beginner",
+      "expected_time": 20,
+      "created_by": 10,
+      "created_at": "2024-09-29T00:08:25.271Z",
+      "tags": [
+        103,
+        104
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 2,
+    "fields": {
+      "text": "Pamiętaj, aby dziś pić więcej wody! Nawodnienie to klucz do zdrowego ciała i umysłu. 🥤",
+      "difficulty": "beginner",
+      "expected_time": 5,
+      "created_by": 12,
+      "created_at": "2024-09-29T10:15:30.271Z",
+      "tags": [
+        4,
+        10,
+        22
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 3,
+    "fields": {
+      "text": "Masz już plan na przyszły tydzień? Sprawdź kalendarz i uporządkuj swoje zadania, aby uniknąć stresu. 🗓️",
+      "difficulty": "intermediate",
+      "expected_time": 15,
+      "created_by": 14,
+      "created_at": "2024-09-28T22:35:00Z",
+      "tags": [
+        4,
+        10,
+        22
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 4,
+    "fields": {
+      "text": "Nie zapomnij o ruchu! Nawet krótki spacer może poprawić Twoje samopoczucie i dodać energii na resztę dnia. 🚶",
+      "difficulty": "beginner",
+      "expected_time": 10,
+      "created_by": 15,
+      "created_at": "2024-09-29T11:45:00Z",
+      "tags": [
+        103,
+        107
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 5,
+    "fields": {
+      "text": "Czy wiesz, że codzienna medytacja może poprawić koncentrację i obniżyć poziom stresu? Spróbuj już dziś! 🧘",
+      "difficulty": "beginner",
+      "expected_time": 10,
+      "created_by": 11,
+      "created_at": "2024-09-28T18:00:00Z",
+      "tags": [
+        4,
+        10,
+        22
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 6,
+    "fields": {
+      "text": "Czas na małą przerwę! Zrób sobie 5 minut dla siebie i złap oddech. Odpoczynek to podstawa produktywności. 🌿",
+      "difficulty": "beginner",
+      "expected_time": 5,
+      "created_by": 13,
+      "created_at": "2024-09-29T08:00:00Z",
+      "tags": [
+        4,
+        10,
+        22
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 7,
+    "fields": {
+      "text": "Zaplanuj posiłki na cały tydzień! To oszczędność czasu, pieniędzy i dbanie o zdrowie. 🍽️",
+      "difficulty": "intermediate",
+      "expected_time": 30,
+      "created_by": 16,
+      "created_at": "2024-09-28T20:45:00Z",
+      "tags": [
+        4,
+        10,
+        22
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 8,
+    "fields": {
+      "text": "Twój dzień zaczyna się od energii! Zadbaj o zdrowe śniadanie i dobry początek każdego poranka. 🍳",
+      "difficulty": "beginner",
+      "expected_time": 10,
+      "created_by": 14,
+      "created_at": "2024-09-29T07:15:00Z",
+      "tags": [
+        4,
+        10,
+        22
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 9,
+    "fields": {
+      "text": "Masz zaległe zadania? Podziel je na mniejsze kroki, aby szybciej je zrealizować. 📋",
+      "difficulty": "intermediate",
+      "expected_time": 25,
+      "created_by": 12,
+      "created_at": "2024-09-28T16:30:00Z",
+      "tags": [
+        4,
+        10,
+        22
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 10,
+    "fields": {
+      "text": "Znajdź czas na hobby! Rozwój osobisty zaczyna się od pasji, które dodają radości i energii. 🎨",
+      "difficulty": "intermediate",
+      "expected_time": 20,
+      "created_by": 15,
+      "created_at": "2024-09-29T12:00:00Z",
+      "tags": [
+        4,
+        10,
+        22
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 11,
+    "fields": {
+      "text": "Nocny odpoczynek to klucz do sukcesu! Staraj się spać minimum 7-8 godzin dziennie, aby regenerować organizm. 🌙",
+      "difficulty": "beginner",
+      "expected_time": 5,
+      "created_by": 13,
+      "created_at": "2024-09-28T21:00:00Z",
+      "tags": [
+        4,
+        10,
+        22
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 12,
+    "fields": {
+      "text": "Hej, Pythonowiczu! Chcesz się nauczyć jak napisać funkcję w Pythonie? To proste! Zaczynasz od słówka \\'def\\', potem nazwa funkcji, nawiasy i dwukropek. Wewnątrz bloku kodu piszesz co funkcja ma robić. Prosty przykład? \\\\ndef przywitaj(swiat):\\\\n    print(\\'Cześć, \\' + swiat + \\'!\\')\\\\nPrzepisz to, wywołaj funkcję i gotowe! Pythonowe czary-mary na wyciągnięcie ręki!",
+      "difficulty": "beginner",
+      "expected_time": 45,
+      "created_by": 10,
+      "created_at": "2024-09-29T00:29:49.142Z",
+      "tags": [
+        8,
+        16,
+        21
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 26,
+    "fields": {
+      "text": "Dobrze jest zaczynać dzień od planowania. Oto kod do funkcji w Pythonie: \\\\ndef planuj_dzien(task):\\\\n    print(\\'Dziś musisz: \\' + task)\\\\nSpróbuj napisać własne zadania i je zaplanować.",
+      "difficulty": "beginner",
+      "expected_time": 20,
+      "created_by": 11,
+      "created_at": "2024-09-30T08:00:00Z",
+      "tags": [
+        4,
+        10,
+        22
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 27,
+    "fields": {
+      "text": "Czy próbowałeś już tworzyć własne funkcje w Pythonie? Oto przykład: \\\\ndef oblicz_obwod_kola(radius):\\\\n    return 2 * 3.14 * radius\\\\nWypróbuj to i baw się dobrze!",
+      "difficulty": "beginner",
+      "expected_time": 15,
+      "created_by": 12,
+      "created_at": "2024-09-30T09:00:00Z",
+      "tags": [
+        8,
+        108
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 28,
+    "fields": {
+      "text": "Funkcje mogą też zwracać wartości. Przykład: \\\\ndef pole_kwadratu(bok):\\\\n    return bok * bok\\\\nStwórz własne funkcje i zobacz jak to działa.",
+      "difficulty": "beginner",
+      "expected_time": 20,
+      "created_by": 13,
+      "created_at": "2024-09-30T10:00:00Z",
+      "tags": [
+        8,
+        21
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 29,
+    "fields": {
+      "text": "Jesień to dobry czas na naukę nowych rzeczy. Napisz funkcję w Pythonie: \\\\ndef oblicz_temp_fahr(celsius):\\\\n    return (celsius * 9/5) + 32\\\\nWypróbuj ją na swoich przykładach!",
+      "difficulty": "beginner",
+      "expected_time": 25,
+      "created_by": 14,
+      "created_at": "2024-09-30T11:00:00Z",
+      "tags": [
+        16,
+        21
+      ]
+    }
+  },
+  
+  {
+    "model": "cards.card",
+    "pk": 30,
+    "fields": {
+      "text": "Czy wiesz jak zdefiniować funkcję w Pythonie? Spróbuj tego: \\\\ndef dodaj_trzy_liczby(a, b, c):\\\\n    return a + b + c\\\\nNapisz swoje funkcje i zobacz jak to działa.",
+      "difficulty": "beginner",
+      "expected_time": 30,
+      "created_by": 15,
+      "created_at": "2024-09-30T12:00:00Z",
+      "tags": [
+        16,
+        108
+      ]
+    }
+  },  
+  {
+    "model": "cards.card",
+    "pk": 13,
+    "fields": {
+      "text": "Python jest prosty, ale potężny! Zacznij od słówka \\'def\\', aby zdefiniować funkcję. Przykład: \\\\ndef dodaj(a, b):\\\\n    return a + b\\\\nProste? Teraz stwórz własną funkcję!",
+      "difficulty": "beginner",
+      "expected_time": 30,
+      "created_by": 11,
+      "created_at": "2024-09-29T00:31:49.142Z",
+      "tags": [
+        8,
+        16,
+        24
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 14,
+    "fields": {
+      "text": "Funkcje w Pythonie pomagają organizować kod. Spróbuj tego: \\\\ndef przywitaj():\\\\n    print(\\'Cześć, Pythonowcu!\\')\\\\nPisz swoje funkcje i ułatwiaj sobie życie z Pythonem!",
+      "difficulty": "beginner",
+      "expected_time": 35,
+      "created_by": 12,
+      "created_at": "2024-09-29T00:32:49.142Z",
+      "tags": [
+        8,
+        88
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 15,
+    "fields": {
+      "text": "Python ma bardzo czytelną składnię. Użyj funkcji, by ponownie używać kodu: \\\\ndef kwadrat(liczba):\\\\n    return liczba * liczba\\\\nWypróbuj to na swoim kodzie!",
+      "difficulty": "beginner",
+      "expected_time": 40,
+      "created_by": 10,
+      "created_at": "2024-09-29T00:33:49.142Z",
+      "tags": [
+        16,
+        21,
+        108
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 16,
+    "fields": {
+      "text": "Chcesz powtórzyć kod wielokrotnie? Użyj funkcji w Pythonie. Przykład: \\\\ndef powiedz_czesc(imie):\\\\n    print(\\'Cześć, \\', imie)\\\\nZdefiniuj swoje funkcje!",
+      "difficulty": "beginner",
+      "expected_time": 25,
+      "created_by": 11,
+      "created_at": "2024-09-29T00:34:49.142Z",
+      "tags": [
+        16,
+        21,
+        108
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 17,
+    "fields": {
+      "text": "Tworzenie funkcji to pierwszy krok do efektywnego programowania. Oto przykład: \\\\ndef pomnoz(a, b):\\\\n    return a * b\\\\nSpróbuj teraz stworzyć własne funkcje!",
+      "difficulty": "beginner",
+      "expected_time": 50,
+      "created_by": 12,
+      "created_at": "2024-09-29T00:35:49.142Z",
+      "tags": [
+        8,
+        21,
+        108
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 18,
+    "fields": {
+      "text": "Zacznij od tworzenia funkcji, by ułatwić sobie pracę. Przykład: \\\\ndef odejmij(a, b):\\\\n    return a - b\\\\nStwórz kolejne funkcje!",
+      "difficulty": "beginner",
+      "expected_time": 30,
+      "created_by": 10,
+      "created_at": "2024-09-29T00:36:49.142Z",
+      "tags": [
+        8,
+        16
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 19,
+    "fields": {
+      "text": "Tworzenie funkcji w Pythonie jest kluczowe! Przykład: \\\\ndef powiel(tekst, n):\\\\n    return tekst * n\\\\nWypróbuj funkcję na przykładach.",
+      "difficulty": "beginner",
+      "expected_time": 45,
+      "created_by": 11,
+      "created_at": "2024-09-29T00:37:49.142Z",
+      "tags": [
+        21,
+        108
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 20,
+    "fields": {
+      "text": "Dzięki funkcjom w Pythonie możesz wielokrotnie używać tego samego kodu. Spójrz na to: \\\\ndef pozegnaj(imie):\\\\n    print(\\'Do zobaczenia, \\', imie)\\\\nTwórz własne funkcje i baw się dobrze!",
+      "difficulty": "beginner",
+      "expected_time": 40,
+      "created_by": 12,
+      "created_at": "2024-09-29T00:38:49.142Z",
+      "tags": [
+        8,
+        108
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 21,
+    "fields": {
+      "text": "Funkcje są jak magiczne pudełka kodu. Oto prosty przykład: \\\\ndef podziel(a, b):\\\\n    return a / b\\\\nNapisz swoje funkcje i sprawdź jak to działa.",
+      "difficulty": "beginner",
+      "expected_time": 35,
+      "created_by": 10,
+      "created_at": "2024-09-29T00:39:49.142Z",
+      "tags": [
+        8,
+        21,
+        108
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 22,
+    "fields": {
+      "text": "Nie wiesz jak zacząć? Użyj funkcji w Pythonie: \\\\ndef kwadratowa(x):\\\\n    return x ** 2\\\\nProsty przykład, który pomoże ci zrozumieć jak działają funkcje.",
+      "difficulty": "beginner",
+      "expected_time": 30,
+      "created_by": 11,
+      "created_at": "2024-09-29T00:40:49.142Z",
+      "tags": [
+        8,
+        16
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 23,
+    "fields": {
+      "text": "Organizuj swój kod dzięki funkcjom. Przykład: \\\\ndef pozdrow(imie):\\\\n    print(\\'Cześć, \\', imie)\\\\nNapisz funkcje i używaj ich wielokrotnie.",
+      "difficulty": "beginner",
+      "expected_time": 25,
+      "created_by": 12,
+      "created_at": "2024-09-29T00:41:49.142Z",
+      "tags": [
+        21,
+        108
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 24,
+    "fields": {
+      "text": "Funkcje to sposób na ponowne użycie kodu w Pythonie. Przykład: \\\\ndef mnozenie(a, b):\\\\n    return a * b\\\\nTwórz swoje funkcje i ułatwiaj sobie życie.",
+      "difficulty": "beginner",
+      "expected_time": 40,
+      "created_by": 10,
+      "created_at": "2024-09-29T00:42:49.142Z",
+      "tags": [
+        8,
+        108
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 25,
+    "fields": {
+      "text": "Nauka funkcji w Pythonie to kluczowy krok w programowaniu. Przykład: \\\\ndef dodaj_3(a, b, c):\\\\n    return a + b + c\\\\nStwórz funkcję i ciesz się programowaniem!",
+      "difficulty": "beginner",
+      "expected_time": 50,
+      "created_by": 11,
+      "created_at": "2024-09-29T00:43:49.142Z",
+      "tags": [
+        21,
+        108
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 26,
+    "fields": {
+      "text": "Funkcje w Pythonie ułatwiają życie programistom. Przykład: def powiedz_czesc(): print('Cześć!')",
+      "difficulty": "beginner",
+      "expected_time": 20,
+      "created_by": 10,
+      "created_at": "2024-09-29T00:44:49.142Z",
+      "tags": [
+        8,
+        21
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 27,
+    "fields": {
+      "text": "Używaj funkcji, by efektywnie zarządzać kodem w Pythonie. Przykład: def suma(a, b): return a + b",
+      "difficulty": "beginner",
+      "expected_time": 45,
+      "created_by": 12,
+      "created_at": "2024-09-29T00:45:49.142Z",
+      "tags": [
+        8,
+        108
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 28,
+    "fields": {
+      "text": "Poznaj podstawy pisania funkcji w Pythonie. Przykład: def roznica(a, b): return a - b",
+      "difficulty": "beginner",
+      "expected_time": 30,
+      "created_by": 11,
+      "created_at": "2024-09-29T00:46:49.142Z",
+      "tags": [
+        21,
+        108,
+        8
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 29,
+    "fields": {
+      "text": "Twórz efektywne funkcje w Pythonie. Przykład: def dzielenie(a, b): return a / b",
+      "difficulty": "beginner",
+      "expected_time": 35,
+      "created_by": 10,
+      "created_at": "2024-09-29T00:47:49.142Z",
+      "tags": [
+        8,
+        16
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 30,
+    "fields": {
+      "text": "Naucz się korzystać z funkcji w Pythonie. Przykład: def przgotuj_herbate(): print('Herbata gotowa!')",
+      "difficulty": "beginner",
+      "expected_time": 40,
+      "created_by": 11,
+      "created_at": "2024-09-29T00:48:49.142Z",
+      "tags": [
+        21,
+        108
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 34,
+    "fields": {
+      "text": "Naucz się piec pyszne ciasto.",
+      "difficulty": "beginner",
+      "expected_time": 60,
+      "created_by": 10,
+      "created_at": "2024-09-30T00:00:00.000Z",
+      "tags": [
+        5
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 35,
+    "fields": {
+      "text": "Odkryj piękne krajobrazy Islandii.",
+      "difficulty": "beginner",
+      "expected_time": 120,
+      "created_by": 12,
+      "created_at": "2024-09-30T01:00:00.000Z",
+      "tags": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 36,
+    "fields": {
+      "text": "Wprowadzenie do podstawowych technik fotografii.",
+      "difficulty": "intermediate",
+      "expected_time": 90,
+      "created_by": 14,
+      "created_at": "2024-09-30T02:00:00.000Z",
+      "tags": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 37,
+    "fields": {
+      "text": "Ćwiczenia jogi dla początkujących.",
+      "difficulty": "beginner",
+      "expected_time": 30,
+      "created_by": 11,
+      "created_at": "2024-09-30T03:00:00.000Z",
+      "tags": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 38,
+    "fields": {
+      "text": "Wskazówki i przepisy na gotowanie dla smakoszy.",
+      "difficulty": "advanced",
+      "expected_time": 90,
+      "created_by": 13,
+      "created_at": "2024-09-30T04:00:00.000Z",
+      "tags": [
+        5
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 39,
+    "fields": {
+      "text": "Top 10 książek, które warto przeczytać tego lata.",
+      "difficulty": "beginner",
+      "expected_time": 60,
+      "created_by": 10,
+      "created_at": "2024-09-30T05:00:00.000Z",
+      "tags": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 40,
+    "fields": {
+      "text": "Szlaki turystyczne w Górach Skalistych.",
+      "difficulty": "intermediate",
+      "expected_time": 120,
+      "created_by": 12,
+      "created_at": "2024-09-30T06:00:00.000Z",
+      "tags": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 41,
+    "fields": {
+      "text": "Trendy modowe na nadchodzący sezon.",
+      "difficulty": "beginner",
+      "expected_time": 45,
+      "created_by": 14,
+      "created_at": "2024-09-30T07:00:00.000Z",
+      "tags": [
+        7
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 42,
+    "fields": {
+      "text": "Ćwiczenia cardio, aby pozostać w formie.",
+      "difficulty": "intermediate",
+      "expected_time": 60,
+      "created_by": 11,
+      "created_at": "2024-09-30T08:00:00.000Z",
+      "tags": [
+        6
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 43,
+    "fields": {
+      "text": "Techniki medytacji redukujące stres.",
+      "difficulty": "beginner",
+      "expected_time": 30,
+      "created_by": 13,
+      "created_at": "2024-09-30T09:00:00.000Z",
+      "tags": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 44,
+    "fields": {
+      "text": "Naucz się robić na drutach i tworzyć własne ubrania.",
+      "difficulty": "advanced",
+      "expected_time": 120,
+      "created_by": 10,
+      "created_at": "2024-09-30T10:00:00.000Z",
+      "tags": [
+        7
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 45,
+    "fields": {
+      "text": "Przewodnik po degustacji wina.",
+      "difficulty": "intermediate",
+      "expected_time": 60,
+      "created_by": 12,
+      "created_at": "2024-09-30T11:00:00.000Z",
+      "tags": [
+        5
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 46,
+    "fields": {
+      "text": "Poznaj historię starożytnego Rzymu.",
+      "difficulty": "intermediate",
+      "expected_time": 90,
+      "created_by": 14,
+      "created_at": "2024-09-30T12:00:00.000Z",
+      "tags": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 47,
+    "fields": {
+      "text": "Wskazówki dotyczące uprawy skutecznego warzywniaka.",
+      "difficulty": "beginner",
+      "expected_time": 60,
+      "created_by": 11,
+      "created_at": "2024-09-30T13:00:00.000Z",
+      "tags": [
+        5
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 48,
+    "fields": {
+      "text": "Podstawowe techniki pierwszej pomocy, które każdy powinien znać.",
+      "difficulty": "beginner",
+      "expected_time": 45,
+      "created_by": 13,
+      "created_at": "2024-09-30T14:00:00.000Z",
+      "tags": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 49,
+    "fields": {
+      "text": "Zrozumienie zasad współczesnej sztuki.",
+      "difficulty": "advanced",
+      "expected_time": 90,
+      "created_by": 10,
+      "created_at": "2024-09-30T15:00:00.000Z",
+      "tags": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 50,
+    "fields": {
+      "text": "Najlepsze miejsca na wakacje letnie.",
+      "difficulty": "beginner",
+      "expected_time": 120,
+      "created_by": 12,
+      "created_at": "2024-09-30T16:00:00.000Z",
+      "tags": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 51,
+    "fields": {
+      "text": "Jak trenować do maratonu.",
+      "difficulty": "intermediate",
+      "expected_time": 180,
+      "created_by": 14,
+      "created_at": "2024-09-30T17:00:00.000Z",
+      "tags": [
+        6
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 52,
+    "fields": {
+      "text": "Poznaj architekturę Paryża.",
+      "difficulty": "beginner",
+      "expected_time": 90,
+      "created_by": 11,
+      "created_at": "2024-09-30T18:00:00.000Z",
+      "tags": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 53,
+    "fields": {
+      "text": "Proste przepisy na zdrowe koktajle na śniadanie.",
+      "difficulty": "beginner",
+      "expected_time": 30,
+      "created_by": 13,
+      "created_at": "2024-09-30T19:00:00.000Z",
+      "tags": [
+        5
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 54,
+    "fields": {
+      "text": "Zrozumienie podstaw inwestowania.",
+      "difficulty": "intermediate",
+      "expected_time": 120,
+      "created_by": 10,
+      "created_at": "2024-09-30T20:00:00.000Z",
+      "tags": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 55,
+    "fields": {
+      "text": "Projektowanie wymarzonego domu na budżet.",
+      "difficulty": "beginner",
+      "expected_time": 90,
+      "created_by": 12,
+      "created_at": "2024-09-30T21:00:00.000Z",
+      "tags": [
+        5
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 56,
+    "fields": {
+      "text": "Sztuka robienia perfekcyjnego sushi.",
+      "difficulty": "advanced",
+      "expected_time": 120,
+      "created_by": 14,
+      "created_at": "2024-09-30T22:00:00.000Z",
+      "tags": [
+        5
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 57,
+    "fields": {
+      "text": "Techniki rzeźby dla początkujących.",
+      "difficulty": "beginner",
+      "expected_time": 90,
+      "created_by": 11,
+      "created_at": "2024-09-30T23:00:00.000Z",
+      "tags": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 58,
+    "fields": {
+      "text": "Odkrywanie życia nocnego w Tokio.",
+      "difficulty": "intermediate",
+      "expected_time": 120,
+      "created_by": 13,
+      "created_at": "2024-10-01T00:00:00.000Z",
+      "tags": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 59,
+    "fields": {
+      "text": "Naucz się tańczyć salsę.",
+      "difficulty": "beginner",
+      "expected_time": 45,
+      "created_by": 10,
+      "created_at": "2024-10-01T01:00:00.000Z",
+      "tags": [
+        6
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 60,
+    "fields": {
+      "text": "Podróż przez winnice Toskanii.",
+      "difficulty": "advanced",
+      "expected_time": 180,
+      "created_by": 12,
+      "created_at": "2024-10-01T02:00:00.000Z",
+      "tags": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 61,
+    "fields": {
+      "text": "DIY Projekty ulepszające dom.",
+      "difficulty": "intermediate",
+      "expected_time": 90,
+      "created_by": 14,
+      "created_at": "2024-10-01T03:00:00.000Z",
+      "tags": [
+        5
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 62,
+    "fields": {
+      "text": "Top 10 albumów jazzowych do posłuchania.",
+      "difficulty": "beginner",
+      "expected_time": 60,
+      "created_by": 11,
+      "created_at": "2024-10-01T04:00:00.000Z",
+      "tags": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 63,
+    "fields": {
+      "text": "Odkrywanie raf koralowych Australii.",
+      "difficulty": "intermediate",
+      "expected_time": 120,
+      "created_by": 13,
+      "created_at": "2024-10-01T05:00:00.000Z",
+      "tags": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 64,
+    "fields": {
+      "text": "Ćwiczenia mindfulness dla wewnętrznego spokoju.",
+      "difficulty": "beginner",
+      "expected_time": 30,
+      "created_by": 10,
+      "created_at": "2024-10-01T06:00:00.000Z",
+      "tags": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 65,
+    "fields": {
+      "text": "Jak zbudować budkę dla ptaków.",
+      "difficulty": "beginner",
+      "expected_time": 60,
+      "created_by": 12,
+      "created_at": "2024-10-01T07:00:00.000Z",
+      "tags": [
+        5
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 66,
+    "fields": {
+      "text": "Odkrywanie świątyń w Kioto.",
+      "difficulty": "intermediate",
+      "expected_time": 120,
+      "created_by": 14,
+      "created_at": "2024-10-01T08:00:00.000Z",
+      "tags": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 67,
+    "fields": {
+      "text": "Niezbędny sprzęt do pieszych wędrówek dla początkujących.",
+      "difficulty": "beginner",
+      "expected_time": 45,
+      "created_by": 11,
+      "created_at": "2024-10-01T09:00:00.000Z",
+      "tags": [
+        6
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 68,
+    "fields": {
+      "text": "Techniki malowania krajobrazów.",
+      "difficulty": "intermediate",
+      "expected_time": 90,
+      "created_by": 13,
+      "created_at": "2024-10-01T10:00:00.000Z",
+      "tags": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 69,
+    "fields": {
+      "text": "Naucz się grać na gitarze.",
+      "difficulty": "beginner",
+      "expected_time": 60,
+      "created_by": 10,
+      "created_at": "2024-10-01T11:00:00.000Z",
+      "tags": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 70,
+    "fields": {
+      "text": "Podstawowe techniki szycia dla początkujących.",
+      "difficulty": "beginner",
+      "expected_time": 60,
+      "created_by": 12,
+      "created_at": "2024-10-01T12:00:00.000Z",
+      "tags": [
+        7
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 71,
+    "fields": {
+      "text": "Odkrywanie dzikiej przyrody Afryki.",
+      "difficulty": "intermediate",
+      "expected_time": 120,
+      "created_by": 14,
+      "created_at": "2024-10-01T13:00:00.000Z",
+      "tags": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 72,
+    "fields": {
+      "text": "Pomysły na zdrowe przygotowywanie posiłków.",
+      "difficulty": "beginner",
+      "expected_time": 60,
+      "created_by": 11,
+      "created_at": "2024-10-01T14:00:00.000Z",
+      "tags": [
+        5
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 73,
+    "fields": {
+      "text": "Ćwiczenia Pilates na wzmocnienie mięśni brzucha.",
+      "difficulty": "beginner",
+      "expected_time": 45,
+      "created_by": 13,
+      "created_at": "2024-10-01T15:00:00.000Z",
+      "tags": [
+        6
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 31,
+    "fields": {
+      "text": "Funkcje lambda w Pythonie to sposób na pisanie krótkich funkcji. Przykład: dodaj = lambda x, y: x + y",
+      "difficulty": "intermediate",
+      "expected_time": 30,
+      "created_by": 13,
+      "created_at": "2024-09-29T00:49:49.142Z",
+      "tags": [
+        21,
+        108
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 32,
+    "fields": {
+      "text": "Zagnieżdżone funkcje mogą być bardzo przydatne. Przykład: def zewnetrzna(x): def wewnetrzna(y): return x + y return wewnetrzna",
+      "difficulty": "intermediate",
+      "expected_time": 45,
+      "created_by": 14,
+      "created_at": "2024-09-29T00:50:49.142Z",
+      "tags": [
+        8,
+        16,
+        21
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 33,
+    "fields": {
+      "text": "Poznaj domknięcia w Pythonie. Przykład: def make_multiplier(n): return lambda x: x * n",
+      "difficulty": "advanced",
+      "expected_time": 60,
+      "created_by": 15,
+      "created_at": "2024-09-29T00:51:49.142Z",
+      "tags": [
+        108,
+        8
+      ]
+    }
+  },
+
+  {
+    "model": "cards.card",
+    "pk": 63,
+    "fields": {
+      "text": "Techniki skutecznego kodowania w Pythonie.",
+      "difficulty": "intermediate",
+      "expected_time": 90,
+      "created_by": 14,
+      "created_at": "2024-09-30T10:00:00.000Z",
+      "tags": [
+        8,
+        21
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 64,
+    "fields": {
+      "text": "Porady na temat robienia zdjęć przyrody.",
+      "difficulty": "beginner",
+      "expected_time": 120,
+      "created_by": 10,
+      "created_at": "2024-10-02T09:00:00.000Z",
+      "tags": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 65,
+    "fields": {
+      "text": "Planowanie zrównoważonych posiłków.",
+      "difficulty": "beginner",
+      "expected_time": 75,
+      "created_by": 11,
+      "created_at": "2024-10-03T08:00:00.000Z",
+      "tags": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 66,
+    "fields": {
+      "text": "Ćwiczenia na poprawę wytrzymałości.",
+      "difficulty": "advanced",
+      "expected_time": 60,
+      "created_by": 12,
+      "created_at": "2024-10-03T18:00:00.000Z",
+      "tags": [
+        6,
+        10
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 67,
+    "fields": {
+      "text": "Poradnik jak zacząć przygodę z motoryzacją.",
+      "difficulty": "beginner",
+      "expected_time": 30,
+      "created_by": 13,
+      "created_at": "2024-10-04T07:00:00.000Z",
+      "tags": [
+        12
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 68,
+    "fields": {
+      "text": "Techniki zastosowania domknięć w Pythonie.",
+      "difficulty": "advanced",
+      "expected_time": 45,
+      "created_by": 15,
+      "created_at": "2024-10-04T16:00:00.000Z",
+      "tags": [
+        8,
+        21
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 69,
+    "fields": {
+      "text": "Nauka gry na gitarze.",
+      "difficulty": "beginner",
+      "expected_time": 120,
+      "created_by": 14,
+      "created_at": "2024-10-05T15:00:00.000Z",
+      "tags": [
+        9
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 70,
+    "fields": {
+      "text": "Odkrywanie ekologicznych alternatyw.",
+      "difficulty": "intermediate",
+      "expected_time": 90,
+      "created_by": 13,
+      "created_at": "2024-10-05T19:00:00.000Z",
+      "tags": [
+        13
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 71,
+    "fields": {
+      "text": "Podstawy fotografii cyfrowej.",
+      "difficulty": "beginner",
+      "expected_time": 60,
+      "created_by": 11,
+      "created_at": "2024-10-06T14:00:00.000Z",
+      "tags": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 72,
+    "fields": {
+      "text": "Planowanie wyjazdu do egzotycznych krajów.",
+      "difficulty": "intermediate",
+      "expected_time": 120,
+      "created_by": 12,
+      "created_at": "2024-10-07T06:00:00.000Z",
+      "tags": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 73,
+    "fields": {
+      "text": "Szybkie i zdrowe przepisy na kolacje.",
+      "difficulty": "beginner",
+      "expected_time": 15,
+      "created_by": 12,
+      "created_at": "2024-10-07T20:00:00.000Z",
+      "tags": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 74,
+    "fields": {
+      "text": "Jak zaplanować swój trening siłowy.",
+      "difficulty": "intermediate",
+      "expected_time": 90,
+      "created_by": 15,
+      "created_at": "2024-10-08T17:00:00.000Z",
+      "tags": [
+        10,
+        6
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 75,
+    "fields": {
+      "text": "Zasady jazdy defensywnej.",
+      "difficulty": "advanced",
+      "expected_time": 120,
+      "created_by": 13,
+      "created_at": "2024-10-08T12:00:00.000Z",
+      "tags": [
+        12
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 76,
+    "fields": {
+      "text": "Sztuka szycia własnych ubrań.",
+      "difficulty": "beginner",
+      "expected_time": 180,
+      "created_by": 14,
+      "created_at": "2024-10-09T09:00:00.000Z",
+      "tags": [
+        7
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 77,
+    "fields": {
+      "text": "Zastosowanie rekursji w programowaniu.",
+      "difficulty": "advanced",
+      "expected_time": 60,
+      "created_by": 15,
+      "created_at": "2024-10-09T19:00:00.000Z",
+      "tags": [
+        21
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 78,
+    "fields": {
+      "text": "Jak zacząć trening z kettlebell.",
+      "difficulty": "intermediate",
+      "expected_time": 45,
+      "created_by": 11,
+      "created_at": "2024-10-10T06:00:00.000Z",
+      "tags": [
+        10,
+        6
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 79,
+    "fields": {
+      "text": "Skuteczne techniki zarządzania czasem.",
+      "difficulty": "intermediate",
+      "expected_time": 30,
+      "created_by": 12,
+      "created_at": "2024-10-10T12:00:00.000Z",
+      "tags": [
+        21
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 80,
+    "fields": {
+      "text": "Zastosowanie uczenia maszynowego.",
+      "difficulty": "advanced",
+      "expected_time": 120,
+      "created_by": 13,
+      "created_at": "2024-10-10T22:00:00.000Z",
+      "tags": [
+        8
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 81,
+    "fields": {
+      "text": "Zastosowania muzyki w terapii.",
+      "difficulty": "beginner",
+      "expected_time": 60,
+      "created_by": 11,
+      "created_at": "2024-10-11T08:00:00.000Z",
+      "tags": [
+        9
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 82,
+    "fields": {
+      "text": "Programowanie obiektowe w Pythonie.",
+      "difficulty": "intermediate",
+      "expected_time": 90,
+      "created_by": 12,
+      "created_at": "2024-10-11T14:00:00.000Z",
+      "tags": [
+        108
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 83,
+    "fields": {
+      "text": "Plany żywienia w sporcie.",
+      "difficulty": "advanced",
+      "expected_time": 60,
+      "created_by": 15,
+      "created_at": "2024-10-12T10:00:00.000Z",
+      "tags": [
+        4,
+        10
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 84,
+    "fields": {
+      "text": "Zasady komponowania warstwowe zdjęcia.",
+      "difficulty": "beginner",
+      "expected_time": 30,
+      "created_by": 10,
+      "created_at": "2024-10-12T16:00:00.000Z",
+      "tags": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 85,
+    "fields": {
+      "text": "Podstawowe techniki biegowe.",
+      "difficulty": "beginner",
+      "expected_time": 45,
+      "created_by": 13,
+      "created_at": "2024-10-13T12:00:00.000Z",
+      "tags": [
+        10
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 86,
+    "fields": {
+      "text": "Planowanie podróży po Europie.",
+      "difficulty": "intermediate",
+      "expected_time": 120,
+      "created_by": 14,
+      "created_at": "2024-10-14T06:00:00.000Z",
+      "tags": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 87,
+    "fields": {
+      "text": "Bezpieczna codzienna jazda na rowerze.",
+      "difficulty": "beginner",
+      "expected_time": 30,
+      "created_by": 13,
+      "created_at": "2024-10-14T12:00:00.000Z",
+      "tags": [
+        12
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 88,
+    "fields": {
+      "text": "Filmy edukacyjne dostępne online.",
+      "difficulty": "beginner",
+      "expected_time": 60,
+      "created_by": 12,
+      "created_at": "2024-10-14T16:00:00.000Z",
+      "tags": [
+        11
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 89,
+    "fields": {
+      "text": "Nowoczesne technologie w rolnictwie.",
+      "difficulty": "intermediate",
+      "expected_time": 90,
+      "created_by": 11,
+      "created_at": "2024-10-15T10:00:00.000Z",
+      "tags": [
+        8,
+        13
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 90,
+    "fields": {
+      "text": "Wspieranie lokalnych ekosystemów.",
+      "difficulty": "advanced",
+      "expected_time": 45,
+      "created_by": 10,
+      "created_at": "2024-10-15T16:00:00.000Z",
+      "tags": [
+        13
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 91,
+    "fields": {
+      "text": "Sztuka abstrakcyjna i jej znaczenie.",
+      "difficulty": "advanced",
+      "expected_time": 120,
+      "created_by": 11,
+      "created_at": "2024-10-16T08:00:00.000Z",
+      "tags": [
+        14
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 92,
+    "fields": {
+      "text": "Odkrywanie skarbów kultury Włoch.",
+      "difficulty": "intermediate",
+      "expected_time": 90,
+      "created_by": 12,
+      "created_at": "2024-10-16T12:00:00.000Z",
+      "tags": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 93,
+    "fields": {
+      "text": "Wpływ muzyki na nastrój człowieka.",
+      "difficulty": "beginner",
+      "expected_time": 30,
+      "created_by": 14,
+      "created_at": "2024-10-17T10:00:00.000Z",
+      "tags": [
+        9
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 94,
+    "fields": {
+      "text": "Jak zostać mistrzem fotografii krajobrazowej.",
+      "difficulty": "advanced",
+      "expected_time": 150,
+      "created_by": 13,
+      "created_at": "2024-10-17T14:00:00.000Z",
+      "tags": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 95,
+    "fields": {
+      "text": "Zdrowe odżywianie na co dzień.",
+      "difficulty": "beginner",
+      "expected_time": 20,
+      "created_by": 10,
+      "created_at": "2024-10-18T08:00:00.000Z",
+      "tags": [
+        5
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 96,
+    "fields": {
+      "text": "Codzienne ćwiczenia na zdrową sylwetkę.",
+      "difficulty": "beginner",
+      "expected_time": 30,
+      "created_by": 11,
+      "created_at": "2024-10-18T10:00:00.000Z",
+      "tags": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 97,
+    "fields": {
+      "text": "Organizowanie budżetu domowego.",
+      "difficulty": "intermediate",
+      "expected_time": 60,
+      "created_by": 12,
+      "created_at": "2024-10-19T09:00:00.000Z",
+      "tags": [
+        7
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 98,
+    "fields": {
+      "text": "Zaawansowane techniki obróbki zdjęć.",
+      "difficulty": "advanced",
+      "expected_time": 180,
+      "created_by": 13,
+      "created_at": "2024-10-19T11:00:00.000Z",
+      "tags": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 99,
+    "fields": {
+      "text": "Hodowla roślin w domowych warunkach.",
+      "difficulty": "beginner",
+      "expected_time": 45,
+      "created_by": 14,
+      "created_at": "2024-10-20T10:00:00.000Z",
+      "tags": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 100,
+    "fields": {
+      "text": "Historia sztuki europejskiej.",
+      "difficulty": "advanced",
+      "expected_time": 90,
+      "created_by": 10,
+      "created_at": "2024-10-20T14:00:00.000Z",
+      "tags": [
+        14
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 101,
+    "fields": {
+      "text": "Podstawy montażu filmowego.",
+      "difficulty": "beginner",
+      "expected_time": 45,
+      "created_by": 11,
+      "created_at": "2024-10-21T10:00:00.000Z",
+      "tags": [
+        11
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 102,
+    "fields": {
+      "text": "Uzyskiwanie lepszych wyników w biegach na 5 km.",
+      "difficulty": "intermediate",
+      "expected_time": 60,
+      "created_by": 13,
+      "created_at": "2024-10-21T13:00:00.000Z",
+      "tags": [
+        10
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 103,
+    "fields": {
+      "text": "Jak zacząć oszczędzać na przyszłość.",
+      "difficulty": "beginner",
+      "expected_time": 30,
+      "created_by": 14,
+      "created_at": "2024-10-22T09:00:00.000Z",
+      "tags": [
+        7
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 104,
+    "fields": {
+      "text": "Sekrety udanego pikniku.",
+      "difficulty": "beginner",
+      "expected_time": 30,
+      "created_by": 12,
+      "created_at": "2024-10-22T11:00:00.000Z",
+      "tags": [
+        6
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 105,
+    "fields": {
+      "text": "Podstawy programowania w Pythonie.",
+      "difficulty": "beginner",
+      "expected_time": 60,
+      "created_by": 11,
+      "created_at": "2024-10-23T08:00:00.000Z",
+      "tags": [
+        8
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 106,
+    "fields": {
+      "text": "Jak poprawić swoje umiejętności językowe.",
+      "difficulty": "beginner",
+      "expected_time": 45,
+      "created_by": 10,
+      "created_at": "2024-10-23T10:00:00.000Z",
+      "tags": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 107,
+    "fields": {
+      "text": "Najlepsze miejsca na wakacje w Polsce.",
+      "difficulty": "beginner",
+      "expected_time": 30,
+      "created_by": 14,
+      "created_at": "2024-10-24T09:00:00.000Z",
+      "tags": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 108,
+    "fields": {
+      "text": "Jak zacząć przygodę z rysowaniem.",
+      "difficulty": "beginner",
+      "expected_time": 45,
+      "created_by": 13,
+      "created_at": "2024-10-24T12:00:00.000Z",
+      "tags": [
+        14
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 109,
+    "fields": {
+      "text": "Naukowe odkrycia i ich wpływ na nasze życie.",
+      "difficulty": "intermediate",
+      "expected_time": 60,
+      "created_by": 11,
+      "created_at": "2024-10-25T08:00:00.000Z",
+      "tags": [
+        8
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 110,
+    "fields": {
+      "text": "Jak zaplanować idealny dzień zwiedzania.",
+      "difficulty": "beginner",
+      "expected_time": 30,
+      "created_by": 12,
+      "created_at": "2024-10-25T10:00:00.000Z",
+      "tags": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 1,
+    "fields": {
+      "name": "Książki"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 2,
+    "fields": {
+      "name": "Podróże"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 3,
+    "fields": {
+      "name": "Fotografia"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 4,
+    "fields": {
+      "name": "Zdrowie"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 5,
+    "fields": {
+      "name": "Gotowanie"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 6,
+    "fields": {
+      "name": "Sport"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 7,
+    "fields": {
+      "name": "Moda"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 8,
+    "fields": {
+      "name": "Technologia"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 9,
+    "fields": {
+      "name": "Muzyka"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 10,
+    "fields": {
+      "name": "Fitness"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 11,
+    "fields": {
+      "name": "Film"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 12,
+    "fields": {
+      "name": "Motoryzacja"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 13,
+    "fields": {
+      "name": "Ekologia"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 14,
+    "fields": {
+      "name": "Sztuka"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 15,
+    "fields": {
+      "name": "Kawa"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 16,
+    "fields": {
+      "name": "Nauka"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 17,
+    "fields": {
+      "name": "Rower"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 18,
+    "fields": {
+      "name": "Taniec"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 19,
+    "fields": {
+      "name": "Zdrowa Żywność"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 20,
+    "fields": {
+      "name": "Języki Obce"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 21,
+    "fields": {
+      "name": "Python"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 22,
+    "fields": {
+      "name": "Psychologia"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 23,
+    "fields": {
+      "name": "Historia"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 24,
+    "fields": {
+      "name": "Filozofia"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 25,
+    "fields": {
+      "name": "Zwierzęta"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 26,
+    "fields": {
+      "name": "Podcasts"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 27,
+    "fields": {
+      "name": "DIY"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 28,
+    "fields": {
+      "name": "Hobby"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 29,
+    "fields": {
+      "name": "Relaks"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 30,
+    "fields": {
+      "name": "Malarstwo"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 31,
+    "fields": {
+      "name": "Architektura"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 32,
+    "fields": {
+      "name": "Gry planszowe"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 33,
+    "fields": {
+      "name": "Programy TV"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 34,
+    "fields": {
+      "name": "Edukacja"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 35,
+    "fields": {
+      "name": "Fotomodeling"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 36,
+    "fields": {
+      "name": "Teatr"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 37,
+    "fields": {
+      "name": "Joga"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 38,
+    "fields": {
+      "name": "Astronomia"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 39,
+    "fields": {
+      "name": "Kolarstwo"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 40,
+    "fields": {
+      "name": "Wspinaczka"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 41,
+    "fields": {
+      "name": "Ogrodnictwo"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 42,
+    "fields": {
+      "name": "Fotoreportaż"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 43,
+    "fields": {
+      "name": "JavaScript"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 44,
+    "fields": {
+      "name": "React"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 45,
+    "fields": {
+      "name": "Java"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 46,
+    "fields": {
+      "name": "C++"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 47,
+    "fields": {
+      "name": "Data Science"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 48,
+    "fields": {
+      "name": "Sztuczna Inteligencja"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 49,
+    "fields": {
+      "name": "Blockchain"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 50,
+    "fields": {
+      "name": "Cyberbezpieczeństwo"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 51,
+    "fields": {
+      "name": "No code"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 52,
+    "fields": {
+      "name": "PHP"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 53,
+    "fields": {
+      "name": "UX/UI"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 54,
+    "fields": {
+      "name": "Grafika komputerowa"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 55,
+    "fields": {
+      "name": "Animacja"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 56,
+    "fields": {
+      "name": "Gry komputerowe"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 57,
+    "fields": {
+      "name": "Machine Learning"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 58,
+    "fields": {
+      "name": "Arduino"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 59,
+    "fields": {
+      "name": "Robotyka"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 60,
+    "fields": {
+      "name": "Chmura obliczeniowa"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 61,
+    "fields": {
+      "name": "Python Django"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 62,
+    "fields": {
+      "name": "Flutter"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 63,
+    "fields": {
+      "name": "Fotografia cyfrowa"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 64,
+    "fields": {
+      "name": "Kulinarne podróże"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 65,
+    "fields": {
+      "name": "Projektowanie wnętrz"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 66,
+    "fields": {
+      "name": "Gry karciane"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 67,
+    "fields": {
+      "name": "Wspinaczka wysokogórska"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 68,
+    "fields": {
+      "name": "Psychoterapia"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 69,
+    "fields": {
+      "name": "Tworzenie stron internetowych"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 70,
+    "fields": {
+      "name": "Odnawialne źródła energii"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 71,
+    "fields": {
+      "name": "Wirtualna rzeczywistość"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 72,
+    "fields": {
+      "name": "Zarządzanie czasem"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 73,
+    "fields": {
+      "name": "Genealogia"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 74,
+    "fields": {
+      "name": "Lego"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 75,
+    "fields": {
+      "name": "Astronautyka"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 76,
+    "fields": {
+      "name": "Gry fabularne"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 77,
+    "fields": {
+      "name": "Pszczelarstwo"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 78,
+    "fields": {
+      "name": "Robotyka przemysłowa"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 79,
+    "fields": {
+      "name": "Stolarstwo"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 80,
+    "fields": {
+      "name": "Projektowanie gier"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 81,
+    "fields": {
+      "name": "Szkicowanie"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 82,
+    "fields": {
+      "name": "Fotografia ślubna"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 83,
+    "fields": {
+      "name": "Grafika 3D"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 84,
+    "fields": {
+      "name": "Ekonomia"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 85,
+    "fields": {
+      "name": "Szermierka"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 86,
+    "fields": {
+      "name": "Ogrody miejskie"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 87,
+    "fields": {
+      "name": "Bieganie"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 88,
+    "fields": {
+      "name": "Tworzenie aplikacji mobilnych"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 89,
+    "fields": {
+      "name": "Sztuka współczesna"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 90,
+    "fields": {
+      "name": "Biotechnologia"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 91,
+    "fields": {
+      "name": "Rzeźba"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 92,
+    "fields": {
+      "name": "Turystyka górska"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 93,
+    "fields": {
+      "name": "Nurkowanie"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 94,
+    "fields": {
+      "name": "Kitesurfing"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 95,
+    "fields": {
+      "name": "Robotyka edukacyjna"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 96,
+    "fields": {
+      "name": "Analiza danych"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 97,
+    "fields": {
+      "name": "Badminton"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 98,
+    "fields": {
+      "name": "Tuning samochodów"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 99,
+    "fields": {
+      "name": "Pielęgniarstwo"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 100,
+    "fields": {
+      "name": "Szydełkowanie"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 101,
+    "fields": {
+      "name": "Astrofizyka"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 102,
+    "fields": {
+      "name": "Kolekcjonerstwo"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 103,
+    "fields": {
+      "name": "Announcement"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 104,
+    "fields": {
+      "name": "Finance"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 105,
+    "fields": {
+      "name": "Wiadomość"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 106,
+    "fields": {
+      "name": "Zmiany"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 107,
+    "fields": {
+      "name": "Finanse"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 108,
+    "fields": {
+      "name": "Programowanie"
+    }
+  }
+]
