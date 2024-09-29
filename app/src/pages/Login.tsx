@@ -1,65 +1,109 @@
-import React from 'react';
-import { Container, TextField, Button, Typography, Box } from '@mui/material';
-import { NavLink } from 'react-router-dom';
-import BackButton from 'src/inputs/BackButton.tsx';
+// @ts-nocheck
+import {useState} from 'react';
+import {Container, TextField, Button, Typography, Box} from '@mui/material';
+import axios from "axios";
+import {API, PrefixedAPI} from "src/constants/api_routes.ts";
+import {useSetAtom} from "jotai";
+import {accessTokenAtom} from "src/atoms.ts";
+import {useNavigate} from "react-router-dom";
 
-const Login: React.FC = () => {
-  return (
-    <Container maxWidth="sm">
-      <Box
-        component="main"
-        role="main"
-        display="flex"
-        flexDirection="column"
-        alignItems="center"
-        justifyContent="center"
-        minHeight="100vh"
-        padding="16px"
-        sx={{
-          gap: '1rem',
-          '&:focus': {
-            outline: '2px solid #3f51b5', // WCAG focus state
-          },
-        }}
-      >
-        <Typography variant="h4">
-          Zaloguj się
-        </Typography>
-        <TextField
-          label="Email"
-          variant="outlined"
-          margin="normal"
-          fullWidth
-          aria-label="Email"
-          autoComplete="email"
-        />
-        <TextField
-          label="Hasło"
-          type="password"
-          variant="outlined"
-          margin="normal"
-          fullWidth
-          aria-label="Hasło"
-          autoComplete="current-password"
-        />
-        <Button
-          variant="contained"
-          color="primary"
-          fullWidth
-          aria-label="Zaloguj"
-        >
-          Zaloguj
-        </Button>
-        <Typography variant="body2">
-          {'Zapomniałeś hasła? kliknij '}
-          <NavLink to="/login/password_reminder"
-          >tutaj</NavLink>
-          {' aby odzyskać hasło.'}
-        </Typography>
-        <BackButton />
-      </Box>
-    </Container>
-  );
+type TokenResponse = {
+    access: string;
+    refresh: string;
+}
+
+export default function Login() {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("")
+    const [fetching, setFetching] = useState(false)
+    const setAccessToken = useSetAtom(accessTokenAtom)
+    const navigate = useNavigate();
+
+    return (
+        <Container maxWidth="sm">
+            <Box
+                component="main"
+                role="main"
+                display="flex"
+                flexDirection="column"
+                alignItems="center"
+                justifyContent="center"
+                minHeight="100vh"
+                padding="16px"
+                sx={{
+                    gap: '1rem',
+                    '&:focus': {
+                        outline: '2px solid #3f51b5', // WCAG focus state
+                    },
+                }}
+            >
+                <Typography variant="h4">
+                    Zaloguj się
+                </Typography>
+                <TextField
+                    label="Email"
+                    variant="outlined"
+                    margin="normal"
+                    fullWidth
+                    aria-label="Email"
+                    autoComplete="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                />
+                <TextField
+                    label="Hasło"
+                    type="password"
+                    variant="outlined"
+                    margin="normal"
+                    fullWidth
+                    aria-label="Hasło"
+                    autoComplete="current-password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                />
+                <Button
+                    variant="contained"
+                    color="primary"
+                    fullWidth
+                    aria-label="Zaloguj"
+                    disabled={fetching}
+                    onClick={async () => {
+                        try {
+                            setFetching(true)
+                            const response = await axios.post<TokenResponse>(PrefixedAPI.login, {email, password})
+                            setAccessToken(response.data.access)
+                            navigate("/")
+                        } catch {
+                            console.error("Login failed")
+                        } finally {
+                            setFetching(false)
+                        }
+                    }}
+                >
+                    Zaloguj
+                </Button>
+                <Button
+                    variant="contained"
+                    color="primary"
+                    fullWidth
+                    aria-label="Konto Gościa"
+                    disabled={fetching}
+                    onClick={async () => {
+                        try {
+                            setFetching(true)
+                            const response = await axios.post<TokenResponse>(PrefixedAPI.loginDemo)
+                            setAccessToken(response.data.access)
+                            navigate("/")
+                        } catch {
+                            console.error("Login failed")
+                        } finally {
+                            setFetching(false)
+                        }
+                    }}
+                >
+                    Konto Gościa
+                </Button>
+            </Box>
+        </Container>
+    );
 };
-
-export default Login;

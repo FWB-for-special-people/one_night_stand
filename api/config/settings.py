@@ -139,16 +139,15 @@ MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 # Whitenoise Staticfiles settings
-# STORAGES = {
-#     "staticfiles": {
-#         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
-#     },
-#     "default": {
-#         "BACKEND": "django.core.files.storage.FileSystemStorage",
-#         "LOCATION": "media",
-#     },
-# }
-
+STORAGES = {
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    }
+    #     "default": {
+    #         "BACKEND": "django.core.files.storage.FileSystemStorage",
+    #         "LOCATION": "media",
+    #     },
+}
 
 LOGGING = {
     'version': 1,
@@ -232,30 +231,25 @@ JAZZMIN_SETTINGS = {
     "use_google_fonts_cdn": True,
 }
 
-
-
 AZURE_ACCOUNT_NAME = os.environ.get("AZURE_ACCOUNT_NAME")
 AZURE_ACCOUNT_KEY = os.environ.get("AZURE_ACCOUNT_KEY")
 AZURE_CONTAINER = os.environ.get("AZURE_CONTAINER")
 AZURE_CUSTOM_DOMAIN = os.environ.get("AZURE_CUSTOM_DOMAIN")
 
-
-
-STORAGES = {
-    'default': {
-        'BACKEND': 'storages.backends.azure_storage.AzureStorage',
-        'OPTIONS': {
-            'account_name': AZURE_ACCOUNT_NAME,
-            'account_key': AZURE_ACCOUNT_KEY,
-            'azure_container': AZURE_CONTAINER,
-        },
+STORAGES['default'] = {
+    'BACKEND': 'storages.backends.azure_storage.AzureStorage',
+    'OPTIONS': {
+        'account_name': AZURE_ACCOUNT_NAME,
+        'account_key': AZURE_ACCOUNT_KEY,
+        'azure_container': AZURE_CONTAINER,
     },
-    'staticfiles': {
-        'BACKEND': 'storages.backends.azure_storage.AzureStorage',
-        'OPTIONS': {
-            'account_name': AZURE_ACCOUNT_NAME,
-            'account_key': AZURE_ACCOUNT_KEY,
-            'azure_container': AZURE_CONTAINER,
-        },
-    },
+
+    # 'staticfiles': {
+    #     'BACKEND': 'storages.backends.azure_storage.AzureStorage',
+    #     'OPTIONS': {
+    #         'account_name': AZURE_ACCOUNT_NAME,
+    #         'account_key': AZURE_ACCOUNT_KEY,
+    #         'azure_container': AZURE_CONTAINER,
+    #     },
+    # },
 }

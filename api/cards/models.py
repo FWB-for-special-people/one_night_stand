@@ -3,18 +3,22 @@ import random
 from django.contrib.auth import get_user_model
 from django.contrib.postgres.fields import ArrayField
 from django.db import models
+from django.db.models import ManyToManyField
 
 User = get_user_model()
 
+
 class Card(models.Model):
     text = models.TextField(max_length=500)
+    difficulty = models.TextField(max_length=15)
+    expected_time = models.PositiveSmallIntegerField(default=0)
 
     created_by = models.ForeignKey(User, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
 
     liked_by = models.ManyToManyField(User, related_name="liked_cards", through="CardLike")
     viewed_by = models.ManyToManyField(User, related_name="viewed_cards", through="CardView")
-    tags = ArrayField(models.CharField(max_length=255), default=list, size=5)
+    tags = ManyToManyField("Tag", related_name="cards")
 
     def __str__(self):
         return self.text[0:50]
@@ -40,7 +44,6 @@ class CardView(models.Model):
 
 class Comment(models.Model):
     text = models.TextField(max_length=500)
-
     card = models.ForeignKey(Card, on_delete=models.CASCADE, related_name="comments")
     is_positive = models.FloatField(default=0.0)
     created_by = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -50,8 +53,8 @@ class Comment(models.Model):
         return f"{self.card}-{self.text:30}"
 
     def save(self, *args, **kwargs):
-        if self.pk is None:  # Only assign on creation
-            rand_value = random.random()  # Generates a float between 0 and 1
+        if self.pk is None:
+            rand_value = random.random()
 
             if rand_value <= 0.2:
                 self.is_positive = random.uniform(-1, -0.8)
@@ -61,3 +64,10 @@ class Comment(models.Model):
                 self.is_positive = random.uniform(0.8, 1.0)
 
         super().save(*args, **kwargs)
+
+
+class Tag(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+
+    def __str__(self):
+        return self.name

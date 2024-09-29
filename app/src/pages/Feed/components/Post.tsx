@@ -3,7 +3,7 @@ import { Box, Typography, IconButton, useMediaQuery, useTheme } from '@mui/mater
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import MessageIcon from '@mui/icons-material/Message';
 import { useAtom } from 'jotai';
-import { isSideMenuCollapsedAtom } from 'src/atoms.ts';
+import { darkModeAtom, isSideMenuCollapsedAtom } from 'src/atoms.ts';
 import Avatar from 'src/pages/Feed/components/Avatar.tsx';
 
 interface PostProps {
@@ -18,11 +18,12 @@ const Post: React.FC<PostProps> = ({ image, text, userId, userName, userAvatar }
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const [isSideMenuCollapsed] = useAtom(isSideMenuCollapsedAtom);
+  const [isDarkMode] = useAtom(darkModeAtom);
 
   return (
     <Box
       sx={{
-        backgroundColor: 'background.default',
+        backgroundColor: isDarkMode ? 'background.paper' : 'background.default',
         borderRadius: '.25rem',
         padding: '.2rem',
         display: 'flex',
@@ -58,7 +59,7 @@ const Post: React.FC<PostProps> = ({ image, text, userId, userName, userAvatar }
         <Avatar name={userName} avatar={image} />
         <Typography
           sx={{
-              color: 'text.secondary',
+              color: 'text.primary',
               fontSize: '1rem',
             paddingLeft: '.5rem',
             }}
@@ -78,7 +79,7 @@ const Post: React.FC<PostProps> = ({ image, text, userId, userName, userAvatar }
       >
         <Typography
           sx={{
-            color: 'text.secondary',
+            color: 'text.primary',
             fontSize: {
               xs: '.9rem',
               sm: '1.2rem',
@@ -99,10 +100,10 @@ const Post: React.FC<PostProps> = ({ image, text, userId, userName, userAvatar }
         }}
       >
         <IconButton aria-label="like">
-          <FavoriteIcon sx={{ color: 'primary.main', fontSize: '1.5rem' }} />
+          <FavoriteIcon sx={{ color: isDarkMode? 'text.primary' : 'primary.main', fontSize: '1.5rem' }} />
         </IconButton>
         <IconButton>
-          <MessageIcon sx={{ color: 'primary.main', fontSize: '1.5rem' }} />
+          <MessageIcon sx={{ color: isDarkMode? 'text.primary' : 'primary.main', fontSize: '1.5rem' }} />
         </IconButton>
       </Box>
     </Box>

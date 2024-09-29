@@ -51,6 +51,7 @@ spec:
             - python
             - manage.py
             - collectstatic
+            - --noinput
       containers:
         - name: {{ .Values.hackyeah.api.appName }}
           image: "{{ .Values.hackyeah.api.image.name}}:{{.Values.hackyeah.api.image.tag}}"

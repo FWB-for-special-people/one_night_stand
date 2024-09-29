@@ -1,13 +1,13 @@
 import { createBrowserRouter } from 'react-router-dom';
-import Start from 'src/pages/Start';
-import Login from 'src/pages/Login';
-import RememberPassword from 'src/pages/RememberPassword';
-import AddPostWrapper from 'src/pages/AddPost/AddPostWrapper';
-import Feed from 'src/pages/Feed/Feed';
-import Dashboard from 'src/pages/Dashboard';
-import CategoriesDashboard from 'src/pages/Categories/CategoriesDashboard';
-import MyPage from 'src/pages/MyPage/MyPage';
-import SettingsWrapper from 'src/pages/Settings/SettingsWrapper';
+import Start from 'src/pages/Start.tsx';
+import Login from 'src/pages/Login.tsx';
+import RememberPassword from 'src/pages/RememberPassword.tsx';
+import AddPostWrapper from 'src/pages/AddPost/AddPostWrapper.tsx';
+import Feed from 'src/pages/Feed/Feed.tsx';
+import Dashboard from 'src/pages/Dashboard.tsx';
+import CategoriesDashboard from 'src/pages/Categories/CategoriesDashboard.tsx';
+import MyPage from 'src/pages/MyPage/MyPage.tsx';
+import SettingsWrapper from 'src/pages/Settings/SettingsWrapper.tsx';
 
 export const router = createBrowserRouter([
   {

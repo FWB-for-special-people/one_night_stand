@@ -8,7 +8,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 
 const NavBarBottomMobile: React.FC = () => {
   return (
-    <AppBar position="fixed" sx={{ top: 'auto', bottom: 0 }}>
+    <AppBar position="fixed" sx={{ top: 'auto', bottom: 0, backgroundColor: 'primary.main' }}>
       <Toolbar sx={{ display: 'flex', justifyContent: 'space-around' }}>
         <IconButton aria-label="feed" href="/">
           <HomeIcon sx={{ color: 'white' }} />
