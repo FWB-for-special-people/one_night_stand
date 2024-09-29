@@ -1,9 +1,12 @@
-import { Box } from '@mui/material';
+import {Box} from '@mui/material';
 import Post from 'src/pages/Feed/components/Post.tsx';
-import { useCardsQuery } from 'src/queries/useCardsQuery.ts';
+import {useCardsQuery} from 'src/queries/useCardsQuery.ts';
+import {useOpenAiToken} from "src/queries/useOpenAiToken.ts";
 
 export default function Dashboard() {
-  const { data: cardsData } = useCardsQuery();
+  const {data: cardsData} = useCardsQuery();
+  const {data} = useOpenAiToken()
+  console.log(data)
 
   const mappedCards = cardsData?.pages?.flatMap(page => page.map(post => ({
     id: post.id,
@@ -30,7 +33,8 @@ export default function Dashboard() {
             paddingX: '.5rem',
           }}
         >
-          <Post id={post?.id} image={post?.imageUrl} text={post?.text} userName={post?.createdBy} avatar={post?.avatar}/>
+          <Post id={post?.id} image={post?.imageUrl} text={post?.text} userName={post?.createdBy}
+                avatar={post?.avatar}/>
         </Box>
       ))}
     </Box>
