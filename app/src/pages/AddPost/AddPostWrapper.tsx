@@ -1,94 +1,23 @@
 // @ts-nocheck
 import React, { useState, useEffect } from 'react';
 import { Box, Typography } from '@mui/material';
-import PostInput from './components/PostInput';
 import DataAIDisplay from './components/DataAIDisplay.tsx';
 import response from '../../assets/response.json';
 import AddButton from './components/AddButton.tsx';
 import SpeechToText from "src/pages/AddPost/components/SpeechToText.tsx";
 
 const AddPost: React.FC = () => {
-  const [postQuestionText, setPostQuestionText] = useState('');
+  const [postQuestionText] = useState('');
   const [backendAnswerText, setBackendAnswerText] = useState('');
   const [backendQuestionText, setBackendQuestionText] = useState('');
   const [backendImages, setBackendImages] = useState<string[]>([]);
-  const [isRecording, setIsRecording] = useState(false);
 
-  const handleTextChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.value.length <= 500) {
-      setPostQuestionText(e.target.value);
-    }
-  };
-
-  const handleSpeechToText = () => {
-    console.log('click')
-    let SpeechRecognitionObj = window.SpeechRecognition || window.webkitSpeechRecognition;
-
-    if (!SpeechRecognitionObj) {
-      alert('API rozpoznawania mowy nie jest obsługiwane w tej przeglądarce.');
-      return;
-    }
-
-    const recognition = new SpeechRecognitionObj();
-    recognition.lang = 'pl-PL';
-    recognition.interimResults = true;
-
-    recognition.onstart = () => {
-      setIsRecording(false);
-      console.log('start')
-      setIsRecording(true);
-    };
-
-    recognition.onend = () => {
-     setTimeout(() => {
-       setIsRecording(false);
-     }, 2000);
-    };
-
-    recognition.onresult = (event: any) => {
-      console.log('result')
-      const transcript = event.results[0][0].transcript;
-      console.log(transcript)
-      if (postQuestionText.length + transcript.length <= 3000) {
-        setPostQuestionText((prevText) => prevText + ' ' + transcript);
-      }
-    };
-
-    recognition.start();
-  };
 
   const handleSavePost = (isPublic: boolean) => {
     console.log('Tekst posta:', postQuestionText);
     console.log('Czy post jest publiczny?: ', isPublic);
   };
 
-  const sendQuestion = () => {
-    const postData = {
-      question: postQuestionText,
-    };
-
-    console.log(postData);
-    // try {
-    //   const response = await fetch('https://your-backend-url.com/api/posts', {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify(postData),
-    //   });
-    //
-    //   if (!response.ok) {
-    //     throw new Error('Błąd podczas wysyłania posta do backendu');
-    //   }
-    //
-    //   const data = await response.json();
-    //   console.log('Odpowiedź z backendu:', data);
-    //   alert('Post został pomyślnie zapisany!');
-    // } catch (error) {
-    //   console.error('Błąd:', error);
-    //   alert('Wystąpił błąd podczas zapisywania posta.');
-    // }
-  };
 
   const { answer, question, images_b64 } = response;
 
@@ -118,13 +47,6 @@ const AddPost: React.FC = () => {
         Dodaj post
       </Typography>
 
-      {/*<PostInput*/}
-      {/*  postText={postQuestionText}*/}
-      {/*  onTextChange={handleTextChange}*/}
-      {/*  onSpeechToText={handleSpeechToText}*/}
-      {/*  isRecording={isRecording}*/}
-      {/*  sendQuestion={sendQuestion}*/}
-      {/*/>*/}
       <SpeechToText />
 
       <DataAIDisplay
