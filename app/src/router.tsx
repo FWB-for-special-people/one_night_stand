@@ -7,8 +7,8 @@ import Feed from 'src/pages/Feed/Feed.tsx';
 import Dashboard from 'src/pages/Dashboard.tsx';
 import CategoriesDashboard from 'src/pages/Categories/CategoriesDashboard.tsx';
 import MyPage from 'src/pages/MyPage/MyPage.tsx';
-import SettingsWrapper from 'src/pages/Settings/SettingsWrapper.tsx';
 import AuthWrapper from 'src/auth/AuthWrapper.tsx';
+import SettingsWrapper from 'src/pages/Settings/Settings.tsx';
 
 export const router = createBrowserRouter([
   {
