@@ -3,6 +3,8 @@ import { Box, Typography, TextField, Button } from '@mui/material';
 import { useAxios } from 'src/hooks/useAxios.ts';
 import { API } from 'src/constants/api_routes.ts';
 import { useCardCommentsQuery } from 'src/queries/useCardCommentsQuery.ts';
+import { useAtom } from 'jotai';
+import { darkModeAtom } from 'src/atoms.ts';
 
 interface CommentsSectionProps {
   postId: number;
@@ -32,6 +34,8 @@ function formatDate(dateString: string): string {
 const CommentsSection: React.FC<CommentsSectionProps> = ({ postId }) => {
   const [newComment, setNewComment] = useState('');
   const axios = useAxios();
+
+  const [isDarkMode] = useAtom(darkModeAtom);
 
   const { data: commentsData, refetch } = useCardCommentsQuery(postId);
 
@@ -81,7 +85,9 @@ const CommentsSection: React.FC<CommentsSectionProps> = ({ postId }) => {
           fullWidth
           label="Dodaj komentarz"
           variant="outlined"
-          sx={{ backgroundColor: 'background.default' }}
+          sx={{
+            backgroundColor: 'background.default',
+          }}
           value={newComment}
           onChange={(e) => setNewComment(e.target.value)}
         />
@@ -112,8 +118,8 @@ const CommentsSection: React.FC<CommentsSectionProps> = ({ postId }) => {
                 <Typography
                   variant="caption"
                   sx={{
-                    color: 'primary.main',
-                    borderBottom: '.5px solid black',
+                    color: isDarkMode ? 'text.primary' : 'secondary.main.',
+                    borderBottom: isDarkMode ? '.5px solid white' : '.5px solid black',
                     fontSize: '.5rem',
                   }}>
                   {comment.createdBy}
@@ -121,8 +127,8 @@ const CommentsSection: React.FC<CommentsSectionProps> = ({ postId }) => {
                 <Typography
                   variant="caption"
                   sx={{
-                    color: 'primary.main',
-                    borderBottom: '.5px solid black',
+                    color: isDarkMode ? 'text.primary' : 'primary.main',
+                    borderBottom: isDarkMode ? '.5px solid white' : '.5px solid black',
                     fontSize: '.5rem',
                   }}>
                   {formatDate(comment.createdAt)}
