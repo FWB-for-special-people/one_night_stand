@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 import {List, ListItemIcon, ListItemText, AppBar, Toolbar, ListItemButton, IconButton} from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';

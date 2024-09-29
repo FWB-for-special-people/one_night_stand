@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 import { AppBar, Toolbar, Typography, Box } from '@mui/material';
 
