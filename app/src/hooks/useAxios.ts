@@ -8,7 +8,7 @@ export function useAxios() {
 
     return useMemo(() => {
         const instance = axios.create({
-            baseURL: "http://localhost" // Replace with your API base URL
+            baseURL: import.meta.env.PROD ? "https://azeno.it/api/v1" : "http://localhost/api/v1" // Replace with your API base URL
         });
 
         instance.interceptors.request.use(
