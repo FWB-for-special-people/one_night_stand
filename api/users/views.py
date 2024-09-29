@@ -2,7 +2,6 @@ import logging
 import os
 
 from django.contrib.auth import get_user_model
-from django.db import transaction
 from rest_framework import viewsets, status, generics
 from rest_framework.decorators import action
 from rest_framework.generics import get_object_or_404
@@ -84,30 +83,30 @@ class FollowUserView(viewsets.ViewSetMixin, generics.ListAPIView, generics.Retri
         return Response(serializer.data)
 
 
-# class AutoLoginPredefinedUserView(APIView):
-#     """
-#     A view that automatically logs in a predefined user
-#     without requiring authentication.
-#     """
-#     http_method_names = ['post']
-#     permission_classes = [AllowAny]
-#
-#     @staticmethod
-#     def get_predefined_user():
-#         email = os.environ.get("DEMO_USER_EMAIL")
-#         password = os.environ.get("DEMO_USER_PASSWORD")
-#         user, created = User.objects.get_or_create(email=email)
-#         if created:
-#             user.set_password(password)
-#             user.save()
-#
-#         return user
-#
-#     def post(self, request, *args, **kwargs):
-#         user = self.get_predefined_user()
-#         refresh = RefreshToken.for_user(user)
-#
-#         return Response({
-#             'refresh': str(refresh),
-#             'access': str(refresh.access_token),
-#         }, status=status.HTTP_200_OK)
+class AutoLoginPredefinedUserView(APIView):
+    """
+    A view that automatically logs in a predefined user
+    without requiring authentication.
+    """
+    http_method_names = ['post']
+    permission_classes = [AllowAny]
+
+    @staticmethod
+    def get_predefined_user():
+        email = os.environ.get("DEMO_USER_EMAIL")
+        password = os.environ.get("DEMO_USER_PASSWORD")
+        user, created = User.objects.get_or_create(email=email)
+        if created:
+            user.set_password(password)
+            user.save()
+
+        return user
+
+    def post(self, request, *args, **kwargs):
+        user = self.get_predefined_user()
+        refresh = RefreshToken.for_user(user)
+
+        return Response({
+            'refresh': str(refresh),
+            'access': str(refresh.access_token),
+        }, status=status.HTTP_200_OK)
