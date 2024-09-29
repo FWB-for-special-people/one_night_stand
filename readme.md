@@ -11,7 +11,7 @@
 [![MUI](https://img.shields.io/badge/MUI-lightblue)]()
 ---
 
-![Logo](api%2Fassets%2Fazeno_logo.svg)
+![Logo](api%2Fassets%2Fazeno_logo.png)
 
 # Przedstawiamy **Azeno**: odpal swoje możliwości!
 
