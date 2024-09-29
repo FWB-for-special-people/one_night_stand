@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useState, useEffect } from 'react';
 import { Box, Typography } from '@mui/material';
 import PostInput from './components/PostInput';

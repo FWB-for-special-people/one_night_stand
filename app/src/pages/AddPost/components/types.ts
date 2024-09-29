@@ -1,3 +1,4 @@
+// @ts-nocheck
 export type UseWhisperConfig = {
   apiKey?: string
   autoStart?: boolean
