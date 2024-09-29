@@ -8,7 +8,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 
 const NavBarBottomMobile: React.FC = () => {
   return (
-    <AppBar position="fixed" sx={{ top: 'auto', bottom: 0 }}>
+    <AppBar position="fixed" sx={{ top: 'auto', bottom: 0, backgroundColor: 'primary.main' }}>
       <Toolbar sx={{ display: 'flex', justifyContent: 'space-around' }}>
         <IconButton aria-label="feed" href="/">
           <HomeIcon sx={{ color: 'white' }} />
@@ -16,23 +16,14 @@ const NavBarBottomMobile: React.FC = () => {
         <IconButton aria-label="categories" href="/categories">
           <CategoryIcon sx={{ color: 'white' }} />
         </IconButton>
-        <IconButton aria-label="add post" size="large" href="/add-post">
-          <AddCircleIcon
-            sx={{
-              color: 'white',
-              fontSize: 80,
-              position: 'absolute',
-              transform: 'translatey(-20%)',
-              backgroundColor: 'secondary.main',
-              borderRadius: '20rem',
-            }}
-          />
-        </IconButton>
         <IconButton aria-label="my feed" href="/my-profile">
           <AccountCircleIcon sx={{ color: 'white' }} />
         </IconButton>
         <IconButton aria-label="settings" href="/settings">
           <SettingsIcon sx={{ color: 'white' }} />
+        </IconButton>
+        <IconButton aria-label="add post" href="/add-post">
+          <AddCircleIcon sx={{ color: 'secondary.main', fontSize: 40 }} />
         </IconButton>
       </Toolbar>
     </AppBar>
