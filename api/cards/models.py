@@ -1,7 +1,6 @@
 import random
 
 from django.contrib.auth import get_user_model
-from django.contrib.postgres.fields import ArrayField
 from django.db import models
 from django.db.models import ManyToManyField
 
@@ -13,6 +12,8 @@ class Card(models.Model):
     difficulty = models.TextField(max_length=15)
     expected_time = models.PositiveSmallIntegerField(default=0)
 
+    image = models.ForeignKey("cards.CardImage", on_delete=models.CASCADE)
+
     created_by = models.ForeignKey(User, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
 
@@ -22,6 +23,18 @@ class Card(models.Model):
 
     def __str__(self):
         return self.text[0:50]
+
+
+class CardImage(models.Model):
+    image = models.ImageField(upload_to='cards/', null=True)
+
+    created_by = models.ForeignKey(User, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    is_public = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f"{self.image.name} - {self.is_public}"
 
 
 class CardLike(models.Model):

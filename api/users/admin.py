@@ -4,6 +4,7 @@ from django.contrib.auth import get_user_model
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 
+from users.models import Follower
 
 CustomUser = get_user_model()
 
@@ -16,4 +17,5 @@ class CustomUserAdminConfig(UserAdmin):
 
 
 admin.site.register(CustomUser, CustomUserAdminConfig)
+admin.site.register(Follower)
 
