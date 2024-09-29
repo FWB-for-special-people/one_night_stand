@@ -11,7 +11,7 @@
 [![MUI](https://img.shields.io/badge/MUI-lightblue)]()
 ---
 
-![Logo](assets%2Fazeno_logo.svg)
+![Logo](api%2Fassets%2Fazeno_logo.svg)
 
 # Przedstawiamy **Azeno**: odpal swoje możliwości!
 
@@ -52,11 +52,11 @@ Algorytmy oceniają każdy post na podstawie licznych kryteriów, takich jak rod
 
 ## Screenshots
 
-![screen01.png](assets%2Fscreen01.png)
+![screen01.png](api%2Fassets%2Fscreen01.png)
 
-![screen02.png](assets%2Fscreen02.png)
+![screen02.png](api%2Fassets%2Fscreen02.png)
 
-![screen03.png](assets%2Fscreen03.png)
+![screen03.png](api%2Fassets%2Fscreen03.png)
 
 
 ## Authors
