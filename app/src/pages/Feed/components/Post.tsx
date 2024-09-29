@@ -14,7 +14,7 @@ interface PostProps {
   userAvatar?: string;
 }
 
-const Post: React.FC<PostProps> = ({ image, text, userId, userName, userAvatar }) => {
+const Post: React.FC<PostProps> = ({ image, text, userName='Użytkownik Anonimowy' }) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const [isSideMenuCollapsed] = useAtom(isSideMenuCollapsedAtom);
@@ -31,7 +31,6 @@ const Post: React.FC<PostProps> = ({ image, text, userId, userName, userAvatar }
         alignItems: 'center',
         justifyContent: 'center',
         color: 'text.primary',
-        boxShadow: '.05rem .05rem .05rem .05rem rgba(0, 0, 0, 0.4)',
         width: isMobile ? '100%' : isSideMenuCollapsed ? '90%' : '80%',
         border: '1px solid black',
       }}
@@ -56,7 +55,7 @@ const Post: React.FC<PostProps> = ({ image, text, userId, userName, userAvatar }
           margin: '.5rem',
           paddingLeft: '.2rem',
         }}>
-        <Avatar name={userName} avatar={image} />
+        <Avatar avatar={image} id={userName} name={userName} />
         <Typography
           sx={{
               color: 'text.primary',
@@ -97,6 +96,8 @@ const Post: React.FC<PostProps> = ({ image, text, userId, userName, userAvatar }
           justifyContent: 'space-evenly',
           paddingRight: '1rem',
           width: '100%',
+            borderTop: '1px solid black',
+            marginTop: '0.625rem'
         }}
       >
         <IconButton aria-label="like">
