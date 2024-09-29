@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import {Container, TextField, Button, Typography, Box} from '@mui/material';
 import axios from "axios";
-import {API} from "src/constants/api_routes.ts";
+import {API, PrefixedAPI} from "src/constants/api_routes.ts";
 import {useSetAtom} from "jotai";
 import {accessTokenAtom} from "src/atoms.ts";
 import {useNavigate} from "react-router-dom";
@@ -69,7 +69,7 @@ export default function Login() {
                     onClick={async () => {
                         try {
                             setFetching(true)
-                            const response = await axios.post<TokenResponse>(API.loginDemo, {email, password})
+                            const response = await axios.post<TokenResponse>(PrefixedAPI.login, {email, password})
                             setAccessToken(response.data.access)
                             navigate("/")
                         } catch {
@@ -90,7 +90,7 @@ export default function Login() {
                     onClick={async () => {
                         try {
                             setFetching(true)
-                            const response = await axios.post<TokenResponse>(API.loginDemo)
+                            const response = await axios.post<TokenResponse>(PrefixedAPI.loginDemo)
                             setAccessToken(response.data.access)
                             navigate("/")
                         } catch {

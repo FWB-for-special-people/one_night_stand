@@ -3,26 +3,23 @@ import {API} from "src/constants/api_routes.ts";
 import {useAxios} from "src/hooks/useAxios.ts";
 import {Paginated} from "src/types.ts";
 
-type Card = {
+type Comment = {
     id: number;
     text: string;
     created_by: number;
     created_at: string;
-    tags: string[];
-    like_count: number;
-    view_count: number;
-    channels: number[];
 }
 
-export function useCardsQuery() {
+export function useCardCommentsQuery(cardId: number) {
     const axios = useAxios()
 
-    return useInfiniteQuery<Card[], unknown, Card[], [string]>({
-        queryKey: [API.cards],
+    return useInfiniteQuery({
+        queryKey: [API.cardComments(cardId)],
         queryFn: async ({queryKey: [url]}) => {
-            const response = await axios.get<Paginated<Card[]>>(url)
-            return response.data.results
+            const response = await axios.get<Paginated<Comment[]>>(url)
+            return response.data
         },
+        getNextPageParam: (lastPage) => lastPage.next,
         enabled: axios !== null
     })
 }
