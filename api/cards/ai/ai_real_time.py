@@ -47,18 +47,14 @@ from datetime import timedelta
 import random
 import logging
 
-logger = logging.getLogger(__name__)
-
 
 def recommend_cards_based_on_recent_activity(user_id):
     now = pd.Timestamp.now()
-    logger.info(liked_cards_df)
 
     liked_cards = liked_cards_df[
         (liked_cards_df['user'] == user_id) &
         (liked_cards_df['liked_at'] >= now - timedelta(days=150))
         ]['card_id'].tolist()
-    logger.info(f'LIKED CARDS: {liked_cards}')
 
     commented_cards = []
 
@@ -68,10 +64,8 @@ def recommend_cards_based_on_recent_activity(user_id):
         return []
 
     recent_activity_tags = flashcards_df[flashcards_df['id'].isin(recent_activity_cards)]['tags'].tolist()
-    logger.info(f'RECENT ACTIVITY TAGS: {recent_activity_tags}')
 
     viewed_cards_by_user = viewed_cards_df[viewed_cards_df['user'] == user_id]['card_id'].tolist()
-    logger.info(f'VIEWED CARDS BY USER: {viewed_cards_by_user}')
 
     recommended_cards = flashcards_df[
         flashcards_df['tags'].apply(lambda tags: any(tag in recent_activity_tags for tag in tags)) &
@@ -79,8 +73,6 @@ def recommend_cards_based_on_recent_activity(user_id):
         ]
 
     if recommended_cards.empty:
-        logger.info('No cards found based on tags. Returning random cards.')
         return flashcards_df.sample(5)['id'].tolist()
 
     return recommended_cards['id']
-

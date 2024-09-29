@@ -17,12 +17,6 @@ from rest_framework import serializers as drf_serializers
 from cards import serializers, models
 from utils.pagination import LargePagination
 
-# from cards.ai.ai_recommendation import recommend_flashcards_for_user
-# from cards.ai.ai_collaborative import recommend_collaborative_cards
-# from cards.ai.ai_real_time import recommend_cards_based_on_recent_activity
-
-logger = logging.getLogger(__name__)
-
 
 class CardViewSet(viewsets.ViewSetMixin, generics.ListAPIView, generics.CreateAPIView):
     serializer_class = serializers.CardSerializer
@@ -138,42 +132,3 @@ class TagsView(APIView):
 
     def get(self, request, *args, **kwargs):
         return Response(models.Tag.objects.values_list("name", flat=True), status=status.HTTP_200_OK)
-
-
-# class DataView(APIView):
-#
-#     def post(self, request):
-#         user = request.data.get('user_id') # TUTAJ POWINNO BYĆ ID AKTUALNEGO USERA
-#         user_tags_preference = request.data.get('user_tags_preference')
-#
-#         if user_tags_preference is None:
-#             return Response({"detail": "user_tags_preference is required."},
-#                             status=400)
-#
-#         recommendations_model = recommend_flashcards_for_user(user_tags_preference)
-#         recommendations_collab = recommend_collaborative_cards(user)
-#         recommendations_realtime = recommend_cards_based_on_recent_activity(user)
-#
-#         response_data = [rec for rec in recommendations_model + recommendations_collab + recommendations_realtime]
-#         random.shuffle(response_data)
-#
-#         return Response(response_data[:10])
-#
-#
-# # TODO Remove this class
-# class CardRecommendationView(APIView):
-#     def post(self, request):
-#         user = request.data.get('user_id')
-#         recommended_cards = recommend_collaborative_cards(user)
-#
-#         return Response(recommended_cards)
-#
-#
-# # TODO Remove this class
-# class RealDataRecommendationView(APIView):
-#     def post(self, request):
-#         user = request.data.get('user_id')
-#         recommended_cards = recommend_cards_based_on_recent_activity(user)
-#
-#         return Response(recommended_cards)
-#
