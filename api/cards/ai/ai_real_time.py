@@ -78,5 +78,9 @@ def recommend_cards_based_on_recent_activity(user_id):
         ~flashcards_df['id'].isin(viewed_cards_by_user)
         ]
 
+    if recommended_cards.empty:
+        logger.info('No cards found based on tags. Returning random cards.')
+        return flashcards_df.sample(5)['id'].tolist()
+
     return recommended_cards['id']
 

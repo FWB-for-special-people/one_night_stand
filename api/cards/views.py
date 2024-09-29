@@ -2,6 +2,7 @@ import json
 import os
 from json import JSONDecodeError
 import logging
+import random
 
 from django.core.exceptions import BadRequest
 from attr import filters
@@ -126,19 +127,24 @@ class CommentViewSet(viewsets.ViewSetMixin, generics.ListAPIView, generics.Creat
 class DataView(APIView):
 
     def post(self, request):
+        user = request.data.get('user_id') # TUTAJ POWINNO BYĆ ID AKTUALNEGO USERA
         user_tags_preference = request.data.get('user_tags_preference')
 
         if user_tags_preference is None:
             return Response({"detail": "user_tags_preference is required."},
                             status=400)
 
-        recommendations = recommend_flashcards_for_user(user_tags_preference)
+        recommendations_model = recommend_flashcards_for_user(user_tags_preference)
+        recommendations_collab = recommend_collaborative_cards(user)
+        recommendations_realtime = recommend_cards_based_on_recent_activity(user)
 
-        response_data = [rec for rec in recommendations]
+        response_data = [rec for rec in recommendations_model + recommendations_collab + recommendations_realtime]
+        random.shuffle(response_data)
 
-        return Response(response_data)
+        return Response(response_data[:10])
 
 
+# TODO Remove this class
 class CardRecommendationView(APIView):
     def post(self, request):
         user = request.data.get('user_id')
@@ -147,6 +153,7 @@ class CardRecommendationView(APIView):
         return Response(recommended_cards)
 
 
+# TODO Remove this class
 class RealDataRecommendationView(APIView):
     def post(self, request):
         user = request.data.get('user_id')
