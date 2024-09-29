@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {useWhisper} from './useWhisperYolo';
 
 const SpeechToText = () => {

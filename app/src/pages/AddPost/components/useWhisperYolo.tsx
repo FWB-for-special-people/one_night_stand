@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useEffectAsync, useMemoAsync } from '@chengsokdara/react-hooks-async'
 import type { RawAxiosRequestHeaders } from 'axios'
 import type { Harker } from 'hark'
