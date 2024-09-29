@@ -13,7 +13,7 @@ hackyeah:
     trustedOrigins: ""
     resources:
       requests:
-        cpu: 300
+        cpu: 300m
         memory: 2Gi
       limits:
         memory: 4Gi
