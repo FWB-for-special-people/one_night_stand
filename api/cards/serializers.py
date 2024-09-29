@@ -43,6 +43,8 @@ class CardSerializer(serializers.ModelSerializer):
 
 
 class CommentSerializer(serializers.ModelSerializer):
+    created_by = UserSerializer(read_only=True)
+
     class Meta:
         model = models.Comment
         fields = ["id", "text", "created_by", "created_at"]

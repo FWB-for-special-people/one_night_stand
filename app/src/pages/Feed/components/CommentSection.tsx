@@ -5,6 +5,7 @@ import { API } from 'src/constants/api_routes.ts';
 import { useCardCommentsQuery } from 'src/queries/useCardCommentsQuery.ts';
 import { useAtom } from 'jotai';
 import { darkModeAtom } from 'src/atoms.ts';
+import {User} from "src/types.ts";
 
 interface CommentsSectionProps {
   postId: number;
@@ -13,7 +14,7 @@ interface CommentsSectionProps {
 interface Comment {
   id: number;
   text: string;
-  createdBy: number;
+  createdBy: User;
   createdAt: string;
 }
 
@@ -122,7 +123,7 @@ const CommentsSection: React.FC<CommentsSectionProps> = ({ postId }) => {
                     borderBottom: isDarkMode ? '.5px solid white' : '.5px solid black',
                     fontSize: '.5rem',
                   }}>
-                  {comment.createdBy}
+                  {comment.createdBy.full_name}
                 </Typography>
                 <Typography
                   variant="caption"

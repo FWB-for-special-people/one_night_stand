@@ -1,12 +1,12 @@
 import {useInfiniteQuery} from "react-query";
 import {API} from "src/constants/api_routes.ts";
 import {useAxios} from "src/hooks/useAxios.ts";
-import {Paginated} from "src/types.ts";
+import {Paginated, User} from "src/types.ts";
 
 type Comment = {
     id: number;
     text: string;
-    created_by: number;
+    created_by: User,
     created_at: string;
 }
 
