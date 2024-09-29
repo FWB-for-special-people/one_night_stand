@@ -4,7 +4,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import MessageIcon from '@mui/icons-material/Message';
 import { useAtom } from 'jotai';
 import { darkModeAtom, isSideMenuCollapsedAtom } from 'src/atoms.ts';
-import Avatar from 'src/pages/Feed/components/Avatar.tsx';
+import { Avatar } from 'src/pages/Feed/components/Avatar.tsx';
 
 interface PostProps {
   image: string;
@@ -13,6 +13,7 @@ interface PostProps {
   userName?: string;
   userAvatar?: string;
 }
+
 
 const Post: React.FC<PostProps> = ({ image, text, userName='Użytkownik Anonimowy' }) => {
   const theme = useTheme();
@@ -55,7 +56,8 @@ const Post: React.FC<PostProps> = ({ image, text, userName='Użytkownik Anonimow
           margin: '.5rem',
           paddingLeft: '.2rem',
         }}>
-        <Avatar avatar={image} id={userName} name={userName} />
+
+        <Avatar avatar={image}  name={userName} />
         <Typography
           sx={{
               color: 'text.primary',
