@@ -26,7 +26,7 @@ logger = logging.getLogger(__name__)
 
 class CardViewSet(viewsets.ViewSetMixin, generics.ListAPIView, generics.CreateAPIView):
     serializer_class = serializers.CardSerializer
-    queryset = models.Card.objects.all()
+    queryset = models.Card.objects.all().order_by("-created_at")
     client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
     pagination_class = LargePagination
 
