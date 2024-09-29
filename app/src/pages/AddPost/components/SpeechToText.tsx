@@ -7,7 +7,7 @@ const SpeechToText = () => {
         startRecording,
         stopRecording,
     } = useWhisper({
-        apiKey: process.env.OPENAI_API_KEY
+        apiKey: import.meta.env.VITE_OPENAI_API_KEY
     })
 
     return (
