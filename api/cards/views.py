@@ -15,11 +15,9 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from cards import serializers, models
-from . import models, serializers
-from .ai.ai_recommendation import recommend_flashcards_for_user
-from .ai.ai_collaborative import recommend_collaborative_cards
-from .ai.ai_real_time import recommend_cards_based_on_recent_activity
-from . import serializers, models
+from cards.ai.ai_recommendation import recommend_flashcards_for_user
+from cards.ai.ai_collaborative import recommend_collaborative_cards
+from cards.ai.ai_real_time import recommend_cards_based_on_recent_activity
 
 logger = logging.getLogger(__name__)
 
@@ -36,10 +34,7 @@ class CardViewSet(viewsets.ViewSetMixin, generics.ListAPIView, generics.CreateAP
         return queryset
 
     def perform_create(self, serializer):
-
-        card = serializer.save(created_by=self.request.user, difficulty=self.request.data["difficulty"],
-                               expected_time=int(self.request.data[
-                                                     "expected_time"]))
+        card = serializer.save(created_by=self.request.user)
 
         tags = self.request.data["tags"]
         for tag in tags:
@@ -122,6 +117,17 @@ class CommentViewSet(viewsets.ViewSetMixin, generics.ListAPIView, generics.Creat
 
     def perform_create(self, serializer):
         serializer.save(created_by=self.request.user, card_id=self.kwargs["card_id"])
+
+
+class CardImageViewSet(viewsets.ViewSetMixin, generics.ListAPIView, generics.CreateAPIView):
+    queryset = models.CardImage.objects.all()
+    serializer_class = serializers.CardImageSerializer
+
+    def filter_queryset(self, queryset):
+        return queryset.filter(Q(is_public=True) | Q(created_by=self.request.user))
+
+    def perform_create(self, serializer):
+        serializer.save(created_by=self.request.user)
 
 
 class DataView(APIView):
