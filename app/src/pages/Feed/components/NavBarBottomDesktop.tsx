@@ -14,7 +14,10 @@ interface NavBarBottomDesktopProps {
   isCollapsed: boolean;
 }
 
-const NavBarBottomDesktop: React.FC<NavBarBottomDesktopProps> = ({handleToggle, isCollapsed}: NavBarBottomDesktopProps) => {
+const NavBarBottomDesktop: React.FC<NavBarBottomDesktopProps> = ({
+                                                                   handleToggle,
+                                                                   isCollapsed
+                                                                 }: NavBarBottomDesktopProps) => {
 
   const menuTextStyle = {
     color: 'white',
@@ -23,42 +26,42 @@ const NavBarBottomDesktop: React.FC<NavBarBottomDesktopProps> = ({handleToggle, 
   }
 
   return (
-      <AppBar
-        position="fixed"
+    <AppBar
+      position="fixed"
+      sx={{
+        width: isCollapsed ? '3rem' : '12rem',
+        height: 'calc(100vh - 4rem)',
+        left: 0,
+        top: '4rem',
+        backgroundColor: 'primary.main',
+        paddingTop: '2rem',
+        boxShadow: 'inset 0 0 10px rgba(0, 0, 0, 0.5)',
+      }}
+    >
+      <Toolbar
         sx={{
-          width: isCollapsed ? '7vw' : '20vw',
-          height: 'calc(100vh - 4rem)',
-          left: 0,
-          top: '4rem',
-          backgroundColor: 'primary.main',
-          paddingTop: '2rem',
-          boxShadow: 'inset 0 0 10px rgba(0, 0, 0, 0.5)',
+          display: 'flex',
+          height: '100%',
+          flexDirection: 'column',
+          paddingLeft: isCollapsed ? "" : "0rem !important"
         }}
       >
-        <Toolbar
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'flex-start',
-            height: '100%',
-          }}
-        >
-          <List sx={{ flexGrow: 1, width: '100%', gap: '2rem' }}>
-            <ListItemButton sx={{ justifyContent: isCollapsed ? 'center' : 'flex-start', padding: '0.5rem 1rem' }}
-                            component="a" href="/">
-              <ListItemIcon sx={{ minWidth: '3rem', justifyContent: 'center' }}>
-                <HomeIcon sx={{ color: 'white' }} />
-              </ListItemIcon>
-              {!isCollapsed && <ListItemText primary="Strona Główna" sx={{...menuTextStyle}} />}
-            </ListItemButton>
+        <List sx={{width: '100%', gap: '2rem'}}>
+          <ListItemButton sx={{justifyContent: isCollapsed ? 'center' : 'flex-start', padding: '0.5rem 0rem', height: "3rem"}}
+                          component="a" href="/">
+            <ListItemIcon sx={{minWidth: '3rem', justifyContent: 'center'}}>
+              <HomeIcon sx={{color: 'white'}}/>
+            </ListItemIcon>
+            {!isCollapsed && <ListItemText primary="Strona Główna" sx={{...menuTextStyle}}/>}
+          </ListItemButton>
 
-            <ListItemButton sx={{ justifyContent: isCollapsed ? 'center' : 'flex-start', padding: '0.5rem 1rem' }}
-                            component="a" href="/categories">
-              <ListItemIcon sx={{ minWidth: '3rem', justifyContent: 'center' }}>
-                <CategoryIcon sx={{ color: 'white' }} />
-              </ListItemIcon>
-              {!isCollapsed && <ListItemText primary="Kategorie" sx={{...menuTextStyle}} />}
-            </ListItemButton>
+          <ListItemButton sx={{justifyContent: isCollapsed ? 'center' : 'flex-start', padding: '0.5rem 0rem', height: "3rem"}}
+                          component="a" href="/categories">
+            <ListItemIcon sx={{minWidth: '3rem', justifyContent: 'center'}}>
+              <CategoryIcon sx={{color: 'white'}}/>
+            </ListItemIcon>
+            {!isCollapsed && <ListItemText primary="Kategorie" sx={{...menuTextStyle}}/>}
+          </ListItemButton>
 
             <ListItemButton
                         sx={{ justifyContent: isCollapsed ? 'center' : 'flex-start', padding: '0.5rem 1rem' }}
@@ -71,35 +74,38 @@ const NavBarBottomDesktop: React.FC<NavBarBottomDesktopProps> = ({handleToggle, 
                         {!isCollapsed && <ListItemText primary="Dodaj Post" sx={{ ...menuTextStyle }} />}
                     </ListItemButton>
 
-            <ListItemButton sx={{ justifyContent: isCollapsed ? 'center' : 'flex-start', padding: '0.5rem 1rem' }}
-                            component="a" href="/my-profile">
-              <ListItemIcon sx={{ minWidth: '3rem', justifyContent: 'center' }}>
-                <AccountCircleIcon sx={{ color: 'white' }} />
-              </ListItemIcon>
-              {!isCollapsed && <ListItemText primary="Mój Profil" sx={{...menuTextStyle}} />}
-            </ListItemButton>
+          <ListItemButton sx={{justifyContent: isCollapsed ? 'center' : 'flex-start', padding: '0.5rem 0rem', height: "3rem"}}
+                          component="a" href="/my-profile">
+            <ListItemIcon sx={{minWidth: '3rem', justifyContent: 'center'}}>
+              <AccountCircleIcon sx={{color: 'white'}}/>
+            </ListItemIcon>
+            {!isCollapsed && <ListItemText primary="Mój Profil" sx={{...menuTextStyle}}/>}
+          </ListItemButton>
 
-            <ListItemButton sx={{ justifyContent: isCollapsed ? 'center' : 'flex-start', padding: '0.5rem 1rem' }}
-                            component="a" href="/settings">
-              <ListItemIcon sx={{ minWidth: '3rem', justifyContent: 'center' }}>
-                <SettingsIcon sx={{ color: 'white' }} />
-              </ListItemIcon>
-              {!isCollapsed && <ListItemText primary="Ustawienia" sx={{...menuTextStyle}} />}
-            </ListItemButton>
-          </List>
-        </Toolbar>
+          <ListItemButton sx={{justifyContent: isCollapsed ? 'center' : 'flex-start', padding: '0.5rem 0rem', height: "3rem"}}
+                          component="a" href="/settings">
+            <ListItemIcon sx={{minWidth: '3rem', justifyContent: 'center'}}>
+              <SettingsIcon sx={{color: 'white'}}/>
+            </ListItemIcon>
+            {!isCollapsed && <ListItemText primary="Ustawienia" sx={{...menuTextStyle}}/>}
+          </ListItemButton>
+        </List>
         <IconButton
           onClick={handleToggle}
           sx={{
+            marginTop: "auto",
+            width: "100%",
             color: 'white',
-            alignSelf: isCollapsed ? 'center' : 'flex-end',
-            paddingRight: isCollapsed ? 0 : '1rem',
-            paddingBottom: '1rem'
+            justifyContent: isCollapsed ? "center" : "end",
+            padding: "0 0 1rem 0 !important"
           }}
         >
           {isCollapsed ? <ChevronRightIcon fontSize={"large"}/> : <ChevronLeftIcon fontSize={"large"}/>}
         </IconButton>
-      </AppBar>
+      </Toolbar>
+
+
+    </AppBar>
   );
 };
 

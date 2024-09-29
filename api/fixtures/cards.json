@@ -1,0 +1,6418 @@
+[
+  {
+    "model": "cards.card",
+    "pk": 1,
+    "fields": {
+      "text": "Uwaga, uwaga! Za tydzień wszyscy będą mieć przymusowe wolne - możliwość zarabiania pieniędzy zostanie wstrzymana! Przygotujcie się i zadbajcie o swoje finanse już teraz. ♥️",
+      "difficulty": "beginner",
+      "expected_time": 20,
+      "created_by": 10,
+      "created_at": "2024-09-29T00:08:25.271Z",
+      "tags": [
+        103,
+        104
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 2,
+    "fields": {
+      "text": "Pamiętaj, aby dziś pić więcej wody! Nawodnienie to klucz do zdrowego ciała i umysłu. 🥤",
+      "difficulty": "beginner",
+      "expected_time": 5,
+      "created_by": 12,
+      "created_at": "2024-09-29T10:15:30.271Z",
+      "tags": [
+        4,
+        10,
+        22
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 3,
+    "fields": {
+      "text": "Masz już plan na przyszły tydzień? Sprawdź kalendarz i uporządkuj swoje zadania, aby uniknąć stresu. 🗓️",
+      "difficulty": "intermediate",
+      "expected_time": 15,
+      "created_by": 14,
+      "created_at": "2024-09-28T22:35:00Z",
+      "tags": [
+        4,
+        10,
+        22
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 4,
+    "fields": {
+      "text": "Nie zapomnij o ruchu! Nawet krótki spacer może poprawić Twoje samopoczucie i dodać energii na resztę dnia. 🚶",
+      "difficulty": "beginner",
+      "expected_time": 10,
+      "created_by": 15,
+      "created_at": "2024-09-29T11:45:00Z",
+      "tags": [
+        103,
+        107
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 5,
+    "fields": {
+      "text": "Czy wiesz, że codzienna medytacja może poprawić koncentrację i obniżyć poziom stresu? Spróbuj już dziś! 🧘",
+      "difficulty": "beginner",
+      "expected_time": 10,
+      "created_by": 11,
+      "created_at": "2024-09-28T18:00:00Z",
+      "tags": [
+        4,
+        10,
+        22
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 6,
+    "fields": {
+      "text": "Czas na małą przerwę! Zrób sobie 5 minut dla siebie i złap oddech. Odpoczynek to podstawa produktywności. 🌿",
+      "difficulty": "beginner",
+      "expected_time": 5,
+      "created_by": 13,
+      "created_at": "2024-09-29T08:00:00Z",
+      "tags": [
+        4,
+        10,
+        22
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 7,
+    "fields": {
+      "text": "Zaplanuj posiłki na cały tydzień! To oszczędność czasu, pieniędzy i dbanie o zdrowie. 🍽️",
+      "difficulty": "intermediate",
+      "expected_time": 30,
+      "created_by": 16,
+      "created_at": "2024-09-28T20:45:00Z",
+      "tags": [
+        4,
+        10,
+        22
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 8,
+    "fields": {
+      "text": "Twój dzień zaczyna się od energii! Zadbaj o zdrowe śniadanie i dobry początek każdego poranka. 🍳",
+      "difficulty": "beginner",
+      "expected_time": 10,
+      "created_by": 14,
+      "created_at": "2024-09-29T07:15:00Z",
+      "tags": [
+        4,
+        10,
+        22
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 9,
+    "fields": {
+      "text": "Masz zaległe zadania? Podziel je na mniejsze kroki, aby szybciej je zrealizować. 📋",
+      "difficulty": "intermediate",
+      "expected_time": 25,
+      "created_by": 12,
+      "created_at": "2024-09-28T16:30:00Z",
+      "tags": [
+        4,
+        10,
+        22
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 10,
+    "fields": {
+      "text": "Znajdź czas na hobby! Rozwój osobisty zaczyna się od pasji, które dodają radości i energii. 🎨",
+      "difficulty": "intermediate",
+      "expected_time": 20,
+      "created_by": 15,
+      "created_at": "2024-09-29T12:00:00Z",
+      "tags": [
+        4,
+        10,
+        22
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 11,
+    "fields": {
+      "text": "Nocny odpoczynek to klucz do sukcesu! Staraj się spać minimum 7-8 godzin dziennie, aby regenerować organizm. 🌙",
+      "difficulty": "beginner",
+      "expected_time": 5,
+      "created_by": 13,
+      "created_at": "2024-09-28T21:00:00Z",
+      "tags": [
+        4,
+        10,
+        22
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 12,
+    "fields": {
+      "text": "Hej, Pythonowiczu! Chcesz się nauczyć jak napisać funkcję w Pythonie? To proste! Zaczynasz od słówka \\'def\\', potem nazwa funkcji, nawiasy i dwukropek. Wewnątrz bloku kodu piszesz co funkcja ma robić. Prosty przykład? \\\\ndef przywitaj(swiat):\\\\n    print(\\'Cześć, \\' + swiat + \\'!\\')\\\\nPrzepisz to, wywołaj funkcję i gotowe! Pythonowe czary-mary na wyciągnięcie ręki!",
+      "difficulty": "beginner",
+      "expected_time": 45,
+      "created_by": 10,
+      "created_at": "2024-09-29T00:29:49.142Z",
+      "tags": [
+        8,
+        16,
+        21
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 13,
+    "fields": {
+      "text": "Python jest prosty, ale potężny! Zacznij od słówka \\'def\\', aby zdefiniować funkcję. Przykład: \\\\ndef dodaj(a, b):\\\\n    return a + b\\\\nProste? Teraz stwórz własną funkcję!",
+      "difficulty": "beginner",
+      "expected_time": 30,
+      "created_by": 11,
+      "created_at": "2024-09-29T00:31:49.142Z",
+      "tags": [
+        8,
+        16,
+        24
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 14,
+    "fields": {
+      "text": "Funkcje w Pythonie pomagają organizować kod. Spróbuj tego: \\\\ndef przywitaj():\\\\n    print(\\'Cześć, Pythonowcu!\\')\\\\nPisz swoje funkcje i ułatwiaj sobie życie z Pythonem!",
+      "difficulty": "beginner",
+      "expected_time": 35,
+      "created_by": 12,
+      "created_at": "2024-09-29T00:32:49.142Z",
+      "tags": [
+        8,
+        88
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 15,
+    "fields": {
+      "text": "Python ma bardzo czytelną składnię. Użyj funkcji, by ponownie używać kodu: \\\\ndef kwadrat(liczba):\\\\n    return liczba * liczba\\\\nWypróbuj to na swoim kodzie!",
+      "difficulty": "beginner",
+      "expected_time": 40,
+      "created_by": 10,
+      "created_at": "2024-09-29T00:33:49.142Z",
+      "tags": [
+        16,
+        21,
+        108
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 16,
+    "fields": {
+      "text": "Chcesz powtórzyć kod wielokrotnie? Użyj funkcji w Pythonie. Przykład: \\\\ndef powiedz_czesc(imie):\\\\n    print(\\'Cześć, \\', imie)\\\\nZdefiniuj swoje funkcje!",
+      "difficulty": "beginner",
+      "expected_time": 25,
+      "created_by": 11,
+      "created_at": "2024-09-29T00:34:49.142Z",
+      "tags": [
+        16,
+        21,
+        108
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 17,
+    "fields": {
+      "text": "Tworzenie funkcji to pierwszy krok do efektywnego programowania. Oto przykład: \\\\ndef pomnoz(a, b):\\\\n    return a * b\\\\nSpróbuj teraz stworzyć własne funkcje!",
+      "difficulty": "beginner",
+      "expected_time": 50,
+      "created_by": 12,
+      "created_at": "2024-09-29T00:35:49.142Z",
+      "tags": [
+        8,
+        21,
+        108
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 18,
+    "fields": {
+      "text": "Zacznij od tworzenia funkcji, by ułatwić sobie pracę. Przykład: \\\\ndef odejmij(a, b):\\\\n    return a - b\\\\nStwórz kolejne funkcje!",
+      "difficulty": "beginner",
+      "expected_time": 30,
+      "created_by": 10,
+      "created_at": "2024-09-29T00:36:49.142Z",
+      "tags": [
+        8,
+        16
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 19,
+    "fields": {
+      "text": "Tworzenie funkcji w Pythonie jest kluczowe! Przykład: \\\\ndef powiel(tekst, n):\\\\n    return tekst * n\\\\nWypróbuj funkcję na przykładach.",
+      "difficulty": "beginner",
+      "expected_time": 45,
+      "created_by": 11,
+      "created_at": "2024-09-29T00:37:49.142Z",
+      "tags": [
+        21,
+        108
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 20,
+    "fields": {
+      "text": "Dzięki funkcjom w Pythonie możesz wielokrotnie używać tego samego kodu. Spójrz na to: \\\\ndef pozegnaj(imie):\\\\n    print(\\'Do zobaczenia, \\', imie)\\\\nTwórz własne funkcje i baw się dobrze!",
+      "difficulty": "beginner",
+      "expected_time": 40,
+      "created_by": 12,
+      "created_at": "2024-09-29T00:38:49.142Z",
+      "tags": [
+        8,
+        108
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 21,
+    "fields": {
+      "text": "Funkcje są jak magiczne pudełka kodu. Oto prosty przykład: \\\\ndef podziel(a, b):\\\\n    return a / b\\\\nNapisz swoje funkcje i sprawdź jak to działa.",
+      "difficulty": "beginner",
+      "expected_time": 35,
+      "created_by": 10,
+      "created_at": "2024-09-29T00:39:49.142Z",
+      "tags": [
+        8,
+        21,
+        108
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 22,
+    "fields": {
+      "text": "Nie wiesz jak zacząć? Użyj funkcji w Pythonie: \\\\ndef kwadratowa(x):\\\\n    return x ** 2\\\\nProsty przykład, który pomoże ci zrozumieć jak działają funkcje.",
+      "difficulty": "beginner",
+      "expected_time": 30,
+      "created_by": 11,
+      "created_at": "2024-09-29T00:40:49.142Z",
+      "tags": [
+        8,
+        16
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 23,
+    "fields": {
+      "text": "Organizuj swój kod dzięki funkcjom. Przykład: \\\\ndef pozdrow(imie):\\\\n    print(\\'Cześć, \\', imie)\\\\nNapisz funkcje i używaj ich wielokrotnie.",
+      "difficulty": "beginner",
+      "expected_time": 25,
+      "created_by": 12,
+      "created_at": "2024-09-29T00:41:49.142Z",
+      "tags": [
+        21,
+        108
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 24,
+    "fields": {
+      "text": "Funkcje to sposób na ponowne użycie kodu w Pythonie. Przykład: \\\\ndef mnozenie(a, b):\\\\n    return a * b\\\\nTwórz swoje funkcje i ułatwiaj sobie życie.",
+      "difficulty": "beginner",
+      "expected_time": 40,
+      "created_by": 10,
+      "created_at": "2024-09-29T00:42:49.142Z",
+      "tags": [
+        8,
+        108
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 25,
+    "fields": {
+      "text": "Nauka funkcji w Pythonie to kluczowy krok w programowaniu. Przykład: \\\\ndef dodaj_3(a, b, c):\\\\n    return a + b + c\\\\nStwórz funkcję i ciesz się programowaniem!",
+      "difficulty": "beginner",
+      "expected_time": 50,
+      "created_by": 11,
+      "created_at": "2024-09-29T00:43:49.142Z",
+      "tags": [
+        21,
+        108
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 26,
+    "fields": {
+      "text": "Funkcje w Pythonie ułatwiają życie programistom. Przykład: def powiedz_czesc(): print('Cześć!')",
+      "difficulty": "beginner",
+      "expected_time": 20,
+      "created_by": 10,
+      "created_at": "2024-09-29T00:44:49.142Z",
+      "tags": [
+        8,
+        21
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 27,
+    "fields": {
+      "text": "Używaj funkcji, by efektywnie zarządzać kodem w Pythonie. Przykład: def suma(a, b): return a + b",
+      "difficulty": "beginner",
+      "expected_time": 45,
+      "created_by": 12,
+      "created_at": "2024-09-29T00:45:49.142Z",
+      "tags": [
+        8,
+        108
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 28,
+    "fields": {
+      "text": "Poznaj podstawy pisania funkcji w Pythonie. Przykład: def roznica(a, b): return a - b",
+      "difficulty": "beginner",
+      "expected_time": 30,
+      "created_by": 11,
+      "created_at": "2024-09-29T00:46:49.142Z",
+      "tags": [
+        8,
+        21,
+        108
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 29,
+    "fields": {
+      "text": "Twórz efektywne funkcje w Pythonie. Przykład: def dzielenie(a, b): return a / b",
+      "difficulty": "beginner",
+      "expected_time": 35,
+      "created_by": 10,
+      "created_at": "2024-09-29T00:47:49.142Z",
+      "tags": [
+        8,
+        16
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 30,
+    "fields": {
+      "text": "Naucz się korzystać z funkcji w Pythonie. Przykład: def przgotuj_herbate(): print('Herbata gotowa!')",
+      "difficulty": "beginner",
+      "expected_time": 40,
+      "created_by": 11,
+      "created_at": "2024-09-29T00:48:49.142Z",
+      "tags": [
+        21,
+        108
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 31,
+    "fields": {
+      "text": "Funkcje lambda w Pythonie to sposób na pisanie krótkich funkcji. Przykład: dodaj = lambda x, y: x + y",
+      "difficulty": "intermediate",
+      "expected_time": 30,
+      "created_by": 13,
+      "created_at": "2024-09-29T00:49:49.142Z",
+      "tags": [
+        21,
+        108
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 32,
+    "fields": {
+      "text": "Zagnieżdżone funkcje mogą być bardzo przydatne. Przykład: def zewnetrzna(x): def wewnetrzna(y): return x + y return wewnetrzna",
+      "difficulty": "intermediate",
+      "expected_time": 45,
+      "created_by": 14,
+      "created_at": "2024-09-29T00:50:49.142Z",
+      "tags": [
+        8,
+        16,
+        21
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 33,
+    "fields": {
+      "text": "Poznaj domknięcia w Pythonie. Przykład: def make_multiplier(n): return lambda x: x * n",
+      "difficulty": "advanced",
+      "expected_time": 60,
+      "created_by": 15,
+      "created_at": "2024-09-29T00:51:49.142Z",
+      "tags": [
+        8,
+        108
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 34,
+    "fields": {
+      "text": "Naucz się piec pyszne ciasto.",
+      "difficulty": "beginner",
+      "expected_time": 60,
+      "created_by": 10,
+      "created_at": "2024-09-30T00:00:00Z",
+      "tags": [
+        5
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 35,
+    "fields": {
+      "text": "Odkryj piękne krajobrazy Islandii.",
+      "difficulty": "beginner",
+      "expected_time": 120,
+      "created_by": 12,
+      "created_at": "2024-09-30T01:00:00Z",
+      "tags": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 36,
+    "fields": {
+      "text": "Wprowadzenie do podstawowych technik fotografii.",
+      "difficulty": "intermediate",
+      "expected_time": 90,
+      "created_by": 14,
+      "created_at": "2024-09-30T02:00:00Z",
+      "tags": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 37,
+    "fields": {
+      "text": "Ćwiczenia jogi dla początkujących.",
+      "difficulty": "beginner",
+      "expected_time": 30,
+      "created_by": 11,
+      "created_at": "2024-09-30T03:00:00Z",
+      "tags": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 38,
+    "fields": {
+      "text": "Wskazówki i przepisy na gotowanie dla smakoszy.",
+      "difficulty": "advanced",
+      "expected_time": 90,
+      "created_by": 13,
+      "created_at": "2024-09-30T04:00:00Z",
+      "tags": [
+        5
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 39,
+    "fields": {
+      "text": "Top 10 książek, które warto przeczytać tego lata.",
+      "difficulty": "beginner",
+      "expected_time": 60,
+      "created_by": 10,
+      "created_at": "2024-09-30T05:00:00Z",
+      "tags": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 40,
+    "fields": {
+      "text": "Szlaki turystyczne w Górach Skalistych.",
+      "difficulty": "intermediate",
+      "expected_time": 120,
+      "created_by": 12,
+      "created_at": "2024-09-30T06:00:00Z",
+      "tags": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 41,
+    "fields": {
+      "text": "Trendy modowe na nadchodzący sezon.",
+      "difficulty": "beginner",
+      "expected_time": 45,
+      "created_by": 14,
+      "created_at": "2024-09-30T07:00:00Z",
+      "tags": [
+        7
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 42,
+    "fields": {
+      "text": "Ćwiczenia cardio, aby pozostać w formie.",
+      "difficulty": "intermediate",
+      "expected_time": 60,
+      "created_by": 11,
+      "created_at": "2024-09-30T08:00:00Z",
+      "tags": [
+        6
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 43,
+    "fields": {
+      "text": "Techniki medytacji redukujące stres.",
+      "difficulty": "beginner",
+      "expected_time": 30,
+      "created_by": 13,
+      "created_at": "2024-09-30T09:00:00Z",
+      "tags": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 44,
+    "fields": {
+      "text": "Naucz się robić na drutach i tworzyć własne ubrania.",
+      "difficulty": "advanced",
+      "expected_time": 120,
+      "created_by": 10,
+      "created_at": "2024-09-30T10:00:00Z",
+      "tags": [
+        7
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 45,
+    "fields": {
+      "text": "Przewodnik po degustacji wina.",
+      "difficulty": "intermediate",
+      "expected_time": 60,
+      "created_by": 12,
+      "created_at": "2024-09-30T11:00:00Z",
+      "tags": [
+        5
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 46,
+    "fields": {
+      "text": "Poznaj historię starożytnego Rzymu.",
+      "difficulty": "intermediate",
+      "expected_time": 90,
+      "created_by": 14,
+      "created_at": "2024-09-30T12:00:00Z",
+      "tags": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 47,
+    "fields": {
+      "text": "Wskazówki dotyczące uprawy skutecznego warzywniaka.",
+      "difficulty": "beginner",
+      "expected_time": 60,
+      "created_by": 11,
+      "created_at": "2024-09-30T13:00:00Z",
+      "tags": [
+        5
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 48,
+    "fields": {
+      "text": "Podstawowe techniki pierwszej pomocy, które każdy powinien znać.",
+      "difficulty": "beginner",
+      "expected_time": 45,
+      "created_by": 13,
+      "created_at": "2024-09-30T14:00:00Z",
+      "tags": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 49,
+    "fields": {
+      "text": "Zrozumienie zasad współczesnej sztuki.",
+      "difficulty": "advanced",
+      "expected_time": 90,
+      "created_by": 10,
+      "created_at": "2024-09-30T15:00:00Z",
+      "tags": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 50,
+    "fields": {
+      "text": "Najlepsze miejsca na wakacje letnie.",
+      "difficulty": "beginner",
+      "expected_time": 120,
+      "created_by": 12,
+      "created_at": "2024-09-30T16:00:00Z",
+      "tags": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 51,
+    "fields": {
+      "text": "Jak trenować do maratonu.",
+      "difficulty": "intermediate",
+      "expected_time": 180,
+      "created_by": 14,
+      "created_at": "2024-09-30T17:00:00Z",
+      "tags": [
+        6
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 52,
+    "fields": {
+      "text": "Poznaj architekturę Paryża.",
+      "difficulty": "beginner",
+      "expected_time": 90,
+      "created_by": 11,
+      "created_at": "2024-09-30T18:00:00Z",
+      "tags": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 53,
+    "fields": {
+      "text": "Proste przepisy na zdrowe koktajle na śniadanie.",
+      "difficulty": "beginner",
+      "expected_time": 30,
+      "created_by": 13,
+      "created_at": "2024-09-30T19:00:00Z",
+      "tags": [
+        5
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 54,
+    "fields": {
+      "text": "Zrozumienie podstaw inwestowania.",
+      "difficulty": "intermediate",
+      "expected_time": 120,
+      "created_by": 10,
+      "created_at": "2024-09-30T20:00:00Z",
+      "tags": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 55,
+    "fields": {
+      "text": "Projektowanie wymarzonego domu na budżet.",
+      "difficulty": "beginner",
+      "expected_time": 90,
+      "created_by": 12,
+      "created_at": "2024-09-30T21:00:00Z",
+      "tags": [
+        5
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 56,
+    "fields": {
+      "text": "Sztuka robienia perfekcyjnego sushi.",
+      "difficulty": "advanced",
+      "expected_time": 120,
+      "created_by": 14,
+      "created_at": "2024-09-30T22:00:00Z",
+      "tags": [
+        5
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 57,
+    "fields": {
+      "text": "Techniki rzeźby dla początkujących.",
+      "difficulty": "beginner",
+      "expected_time": 90,
+      "created_by": 11,
+      "created_at": "2024-09-30T23:00:00Z",
+      "tags": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 58,
+    "fields": {
+      "text": "Odkrywanie życia nocnego w Tokio.",
+      "difficulty": "intermediate",
+      "expected_time": 120,
+      "created_by": 13,
+      "created_at": "2024-10-01T00:00:00Z",
+      "tags": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 59,
+    "fields": {
+      "text": "Naucz się tańczyć salsę.",
+      "difficulty": "beginner",
+      "expected_time": 45,
+      "created_by": 10,
+      "created_at": "2024-10-01T01:00:00Z",
+      "tags": [
+        6
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 60,
+    "fields": {
+      "text": "Podróż przez winnice Toskanii.",
+      "difficulty": "advanced",
+      "expected_time": 180,
+      "created_by": 12,
+      "created_at": "2024-10-01T02:00:00Z",
+      "tags": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 61,
+    "fields": {
+      "text": "DIY Projekty ulepszające dom.",
+      "difficulty": "intermediate",
+      "expected_time": 90,
+      "created_by": 14,
+      "created_at": "2024-10-01T03:00:00Z",
+      "tags": [
+        5
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 62,
+    "fields": {
+      "text": "Top 10 albumów jazzowych do posłuchania.",
+      "difficulty": "beginner",
+      "expected_time": 60,
+      "created_by": 11,
+      "created_at": "2024-10-01T04:00:00Z",
+      "tags": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 63,
+    "fields": {
+      "text": "Techniki skutecznego kodowania w Pythonie.",
+      "difficulty": "intermediate",
+      "expected_time": 90,
+      "created_by": 14,
+      "created_at": "2024-09-30T10:00:00Z",
+      "tags": [
+        8,
+        21
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 64,
+    "fields": {
+      "text": "Porady na temat robienia zdjęć przyrody.",
+      "difficulty": "beginner",
+      "expected_time": 120,
+      "created_by": 10,
+      "created_at": "2024-10-02T09:00:00Z",
+      "tags": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 65,
+    "fields": {
+      "text": "Planowanie zrównoważonych posiłków.",
+      "difficulty": "beginner",
+      "expected_time": 75,
+      "created_by": 11,
+      "created_at": "2024-10-03T08:00:00Z",
+      "tags": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 66,
+    "fields": {
+      "text": "Ćwiczenia na poprawę wytrzymałości.",
+      "difficulty": "advanced",
+      "expected_time": 60,
+      "created_by": 12,
+      "created_at": "2024-10-03T18:00:00Z",
+      "tags": [
+        6,
+        10
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 67,
+    "fields": {
+      "text": "Poradnik jak zacząć przygodę z motoryzacją.",
+      "difficulty": "beginner",
+      "expected_time": 30,
+      "created_by": 13,
+      "created_at": "2024-10-04T07:00:00Z",
+      "tags": [
+        12
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 68,
+    "fields": {
+      "text": "Techniki zastosowania domknięć w Pythonie.",
+      "difficulty": "advanced",
+      "expected_time": 45,
+      "created_by": 15,
+      "created_at": "2024-10-04T16:00:00Z",
+      "tags": [
+        8,
+        21
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 69,
+    "fields": {
+      "text": "Nauka gry na gitarze.",
+      "difficulty": "beginner",
+      "expected_time": 120,
+      "created_by": 14,
+      "created_at": "2024-10-05T15:00:00Z",
+      "tags": [
+        9
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 70,
+    "fields": {
+      "text": "Odkrywanie ekologicznych alternatyw.",
+      "difficulty": "intermediate",
+      "expected_time": 90,
+      "created_by": 13,
+      "created_at": "2024-10-05T19:00:00Z",
+      "tags": [
+        13
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 71,
+    "fields": {
+      "text": "Podstawy fotografii cyfrowej.",
+      "difficulty": "beginner",
+      "expected_time": 60,
+      "created_by": 11,
+      "created_at": "2024-10-06T14:00:00Z",
+      "tags": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 72,
+    "fields": {
+      "text": "Planowanie wyjazdu do egzotycznych krajów.",
+      "difficulty": "intermediate",
+      "expected_time": 120,
+      "created_by": 12,
+      "created_at": "2024-10-07T06:00:00Z",
+      "tags": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 73,
+    "fields": {
+      "text": "Szybkie i zdrowe przepisy na kolacje.",
+      "difficulty": "beginner",
+      "expected_time": 15,
+      "created_by": 12,
+      "created_at": "2024-10-07T20:00:00Z",
+      "tags": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 74,
+    "fields": {
+      "text": "Jak zaplanować swój trening siłowy.",
+      "difficulty": "intermediate",
+      "expected_time": 90,
+      "created_by": 15,
+      "created_at": "2024-10-08T17:00:00Z",
+      "tags": [
+        6,
+        10
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 75,
+    "fields": {
+      "text": "Zasady jazdy defensywnej.",
+      "difficulty": "advanced",
+      "expected_time": 120,
+      "created_by": 13,
+      "created_at": "2024-10-08T12:00:00Z",
+      "tags": [
+        12
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 76,
+    "fields": {
+      "text": "Sztuka szycia własnych ubrań.",
+      "difficulty": "beginner",
+      "expected_time": 180,
+      "created_by": 14,
+      "created_at": "2024-10-09T09:00:00Z",
+      "tags": [
+        7
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 77,
+    "fields": {
+      "text": "Zastosowanie rekursji w programowaniu.",
+      "difficulty": "advanced",
+      "expected_time": 60,
+      "created_by": 15,
+      "created_at": "2024-10-09T19:00:00Z",
+      "tags": [
+        21
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 78,
+    "fields": {
+      "text": "Jak zacząć trening z kettlebell.",
+      "difficulty": "intermediate",
+      "expected_time": 45,
+      "created_by": 11,
+      "created_at": "2024-10-10T06:00:00Z",
+      "tags": [
+        6,
+        10
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 79,
+    "fields": {
+      "text": "Skuteczne techniki zarządzania czasem.",
+      "difficulty": "intermediate",
+      "expected_time": 30,
+      "created_by": 12,
+      "created_at": "2024-10-10T12:00:00Z",
+      "tags": [
+        21
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 80,
+    "fields": {
+      "text": "Zastosowanie uczenia maszynowego.",
+      "difficulty": "advanced",
+      "expected_time": 120,
+      "created_by": 13,
+      "created_at": "2024-10-10T22:00:00Z",
+      "tags": [
+        8
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 81,
+    "fields": {
+      "text": "Zastosowania muzyki w terapii.",
+      "difficulty": "beginner",
+      "expected_time": 60,
+      "created_by": 11,
+      "created_at": "2024-10-11T08:00:00Z",
+      "tags": [
+        9
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 82,
+    "fields": {
+      "text": "Programowanie obiektowe w Pythonie.",
+      "difficulty": "intermediate",
+      "expected_time": 90,
+      "created_by": 12,
+      "created_at": "2024-10-11T14:00:00Z",
+      "tags": [
+        108
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 83,
+    "fields": {
+      "text": "Plany żywienia w sporcie.",
+      "difficulty": "advanced",
+      "expected_time": 60,
+      "created_by": 15,
+      "created_at": "2024-10-12T10:00:00Z",
+      "tags": [
+        4,
+        10
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 84,
+    "fields": {
+      "text": "Zasady komponowania warstwowe zdjęcia.",
+      "difficulty": "beginner",
+      "expected_time": 30,
+      "created_by": 10,
+      "created_at": "2024-10-12T16:00:00Z",
+      "tags": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 85,
+    "fields": {
+      "text": "Podstawowe techniki biegowe.",
+      "difficulty": "beginner",
+      "expected_time": 45,
+      "created_by": 13,
+      "created_at": "2024-10-13T12:00:00Z",
+      "tags": [
+        10
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 86,
+    "fields": {
+      "text": "Planowanie podróży po Europie.",
+      "difficulty": "intermediate",
+      "expected_time": 120,
+      "created_by": 14,
+      "created_at": "2024-10-14T06:00:00Z",
+      "tags": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 87,
+    "fields": {
+      "text": "Bezpieczna codzienna jazda na rowerze.",
+      "difficulty": "beginner",
+      "expected_time": 30,
+      "created_by": 13,
+      "created_at": "2024-10-14T12:00:00Z",
+      "tags": [
+        12
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 88,
+    "fields": {
+      "text": "Filmy edukacyjne dostępne online.",
+      "difficulty": "beginner",
+      "expected_time": 60,
+      "created_by": 12,
+      "created_at": "2024-10-14T16:00:00Z",
+      "tags": [
+        11
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 89,
+    "fields": {
+      "text": "Nowoczesne technologie w rolnictwie.",
+      "difficulty": "intermediate",
+      "expected_time": 90,
+      "created_by": 11,
+      "created_at": "2024-10-15T10:00:00Z",
+      "tags": [
+        8,
+        13
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 90,
+    "fields": {
+      "text": "Wspieranie lokalnych ekosystemów.",
+      "difficulty": "advanced",
+      "expected_time": 45,
+      "created_by": 10,
+      "created_at": "2024-10-15T16:00:00Z",
+      "tags": [
+        13
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 91,
+    "fields": {
+      "text": "Sztuka abstrakcyjna i jej znaczenie.",
+      "difficulty": "advanced",
+      "expected_time": 120,
+      "created_by": 11,
+      "created_at": "2024-10-16T08:00:00Z",
+      "tags": [
+        14
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 92,
+    "fields": {
+      "text": "Odkrywanie skarbów kultury Włoch.",
+      "difficulty": "intermediate",
+      "expected_time": 90,
+      "created_by": 12,
+      "created_at": "2024-10-16T12:00:00Z",
+      "tags": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 93,
+    "fields": {
+      "text": "Wpływ muzyki na nastrój człowieka.",
+      "difficulty": "beginner",
+      "expected_time": 30,
+      "created_by": 14,
+      "created_at": "2024-10-17T10:00:00Z",
+      "tags": [
+        9
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 94,
+    "fields": {
+      "text": "Jak zostać mistrzem fotografii krajobrazowej.",
+      "difficulty": "advanced",
+      "expected_time": 150,
+      "created_by": 13,
+      "created_at": "2024-10-17T14:00:00Z",
+      "tags": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 95,
+    "fields": {
+      "text": "Zdrowe odżywianie na co dzień.",
+      "difficulty": "beginner",
+      "expected_time": 20,
+      "created_by": 10,
+      "created_at": "2024-10-18T08:00:00Z",
+      "tags": [
+        5
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 96,
+    "fields": {
+      "text": "Codzienne ćwiczenia na zdrową sylwetkę.",
+      "difficulty": "beginner",
+      "expected_time": 30,
+      "created_by": 11,
+      "created_at": "2024-10-18T10:00:00Z",
+      "tags": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 97,
+    "fields": {
+      "text": "Organizowanie budżetu domowego.",
+      "difficulty": "intermediate",
+      "expected_time": 60,
+      "created_by": 12,
+      "created_at": "2024-10-19T09:00:00Z",
+      "tags": [
+        7
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 98,
+    "fields": {
+      "text": "Zaawansowane techniki obróbki zdjęć.",
+      "difficulty": "advanced",
+      "expected_time": 180,
+      "created_by": 13,
+      "created_at": "2024-10-19T11:00:00Z",
+      "tags": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 99,
+    "fields": {
+      "text": "Hodowla roślin w domowych warunkach.",
+      "difficulty": "beginner",
+      "expected_time": 45,
+      "created_by": 14,
+      "created_at": "2024-10-20T10:00:00Z",
+      "tags": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 100,
+    "fields": {
+      "text": "Historia sztuki europejskiej.",
+      "difficulty": "advanced",
+      "expected_time": 90,
+      "created_by": 10,
+      "created_at": "2024-10-20T14:00:00Z",
+      "tags": [
+        14
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 101,
+    "fields": {
+      "text": "Podstawy montażu filmowego.",
+      "difficulty": "beginner",
+      "expected_time": 45,
+      "created_by": 11,
+      "created_at": "2024-10-21T10:00:00Z",
+      "tags": [
+        11
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 102,
+    "fields": {
+      "text": "Uzyskiwanie lepszych wyników w biegach na 5 km.",
+      "difficulty": "intermediate",
+      "expected_time": 60,
+      "created_by": 13,
+      "created_at": "2024-10-21T13:00:00Z",
+      "tags": [
+        10
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 103,
+    "fields": {
+      "text": "Jak zacząć oszczędzać na przyszłość.",
+      "difficulty": "beginner",
+      "expected_time": 30,
+      "created_by": 14,
+      "created_at": "2024-10-22T09:00:00Z",
+      "tags": [
+        7
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 104,
+    "fields": {
+      "text": "Sekrety udanego pikniku.",
+      "difficulty": "beginner",
+      "expected_time": 30,
+      "created_by": 12,
+      "created_at": "2024-10-22T11:00:00Z",
+      "tags": [
+        6
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 105,
+    "fields": {
+      "text": "Podstawy programowania w Pythonie.",
+      "difficulty": "beginner",
+      "expected_time": 60,
+      "created_by": 11,
+      "created_at": "2024-10-23T08:00:00Z",
+      "tags": [
+        8
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 106,
+    "fields": {
+      "text": "Jak poprawić swoje umiejętności językowe.",
+      "difficulty": "beginner",
+      "expected_time": 45,
+      "created_by": 10,
+      "created_at": "2024-10-23T10:00:00Z",
+      "tags": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 107,
+    "fields": {
+      "text": "Najlepsze miejsca na wakacje w Polsce.",
+      "difficulty": "beginner",
+      "expected_time": 30,
+      "created_by": 14,
+      "created_at": "2024-10-24T09:00:00Z",
+      "tags": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 108,
+    "fields": {
+      "text": "Jak zacząć przygodę z rysowaniem.",
+      "difficulty": "beginner",
+      "expected_time": 45,
+      "created_by": 13,
+      "created_at": "2024-10-24T12:00:00Z",
+      "tags": [
+        14
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 109,
+    "fields": {
+      "text": "Naukowe odkrycia i ich wpływ na nasze życie.",
+      "difficulty": "intermediate",
+      "expected_time": 60,
+      "created_by": 11,
+      "created_at": "2024-10-25T08:00:00Z",
+      "tags": [
+        8
+      ]
+    }
+  },
+  {
+    "model": "cards.card",
+    "pk": 110,
+    "fields": {
+      "text": "Jak zaplanować idealny dzień zwiedzania.",
+      "difficulty": "beginner",
+      "expected_time": 30,
+      "created_by": 12,
+      "created_at": "2024-10-25T10:00:00Z",
+      "tags": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 1,
+    "fields": {
+      "liked_at": "2024-09-29T02:06:11.560Z",
+      "user": 20,
+      "card": 37
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 2,
+    "fields": {
+      "liked_at": "2024-09-29T02:06:17.893Z",
+      "user": 16,
+      "card": 45
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 3,
+    "fields": {
+      "liked_at": "2024-09-29T02:06:27.710Z",
+      "user": 14,
+      "card": 66
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 4,
+    "fields": {
+      "liked_at": "2024-10-01T12:30:15.789Z",
+      "user": 18,
+      "card": 25
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 5,
+    "fields": {
+      "liked_at": "2024-10-02T14:45:22.111Z",
+      "user": 15,
+      "card": 53
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 6,
+    "fields": {
+      "liked_at": "2024-10-03T16:20:30.456Z",
+      "user": 17,
+      "card": 79
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 7,
+    "fields": {
+      "liked_at": "2024-10-04T18:10:05.123Z",
+      "user": 20,
+      "card": 92
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 8,
+    "fields": {
+      "liked_at": "2024-10-05T09:50:44.789Z",
+      "user": 19,
+      "card": 33
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 9,
+    "fields": {
+      "liked_at": "2024-10-06T11:30:00Z",
+      "user": 2,
+      "card": 5
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 10,
+    "fields": {
+      "liked_at": "2024-10-07T12:45:15.245Z",
+      "user": 3,
+      "card": 8
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 11,
+    "fields": {
+      "liked_at": "2024-10-08T14:10:05.678Z",
+      "user": 4,
+      "card": 21
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 12,
+    "fields": {
+      "liked_at": "2024-10-09T15:25:50.123Z",
+      "user": 5,
+      "card": 13
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 13,
+    "fields": {
+      "liked_at": "2024-10-10T16:45:00.789Z",
+      "user": 6,
+      "card": 99
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 14,
+    "fields": {
+      "liked_at": "2024-10-11T18:35:22.111Z",
+      "user": 7,
+      "card": 46
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 15,
+    "fields": {
+      "liked_at": "2024-10-12T20:45:30.456Z",
+      "user": 8,
+      "card": 64
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 16,
+    "fields": {
+      "liked_at": "2024-10-13T22:10:05.123Z",
+      "user": 9,
+      "card": 78
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 17,
+    "fields": {
+      "liked_at": "2024-10-14T08:50:44.789Z",
+      "user": 10,
+      "card": 55
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 18,
+    "fields": {
+      "liked_at": "2024-10-15T10:30:57.457Z",
+      "user": 11,
+      "card": 29
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 19,
+    "fields": {
+      "liked_at": "2024-10-16T08:00:00Z",
+      "user": 12,
+      "card": 45
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 20,
+    "fields": {
+      "liked_at": "2024-10-17T09:15:15Z",
+      "user": 13,
+      "card": 37
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 21,
+    "fields": {
+      "liked_at": "2024-10-18T10:25:25Z",
+      "user": 14,
+      "card": 52
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 22,
+    "fields": {
+      "liked_at": "2024-10-19T11:35:35Z",
+      "user": 15,
+      "card": 41
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 23,
+    "fields": {
+      "liked_at": "2024-10-20T12:45:45Z",
+      "user": 16,
+      "card": 17
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 24,
+    "fields": {
+      "liked_at": "2024-10-21T13:55:55Z",
+      "user": 17,
+      "card": 23
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 25,
+    "fields": {
+      "liked_at": "2024-10-22T14:05:05Z",
+      "user": 18,
+      "card": 91
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 26,
+    "fields": {
+      "liked_at": "2024-10-23T15:15:15Z",
+      "user": 19,
+      "card": 26
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 27,
+    "fields": {
+      "liked_at": "2024-10-24T16:25:25Z",
+      "user": 20,
+      "card": 78
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 28,
+    "fields": {
+      "liked_at": "2024-10-25T17:35:35Z",
+      "user": 2,
+      "card": 54
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 29,
+    "fields": {
+      "liked_at": "2024-10-26T18:45:45Z",
+      "user": 3,
+      "card": 85
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 30,
+    "fields": {
+      "liked_at": "2024-10-27T19:55:55Z",
+      "user": 4,
+      "card": 88
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 31,
+    "fields": {
+      "liked_at": "2024-10-28T20:05:05Z",
+      "user": 5,
+      "card": 69
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 32,
+    "fields": {
+      "liked_at": "2024-10-29T21:15:15Z",
+      "user": 6,
+      "card": 73
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 33,
+    "fields": {
+      "liked_at": "2024-10-30T22:25:25Z",
+      "user": 7,
+      "card": 110
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 34,
+    "fields": {
+      "liked_at": "2024-10-31T08:35:35Z",
+      "user": 8,
+      "card": 100
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 35,
+    "fields": {
+      "liked_at": "2024-11-01T09:45:45Z",
+      "user": 9,
+      "card": 62
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 36,
+    "fields": {
+      "liked_at": "2024-11-02T10:55:55Z",
+      "user": 10,
+      "card": 32
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 37,
+    "fields": {
+      "liked_at": "2024-11-03T12:05:05Z",
+      "user": 11,
+      "card": 47
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 38,
+    "fields": {
+      "liked_at": "2024-11-04T13:15:15Z",
+      "user": 12,
+      "card": 53
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 39,
+    "fields": {
+      "liked_at": "2024-11-05T14:25:25Z",
+      "user": 2,
+      "card": 1
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 40,
+    "fields": {
+      "liked_at": "2024-11-06T15:35:35Z",
+      "user": 3,
+      "card": 2
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 41,
+    "fields": {
+      "liked_at": "2024-11-07T16:45:45Z",
+      "user": 4,
+      "card": 3
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 42,
+    "fields": {
+      "liked_at": "2024-11-08T17:55:55Z",
+      "user": 5,
+      "card": 4
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 43,
+    "fields": {
+      "liked_at": "2024-11-09T18:05:05Z",
+      "user": 6,
+      "card": 5
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 44,
+    "fields": {
+      "liked_at": "2024-11-10T19:15:15Z",
+      "user": 7,
+      "card": 6
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 45,
+    "fields": {
+      "liked_at": "2024-11-11T20:25:25Z",
+      "user": 8,
+      "card": 7
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 46,
+    "fields": {
+      "liked_at": "2024-11-12T21:35:35Z",
+      "user": 9,
+      "card": 8
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 47,
+    "fields": {
+      "liked_at": "2024-11-13T22:45:45Z",
+      "user": 10,
+      "card": 9
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 48,
+    "fields": {
+      "liked_at": "2024-11-14T08:55:55Z",
+      "user": 11,
+      "card": 10
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 49,
+    "fields": {
+      "liked_at": "2024-11-15T09:05:05Z",
+      "user": 12,
+      "card": 11
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 50,
+    "fields": {
+      "liked_at": "2024-11-16T10:15:15Z",
+      "user": 13,
+      "card": 12
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 51,
+    "fields": {
+      "liked_at": "2024-11-17T11:25:25Z",
+      "user": 14,
+      "card": 13
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 52,
+    "fields": {
+      "liked_at": "2024-11-18T12:35:35Z",
+      "user": 15,
+      "card": 14
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 53,
+    "fields": {
+      "liked_at": "2024-11-19T13:45:45Z",
+      "user": 16,
+      "card": 15
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 54,
+    "fields": {
+      "liked_at": "2024-11-20T14:55:55Z",
+      "user": 17,
+      "card": 16
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 55,
+    "fields": {
+      "liked_at": "2024-11-21T15:05:05Z",
+      "user": 18,
+      "card": 17
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 56,
+    "fields": {
+      "liked_at": "2024-11-22T16:15:15Z",
+      "user": 19,
+      "card": 18
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 57,
+    "fields": {
+      "liked_at": "2024-11-23T17:25:25Z",
+      "user": 20,
+      "card": 19
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 58,
+    "fields": {
+      "liked_at": "2024-11-24T18:35:35Z",
+      "user": 2,
+      "card": 20
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 59,
+    "fields": {
+      "liked_at": "2024-11-25T09:00:00Z",
+      "user": 2,
+      "card": 21
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 60,
+    "fields": {
+      "liked_at": "2024-11-26T10:00:00Z",
+      "user": 3,
+      "card": 22
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 61,
+    "fields": {
+      "liked_at": "2024-11-27T11:00:00Z",
+      "user": 4,
+      "card": 23
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 62,
+    "fields": {
+      "liked_at": "2024-11-28T12:00:00Z",
+      "user": 5,
+      "card": 24
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 63,
+    "fields": {
+      "liked_at": "2024-11-29T13:00:00Z",
+      "user": 6,
+      "card": 25
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 64,
+    "fields": {
+      "liked_at": "2024-11-30T14:00:00Z",
+      "user": 7,
+      "card": 26
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 65,
+    "fields": {
+      "liked_at": "2024-12-01T15:00:00Z",
+      "user": 8,
+      "card": 27
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 66,
+    "fields": {
+      "liked_at": "2024-12-02T16:00:00Z",
+      "user": 9,
+      "card": 28
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 67,
+    "fields": {
+      "liked_at": "2024-12-03T17:00:00Z",
+      "user": 10,
+      "card": 29
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 68,
+    "fields": {
+      "liked_at": "2024-12-04T18:00:00Z",
+      "user": 11,
+      "card": 30
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 69,
+    "fields": {
+      "liked_at": "2024-12-05T19:00:00Z",
+      "user": 12,
+      "card": 31
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 70,
+    "fields": {
+      "liked_at": "2024-12-06T20:00:00Z",
+      "user": 13,
+      "card": 32
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 71,
+    "fields": {
+      "liked_at": "2024-12-07T21:00:00Z",
+      "user": 14,
+      "card": 33
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 72,
+    "fields": {
+      "liked_at": "2024-12-08T22:00:00Z",
+      "user": 15,
+      "card": 34
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 73,
+    "fields": {
+      "liked_at": "2024-12-09T23:00:00Z",
+      "user": 16,
+      "card": 35
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 74,
+    "fields": {
+      "liked_at": "2024-12-10T00:00:00Z",
+      "user": 17,
+      "card": 36
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 75,
+    "fields": {
+      "liked_at": "2024-12-11T01:00:00Z",
+      "user": 18,
+      "card": 37
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 76,
+    "fields": {
+      "liked_at": "2024-12-12T02:00:00Z",
+      "user": 19,
+      "card": 38
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 77,
+    "fields": {
+      "liked_at": "2024-12-13T03:00:00Z",
+      "user": 20,
+      "card": 39
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 78,
+    "fields": {
+      "liked_at": "2024-12-14T04:00:00Z",
+      "user": 2,
+      "card": 40
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 79,
+    "fields": {
+      "liked_at": "2024-12-15T05:00:00Z",
+      "user": 3,
+      "card": 41
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 80,
+    "fields": {
+      "liked_at": "2024-12-16T06:00:00Z",
+      "user": 4,
+      "card": 42
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 81,
+    "fields": {
+      "liked_at": "2024-12-17T07:00:00Z",
+      "user": 5,
+      "card": 43
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 82,
+    "fields": {
+      "liked_at": "2024-12-18T08:00:00Z",
+      "user": 6,
+      "card": 44
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 83,
+    "fields": {
+      "liked_at": "2024-12-19T09:00:00Z",
+      "user": 7,
+      "card": 45
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 84,
+    "fields": {
+      "liked_at": "2024-12-20T10:00:00Z",
+      "user": 8,
+      "card": 46
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 85,
+    "fields": {
+      "liked_at": "2024-12-21T11:00:00Z",
+      "user": 9,
+      "card": 47
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 86,
+    "fields": {
+      "liked_at": "2024-12-22T12:00:00Z",
+      "user": 10,
+      "card": 48
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 87,
+    "fields": {
+      "liked_at": "2024-12-23T13:00:00Z",
+      "user": 11,
+      "card": 49
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 88,
+    "fields": {
+      "liked_at": "2024-12-24T14:00:00Z",
+      "user": 12,
+      "card": 50
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 89,
+    "fields": {
+      "liked_at": "2024-12-25T15:00:00Z",
+      "user": 13,
+      "card": 51
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 90,
+    "fields": {
+      "liked_at": "2024-12-26T16:00:00Z",
+      "user": 14,
+      "card": 52
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 91,
+    "fields": {
+      "liked_at": "2024-12-27T17:00:00Z",
+      "user": 15,
+      "card": 53
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 92,
+    "fields": {
+      "liked_at": "2024-12-28T18:00:00Z",
+      "user": 16,
+      "card": 54
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 93,
+    "fields": {
+      "liked_at": "2024-12-29T19:00:00Z",
+      "user": 17,
+      "card": 55
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 94,
+    "fields": {
+      "liked_at": "2024-12-30T20:00:00Z",
+      "user": 18,
+      "card": 56
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 95,
+    "fields": {
+      "liked_at": "2024-12-31T21:00:00Z",
+      "user": 19,
+      "card": 57
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 96,
+    "fields": {
+      "liked_at": "2025-01-01T22:00:00Z",
+      "user": 20,
+      "card": 58
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 97,
+    "fields": {
+      "liked_at": "2025-01-02T23:00:00Z",
+      "user": 2,
+      "card": 59
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 98,
+    "fields": {
+      "liked_at": "2025-01-03T00:00:00Z",
+      "user": 3,
+      "card": 60
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 99,
+    "fields": {
+      "liked_at": "2025-01-04T01:00:00Z",
+      "user": 4,
+      "card": 61
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 100,
+    "fields": {
+      "liked_at": "2025-01-05T02:00:00Z",
+      "user": 5,
+      "card": 62
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 101,
+    "fields": {
+      "liked_at": "2025-01-06T03:00:00Z",
+      "user": 6,
+      "card": 63
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 102,
+    "fields": {
+      "liked_at": "2025-01-07T04:00:00Z",
+      "user": 7,
+      "card": 64
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 103,
+    "fields": {
+      "liked_at": "2025-01-08T05:00:00Z",
+      "user": 8,
+      "card": 65
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 104,
+    "fields": {
+      "liked_at": "2025-01-09T06:00:00Z",
+      "user": 9,
+      "card": 66
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 105,
+    "fields": {
+      "liked_at": "2025-01-10T07:00:00Z",
+      "user": 10,
+      "card": 67
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 106,
+    "fields": {
+      "liked_at": "2025-01-11T08:00:00Z",
+      "user": 11,
+      "card": 68
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 107,
+    "fields": {
+      "liked_at": "2025-01-12T09:00:00Z",
+      "user": 12,
+      "card": 69
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 108,
+    "fields": {
+      "liked_at": "2025-01-13T10:00:00Z",
+      "user": 13,
+      "card": 70
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 109,
+    "fields": {
+      "liked_at": "2025-01-14T11:00:00Z",
+      "user": 14,
+      "card": 71
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 110,
+    "fields": {
+      "liked_at": "2025-01-15T12:00:00Z",
+      "user": 15,
+      "card": 72
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 111,
+    "fields": {
+      "liked_at": "2025-01-16T13:00:00Z",
+      "user": 16,
+      "card": 73
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 112,
+    "fields": {
+      "liked_at": "2025-01-17T14:00:00Z",
+      "user": 17,
+      "card": 74
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 113,
+    "fields": {
+      "liked_at": "2025-01-18T15:00:00Z",
+      "user": 18,
+      "card": 75
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 114,
+    "fields": {
+      "liked_at": "2025-01-19T16:00:00Z",
+      "user": 19,
+      "card": 76
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 115,
+    "fields": {
+      "liked_at": "2025-01-20T17:00:00Z",
+      "user": 20,
+      "card": 77
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 116,
+    "fields": {
+      "liked_at": "2025-01-21T18:00:00Z",
+      "user": 2,
+      "card": 78
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 117,
+    "fields": {
+      "liked_at": "2025-01-22T19:00:00Z",
+      "user": 3,
+      "card": 79
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 118,
+    "fields": {
+      "liked_at": "2025-01-23T20:00:00Z",
+      "user": 4,
+      "card": 80
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 119,
+    "fields": {
+      "liked_at": "2025-01-24T21:00:00Z",
+      "user": 5,
+      "card": 81
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 120,
+    "fields": {
+      "liked_at": "2025-01-25T22:00:00Z",
+      "user": 6,
+      "card": 82
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 121,
+    "fields": {
+      "liked_at": "2025-01-26T23:00:00Z",
+      "user": 7,
+      "card": 83
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 122,
+    "fields": {
+      "liked_at": "2025-01-27T00:00:00Z",
+      "user": 8,
+      "card": 84
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 123,
+    "fields": {
+      "liked_at": "2025-01-28T01:00:00Z",
+      "user": 9,
+      "card": 85
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 124,
+    "fields": {
+      "liked_at": "2025-01-29T02:00:00Z",
+      "user": 10,
+      "card": 86
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 125,
+    "fields": {
+      "liked_at": "2025-01-30T03:00:00Z",
+      "user": 11,
+      "card": 87
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 126,
+    "fields": {
+      "liked_at": "2025-01-31T04:00:00Z",
+      "user": 12,
+      "card": 88
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 127,
+    "fields": {
+      "liked_at": "2025-02-01T05:00:00Z",
+      "user": 13,
+      "card": 89
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 128,
+    "fields": {
+      "liked_at": "2025-02-02T06:00:00Z",
+      "user": 14,
+      "card": 90
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 129,
+    "fields": {
+      "liked_at": "2025-02-03T07:00:00Z",
+      "user": 15,
+      "card": 91
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 130,
+    "fields": {
+      "liked_at": "2025-02-04T08:00:00Z",
+      "user": 16,
+      "card": 92
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 131,
+    "fields": {
+      "liked_at": "2025-02-05T09:00:00Z",
+      "user": 17,
+      "card": 93
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 132,
+    "fields": {
+      "liked_at": "2025-02-06T10:00:00Z",
+      "user": 18,
+      "card": 94
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 133,
+    "fields": {
+      "liked_at": "2025-02-07T11:00:00Z",
+      "user": 19,
+      "card": 95
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 134,
+    "fields": {
+      "liked_at": "2025-02-08T12:00:00Z",
+      "user": 20,
+      "card": 96
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 135,
+    "fields": {
+      "liked_at": "2025-02-09T13:00:00Z",
+      "user": 2,
+      "card": 97
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 136,
+    "fields": {
+      "liked_at": "2025-02-10T14:00:00Z",
+      "user": 3,
+      "card": 1
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 137,
+    "fields": {
+      "liked_at": "2025-02-11T15:00:00Z",
+      "user": 4,
+      "card": 2
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 138,
+    "fields": {
+      "liked_at": "2025-02-12T16:00:00Z",
+      "user": 5,
+      "card": 3
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 139,
+    "fields": {
+      "liked_at": "2025-02-13T17:00:00Z",
+      "user": 6,
+      "card": 4
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 140,
+    "fields": {
+      "liked_at": "2025-02-14T18:00:00Z",
+      "user": 7,
+      "card": 5
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 141,
+    "fields": {
+      "liked_at": "2025-02-15T19:00:00Z",
+      "user": 8,
+      "card": 6
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 142,
+    "fields": {
+      "liked_at": "2025-02-16T20:00:00Z",
+      "user": 9,
+      "card": 7
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 143,
+    "fields": {
+      "liked_at": "2025-02-17T21:00:00Z",
+      "user": 10,
+      "card": 8
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 144,
+    "fields": {
+      "liked_at": "2025-02-18T22:00:00Z",
+      "user": 11,
+      "card": 9
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 145,
+    "fields": {
+      "liked_at": "2025-02-19T23:00:00Z",
+      "user": 12,
+      "card": 10
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 146,
+    "fields": {
+      "liked_at": "2025-02-20T00:00:00Z",
+      "user": 13,
+      "card": 11
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 147,
+    "fields": {
+      "liked_at": "2025-02-21T01:00:00Z",
+      "user": 14,
+      "card": 12
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 148,
+    "fields": {
+      "liked_at": "2025-02-22T02:00:00Z",
+      "user": 15,
+      "card": 13
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 149,
+    "fields": {
+      "liked_at": "2025-02-23T03:00:00Z",
+      "user": 16,
+      "card": 14
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 150,
+    "fields": {
+      "liked_at": "2025-02-24T04:00:00Z",
+      "user": 17,
+      "card": 15
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 151,
+    "fields": {
+      "liked_at": "2025-02-25T05:00:00Z",
+      "user": 18,
+      "card": 16
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 152,
+    "fields": {
+      "liked_at": "2025-02-26T06:00:00Z",
+      "user": 19,
+      "card": 17
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 153,
+    "fields": {
+      "liked_at": "2025-02-27T07:00:00Z",
+      "user": 20,
+      "card": 18
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 154,
+    "fields": {
+      "liked_at": "2025-02-28T08:00:00Z",
+      "user": 2,
+      "card": 19
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 155,
+    "fields": {
+      "liked_at": "2025-03-01T09:00:00Z",
+      "user": 3,
+      "card": 20
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 156,
+    "fields": {
+      "liked_at": "2025-03-02T10:00:00Z",
+      "user": 4,
+      "card": 21
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 157,
+    "fields": {
+      "liked_at": "2025-03-03T11:00:00Z",
+      "user": 5,
+      "card": 22
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 158,
+    "fields": {
+      "liked_at": "2025-03-04T12:00:00Z",
+      "user": 6,
+      "card": 23
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 159,
+    "fields": {
+      "liked_at": "2025-03-05T13:00:00Z",
+      "user": 7,
+      "card": 24
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 160,
+    "fields": {
+      "liked_at": "2025-03-06T14:00:00Z",
+      "user": 8,
+      "card": 25
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 161,
+    "fields": {
+      "liked_at": "2025-03-07T15:00:00Z",
+      "user": 9,
+      "card": 26
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 162,
+    "fields": {
+      "liked_at": "2025-03-08T16:00:00Z",
+      "user": 10,
+      "card": 27
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 163,
+    "fields": {
+      "liked_at": "2025-03-09T17:00:00Z",
+      "user": 11,
+      "card": 28
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 164,
+    "fields": {
+      "liked_at": "2025-03-10T18:00:00Z",
+      "user": 12,
+      "card": 29
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 165,
+    "fields": {
+      "liked_at": "2025-03-11T19:00:00Z",
+      "user": 13,
+      "card": 30
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 166,
+    "fields": {
+      "liked_at": "2025-03-12T20:00:00Z",
+      "user": 14,
+      "card": 31
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 167,
+    "fields": {
+      "liked_at": "2025-03-13T21:00:00Z",
+      "user": 15,
+      "card": 32
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 168,
+    "fields": {
+      "liked_at": "2025-03-14T22:00:00Z",
+      "user": 16,
+      "card": 33
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 169,
+    "fields": {
+      "liked_at": "2025-03-15T23:00:00Z",
+      "user": 17,
+      "card": 34
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 170,
+    "fields": {
+      "liked_at": "2025-03-16T00:00:00Z",
+      "user": 18,
+      "card": 35
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 171,
+    "fields": {
+      "liked_at": "2025-03-17T01:00:00Z",
+      "user": 19,
+      "card": 36
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 172,
+    "fields": {
+      "liked_at": "2025-03-18T02:00:00Z",
+      "user": 20,
+      "card": 37
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 173,
+    "fields": {
+      "liked_at": "2025-03-19T03:00:00Z",
+      "user": 2,
+      "card": 38
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 174,
+    "fields": {
+      "liked_at": "2025-03-20T04:00:00Z",
+      "user": 3,
+      "card": 39
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 175,
+    "fields": {
+      "liked_at": "2025-03-21T05:00:00Z",
+      "user": 4,
+      "card": 40
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 176,
+    "fields": {
+      "liked_at": "2025-03-22T06:00:00Z",
+      "user": 2,
+      "card": 41
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 177,
+    "fields": {
+      "liked_at": "2025-03-23T07:00:00Z",
+      "user": 3,
+      "card": 42
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 178,
+    "fields": {
+      "liked_at": "2025-03-24T08:00:00Z",
+      "user": 4,
+      "card": 43
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 179,
+    "fields": {
+      "liked_at": "2025-03-25T09:00:00Z",
+      "user": 5,
+      "card": 44
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 180,
+    "fields": {
+      "liked_at": "2025-03-26T10:00:00Z",
+      "user": 6,
+      "card": 45
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 181,
+    "fields": {
+      "liked_at": "2025-03-27T11:00:00Z",
+      "user": 7,
+      "card": 46
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 182,
+    "fields": {
+      "liked_at": "2025-03-28T12:00:00Z",
+      "user": 8,
+      "card": 47
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 183,
+    "fields": {
+      "liked_at": "2025-03-29T13:00:00Z",
+      "user": 9,
+      "card": 48
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 184,
+    "fields": {
+      "liked_at": "2025-03-30T14:00:00Z",
+      "user": 10,
+      "card": 49
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 185,
+    "fields": {
+      "liked_at": "2025-03-31T15:00:00Z",
+      "user": 11,
+      "card": 50
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 186,
+    "fields": {
+      "liked_at": "2025-04-01T16:00:00Z",
+      "user": 12,
+      "card": 51
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 187,
+    "fields": {
+      "liked_at": "2025-04-02T17:00:00Z",
+      "user": 13,
+      "card": 52
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 188,
+    "fields": {
+      "liked_at": "2025-04-03T18:00:00Z",
+      "user": 14,
+      "card": 53
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 189,
+    "fields": {
+      "liked_at": "2025-04-04T19:00:00Z",
+      "user": 15,
+      "card": 54
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 190,
+    "fields": {
+      "liked_at": "2025-04-05T20:00:00Z",
+      "user": 16,
+      "card": 55
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 191,
+    "fields": {
+      "liked_at": "2025-04-06T21:00:00Z",
+      "user": 17,
+      "card": 56
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 192,
+    "fields": {
+      "liked_at": "2025-04-07T22:00:00Z",
+      "user": 18,
+      "card": 57
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 193,
+    "fields": {
+      "liked_at": "2025-04-08T23:00:00Z",
+      "user": 19,
+      "card": 58
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 194,
+    "fields": {
+      "liked_at": "2025-04-09T00:00:00Z",
+      "user": 20,
+      "card": 59
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 195,
+    "fields": {
+      "liked_at": "2025-04-10T01:00:00Z",
+      "user": 2,
+      "card": 60
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 196,
+    "fields": {
+      "liked_at": "2025-04-11T02:00:00Z",
+      "user": 3,
+      "card": 61
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 197,
+    "fields": {
+      "liked_at": "2025-04-12T03:00:00Z",
+      "user": 4,
+      "card": 62
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 198,
+    "fields": {
+      "liked_at": "2025-04-13T04:00:00Z",
+      "user": 5,
+      "card": 63
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 199,
+    "fields": {
+      "liked_at": "2025-04-14T05:00:00Z",
+      "user": 6,
+      "card": 64
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 200,
+    "fields": {
+      "liked_at": "2025-04-15T06:00:00Z",
+      "user": 7,
+      "card": 65
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 201,
+    "fields": {
+      "liked_at": "2025-04-16T07:00:00Z",
+      "user": 8,
+      "card": 66
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 202,
+    "fields": {
+      "liked_at": "2025-04-17T08:00:00Z",
+      "user": 9,
+      "card": 67
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 203,
+    "fields": {
+      "liked_at": "2025-04-18T09:00:00Z",
+      "user": 10,
+      "card": 68
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 204,
+    "fields": {
+      "liked_at": "2025-04-19T10:00:00Z",
+      "user": 11,
+      "card": 69
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 205,
+    "fields": {
+      "liked_at": "2025-04-20T11:00:00Z",
+      "user": 12,
+      "card": 70
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 206,
+    "fields": {
+      "liked_at": "2025-04-21T12:00:00Z",
+      "user": 13,
+      "card": 71
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 207,
+    "fields": {
+      "liked_at": "2025-04-22T13:00:00Z",
+      "user": 14,
+      "card": 72
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 208,
+    "fields": {
+      "liked_at": "2025-04-23T14:00:00Z",
+      "user": 15,
+      "card": 73
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 209,
+    "fields": {
+      "liked_at": "2025-04-24T15:00:00Z",
+      "user": 16,
+      "card": 74
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 210,
+    "fields": {
+      "liked_at": "2025-04-25T16:00:00Z",
+      "user": 17,
+      "card": 75
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 211,
+    "fields": {
+      "liked_at": "2025-04-26T17:00:00Z",
+      "user": 18,
+      "card": 76
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 212,
+    "fields": {
+      "liked_at": "2025-04-27T18:00:00Z",
+      "user": 19,
+      "card": 77
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 213,
+    "fields": {
+      "liked_at": "2025-04-28T19:00:00Z",
+      "user": 20,
+      "card": 78
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 214,
+    "fields": {
+      "liked_at": "2025-04-29T20:00:00Z",
+      "user": 2,
+      "card": 79
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 215,
+    "fields": {
+      "liked_at": "2025-04-30T21:00:00Z",
+      "user": 3,
+      "card": 80
+    }
+  },
+  {
+    "model": "cards.cardlike",
+    "pk": 216,
+    "fields": {
+      "liked_at": "2025-05-01T22:00:00Z",
+      "user": 4,
+      "card": 81
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 1,
+    "fields": {
+      "viewed_at": "2024-09-29T02:34:24.946Z",
+      "user": 3,
+      "card": 3
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 2,
+    "fields": {
+      "viewed_at": "2024-09-29T03:00:00Z",
+      "user": 4,
+      "card": 4
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 3,
+    "fields": {
+      "viewed_at": "2024-10-01T04:00:00Z",
+      "user": 5,
+      "card": 5
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 4,
+    "fields": {
+      "viewed_at": "2024-10-02T05:00:00Z",
+      "user": 6,
+      "card": 6
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 5,
+    "fields": {
+      "viewed_at": "2024-10-03T06:00:00Z",
+      "user": 7,
+      "card": 7
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 6,
+    "fields": {
+      "viewed_at": "2024-10-04T07:00:00Z",
+      "user": 8,
+      "card": 8
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 7,
+    "fields": {
+      "viewed_at": "2024-10-05T08:00:00Z",
+      "user": 9,
+      "card": 9
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 8,
+    "fields": {
+      "viewed_at": "2024-10-06T09:00:00Z",
+      "user": 10,
+      "card": 10
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 9,
+    "fields": {
+      "viewed_at": "2024-10-07T10:00:00Z",
+      "user": 11,
+      "card": 11
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 10,
+    "fields": {
+      "viewed_at": "2024-10-08T11:00:00Z",
+      "user": 12,
+      "card": 12
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 11,
+    "fields": {
+      "viewed_at": "2024-10-09T12:00:00Z",
+      "user": 13,
+      "card": 13
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 12,
+    "fields": {
+      "viewed_at": "2024-10-10T13:00:00Z",
+      "user": 14,
+      "card": 14
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 13,
+    "fields": {
+      "viewed_at": "2024-10-11T14:00:00Z",
+      "user": 15,
+      "card": 15
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 14,
+    "fields": {
+      "viewed_at": "2024-10-12T15:00:00Z",
+      "user": 16,
+      "card": 16
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 15,
+    "fields": {
+      "viewed_at": "2024-10-13T16:00:00Z",
+      "user": 17,
+      "card": 17
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 16,
+    "fields": {
+      "viewed_at": "2024-10-14T17:00:00Z",
+      "user": 18,
+      "card": 18
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 17,
+    "fields": {
+      "viewed_at": "2024-10-15T18:00:00Z",
+      "user": 19,
+      "card": 19
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 18,
+    "fields": {
+      "viewed_at": "2024-10-16T19:00:00Z",
+      "user": 20,
+      "card": 20
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 19,
+    "fields": {
+      "viewed_at": "2024-10-17T20:00:00Z",
+      "user": 2,
+      "card": 21
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 20,
+    "fields": {
+      "viewed_at": "2024-10-18T21:00:00Z",
+      "user": 3,
+      "card": 22
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 21,
+    "fields": {
+      "viewed_at": "2024-10-19T22:00:00Z",
+      "user": 4,
+      "card": 23
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 22,
+    "fields": {
+      "viewed_at": "2024-10-20T23:00:00Z",
+      "user": 5,
+      "card": 24
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 23,
+    "fields": {
+      "viewed_at": "2024-10-21T00:00:00Z",
+      "user": 6,
+      "card": 25
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 24,
+    "fields": {
+      "viewed_at": "2024-10-22T01:00:00Z",
+      "user": 7,
+      "card": 26
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 25,
+    "fields": {
+      "viewed_at": "2024-10-23T02:00:00Z",
+      "user": 8,
+      "card": 27
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 26,
+    "fields": {
+      "viewed_at": "2024-10-24T03:00:00Z",
+      "user": 9,
+      "card": 28
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 27,
+    "fields": {
+      "viewed_at": "2024-10-25T04:00:00Z",
+      "user": 10,
+      "card": 29
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 28,
+    "fields": {
+      "viewed_at": "2024-10-26T05:00:00Z",
+      "user": 11,
+      "card": 30
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 29,
+    "fields": {
+      "viewed_at": "2024-10-27T06:00:00Z",
+      "user": 12,
+      "card": 31
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 30,
+    "fields": {
+      "viewed_at": "2024-10-28T07:00:00Z",
+      "user": 13,
+      "card": 32
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 31,
+    "fields": {
+      "viewed_at": "2024-10-29T08:00:00Z",
+      "user": 14,
+      "card": 33
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 32,
+    "fields": {
+      "viewed_at": "2024-10-30T09:00:00Z",
+      "user": 15,
+      "card": 34
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 33,
+    "fields": {
+      "viewed_at": "2024-10-31T10:00:00Z",
+      "user": 16,
+      "card": 35
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 34,
+    "fields": {
+      "viewed_at": "2024-11-01T11:00:00Z",
+      "user": 17,
+      "card": 36
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 35,
+    "fields": {
+      "viewed_at": "2024-11-02T12:00:00Z",
+      "user": 18,
+      "card": 37
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 36,
+    "fields": {
+      "viewed_at": "2024-11-03T13:00:00Z",
+      "user": 19,
+      "card": 38
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 37,
+    "fields": {
+      "viewed_at": "2024-11-04T14:00:00Z",
+      "user": 20,
+      "card": 39
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 38,
+    "fields": {
+      "viewed_at": "2024-11-05T15:00:00Z",
+      "user": 2,
+      "card": 40
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 39,
+    "fields": {
+      "viewed_at": "2024-11-06T16:00:00Z",
+      "user": 3,
+      "card": 41
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 40,
+    "fields": {
+      "viewed_at": "2024-11-07T17:00:00Z",
+      "user": 4,
+      "card": 42
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 41,
+    "fields": {
+      "viewed_at": "2024-11-08T18:00:00Z",
+      "user": 5,
+      "card": 43
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 42,
+    "fields": {
+      "viewed_at": "2024-11-09T19:00:00Z",
+      "user": 6,
+      "card": 44
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 43,
+    "fields": {
+      "viewed_at": "2024-11-10T20:00:00Z",
+      "user": 2,
+      "card": 45
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 44,
+    "fields": {
+      "viewed_at": "2024-11-11T21:00:00Z",
+      "user": 3,
+      "card": 46
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 45,
+    "fields": {
+      "viewed_at": "2024-11-12T22:00:00Z",
+      "user": 4,
+      "card": 47
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 46,
+    "fields": {
+      "viewed_at": "2024-11-13T23:00:00Z",
+      "user": 5,
+      "card": 48
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 47,
+    "fields": {
+      "viewed_at": "2024-11-14T00:00:00Z",
+      "user": 6,
+      "card": 49
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 48,
+    "fields": {
+      "viewed_at": "2024-11-15T01:00:00Z",
+      "user": 7,
+      "card": 50
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 49,
+    "fields": {
+      "viewed_at": "2024-11-16T02:00:00Z",
+      "user": 8,
+      "card": 51
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 50,
+    "fields": {
+      "viewed_at": "2024-11-17T03:00:00Z",
+      "user": 9,
+      "card": 52
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 51,
+    "fields": {
+      "viewed_at": "2024-11-18T04:00:00Z",
+      "user": 10,
+      "card": 53
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 52,
+    "fields": {
+      "viewed_at": "2024-11-19T05:00:00Z",
+      "user": 11,
+      "card": 54
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 53,
+    "fields": {
+      "viewed_at": "2024-11-20T06:00:00Z",
+      "user": 12,
+      "card": 55
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 54,
+    "fields": {
+      "viewed_at": "2024-11-21T07:00:00Z",
+      "user": 13,
+      "card": 56
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 55,
+    "fields": {
+      "viewed_at": "2024-11-22T08:00:00Z",
+      "user": 14,
+      "card": 57
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 56,
+    "fields": {
+      "viewed_at": "2024-11-23T09:00:00Z",
+      "user": 15,
+      "card": 58
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 57,
+    "fields": {
+      "viewed_at": "2024-11-24T10:00:00Z",
+      "user": 16,
+      "card": 59
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 58,
+    "fields": {
+      "viewed_at": "2024-11-25T11:00:00Z",
+      "user": 17,
+      "card": 60
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 59,
+    "fields": {
+      "viewed_at": "2024-11-26T12:00:00Z",
+      "user": 18,
+      "card": 61
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 60,
+    "fields": {
+      "viewed_at": "2024-11-27T13:00:00Z",
+      "user": 19,
+      "card": 62
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 61,
+    "fields": {
+      "viewed_at": "2024-11-28T14:00:00Z",
+      "user": 20,
+      "card": 63
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 62,
+    "fields": {
+      "viewed_at": "2024-11-29T15:00:00Z",
+      "user": 2,
+      "card": 64
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 63,
+    "fields": {
+      "viewed_at": "2024-11-30T16:00:00Z",
+      "user": 3,
+      "card": 65
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 64,
+    "fields": {
+      "viewed_at": "2024-12-01T17:00:00Z",
+      "user": 4,
+      "card": 66
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 65,
+    "fields": {
+      "viewed_at": "2024-12-02T18:00:00Z",
+      "user": 5,
+      "card": 67
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 66,
+    "fields": {
+      "viewed_at": "2024-12-03T19:00:00Z",
+      "user": 6,
+      "card": 68
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 67,
+    "fields": {
+      "viewed_at": "2024-12-04T20:00:00Z",
+      "user": 7,
+      "card": 69
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 68,
+    "fields": {
+      "viewed_at": "2024-12-05T21:00:00Z",
+      "user": 8,
+      "card": 70
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 69,
+    "fields": {
+      "viewed_at": "2024-12-06T22:00:00Z",
+      "user": 9,
+      "card": 71
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 70,
+    "fields": {
+      "viewed_at": "2024-12-07T23:00:00Z",
+      "user": 10,
+      "card": 72
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 71,
+    "fields": {
+      "viewed_at": "2024-12-08T00:00:00Z",
+      "user": 11,
+      "card": 73
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 72,
+    "fields": {
+      "viewed_at": "2024-12-09T01:00:00Z",
+      "user": 12,
+      "card": 74
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 73,
+    "fields": {
+      "viewed_at": "2024-12-10T02:00:00Z",
+      "user": 13,
+      "card": 75
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 74,
+    "fields": {
+      "viewed_at": "2024-12-11T03:00:00Z",
+      "user": 14,
+      "card": 76
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 75,
+    "fields": {
+      "viewed_at": "2024-12-12T04:00:00Z",
+      "user": 15,
+      "card": 77
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 76,
+    "fields": {
+      "viewed_at": "2024-12-13T05:00:00Z",
+      "user": 16,
+      "card": 78
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 77,
+    "fields": {
+      "viewed_at": "2024-12-14T06:00:00Z",
+      "user": 17,
+      "card": 79
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 78,
+    "fields": {
+      "viewed_at": "2024-12-15T07:00:00Z",
+      "user": 18,
+      "card": 80
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 79,
+    "fields": {
+      "viewed_at": "2024-12-16T08:00:00Z",
+      "user": 19,
+      "card": 81
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 80,
+    "fields": {
+      "viewed_at": "2024-12-17T09:00:00Z",
+      "user": 20,
+      "card": 82
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 81,
+    "fields": {
+      "viewed_at": "2024-12-18T10:00:00Z",
+      "user": 2,
+      "card": 83
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 82,
+    "fields": {
+      "viewed_at": "2024-12-19T11:00:00Z",
+      "user": 3,
+      "card": 84
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 83,
+    "fields": {
+      "viewed_at": "2024-12-20T12:00:00Z",
+      "user": 4,
+      "card": 85
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 84,
+    "fields": {
+      "viewed_at": "2024-12-21T13:00:00Z",
+      "user": 5,
+      "card": 86
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 85,
+    "fields": {
+      "viewed_at": "2024-12-22T14:00:00Z",
+      "user": 6,
+      "card": 87
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 86,
+    "fields": {
+      "viewed_at": "2024-12-23T15:00:00Z",
+      "user": 7,
+      "card": 88
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 87,
+    "fields": {
+      "viewed_at": "2024-12-24T16:00:00Z",
+      "user": 8,
+      "card": 89
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 88,
+    "fields": {
+      "viewed_at": "2024-12-25T17:00:00Z",
+      "user": 9,
+      "card": 90
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 89,
+    "fields": {
+      "viewed_at": "2024-12-26T18:00:00Z",
+      "user": 10,
+      "card": 91
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 90,
+    "fields": {
+      "viewed_at": "2024-12-27T19:00:00Z",
+      "user": 11,
+      "card": 92
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 91,
+    "fields": {
+      "viewed_at": "2024-12-28T20:00:00Z",
+      "user": 12,
+      "card": 93
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 92,
+    "fields": {
+      "viewed_at": "2024-12-29T21:00:00Z",
+      "user": 13,
+      "card": 94
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 93,
+    "fields": {
+      "viewed_at": "2024-12-30T22:00:00Z",
+      "user": 14,
+      "card": 95
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 94,
+    "fields": {
+      "viewed_at": "2024-12-31T23:00:00Z",
+      "user": 15,
+      "card": 96
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 95,
+    "fields": {
+      "viewed_at": "2025-01-01T00:00:00Z",
+      "user": 16,
+      "card": 97
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 96,
+    "fields": {
+      "viewed_at": "2025-01-02T01:00:00Z",
+      "user": 17,
+      "card": 98
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 97,
+    "fields": {
+      "viewed_at": "2025-01-03T02:00:00Z",
+      "user": 18,
+      "card": 99
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 98,
+    "fields": {
+      "viewed_at": "2025-01-04T03:00:00Z",
+      "user": 19,
+      "card": 100
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 99,
+    "fields": {
+      "viewed_at": "2025-01-05T04:00:00Z",
+      "user": 20,
+      "card": 101
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 100,
+    "fields": {
+      "viewed_at": "2025-01-06T05:00:00Z",
+      "user": 2,
+      "card": 102
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 101,
+    "fields": {
+      "viewed_at": "2025-01-07T06:00:00Z",
+      "user": 3,
+      "card": 103
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 102,
+    "fields": {
+      "viewed_at": "2025-01-08T07:00:00Z",
+      "user": 4,
+      "card": 104
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 103,
+    "fields": {
+      "viewed_at": "2025-01-09T08:00:00Z",
+      "user": 5,
+      "card": 105
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 104,
+    "fields": {
+      "viewed_at": "2025-01-10T09:00:00Z",
+      "user": 6,
+      "card": 106
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 105,
+    "fields": {
+      "viewed_at": "2025-01-11T10:00:00Z",
+      "user": 7,
+      "card": 107
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 106,
+    "fields": {
+      "viewed_at": "2025-01-12T11:00:00Z",
+      "user": 8,
+      "card": 108
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 107,
+    "fields": {
+      "viewed_at": "2025-01-13T12:00:00Z",
+      "user": 9,
+      "card": 109
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 108,
+    "fields": {
+      "viewed_at": "2025-01-14T13:00:00Z",
+      "user": 10,
+      "card": 110
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 109,
+    "fields": {
+      "viewed_at": "2025-01-15T14:00:00Z",
+      "user": 11,
+      "card": 1
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 110,
+    "fields": {
+      "viewed_at": "2025-01-16T15:00:00Z",
+      "user": 12,
+      "card": 2
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 111,
+    "fields": {
+      "viewed_at": "2025-01-17T16:00:00Z",
+      "user": 13,
+      "card": 3
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 112,
+    "fields": {
+      "viewed_at": "2025-01-18T17:00:00Z",
+      "user": 14,
+      "card": 4
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 113,
+    "fields": {
+      "viewed_at": "2025-01-19T18:00:00Z",
+      "user": 15,
+      "card": 5
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 114,
+    "fields": {
+      "viewed_at": "2025-01-20T19:00:00Z",
+      "user": 16,
+      "card": 6
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 115,
+    "fields": {
+      "viewed_at": "2025-01-21T20:00:00Z",
+      "user": 17,
+      "card": 7
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 116,
+    "fields": {
+      "viewed_at": "2025-01-22T21:00:00Z",
+      "user": 18,
+      "card": 8
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 117,
+    "fields": {
+      "viewed_at": "2025-01-23T22:00:00Z",
+      "user": 19,
+      "card": 9
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 118,
+    "fields": {
+      "viewed_at": "2025-01-24T23:00:00Z",
+      "user": 20,
+      "card": 10
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 119,
+    "fields": {
+      "viewed_at": "2025-01-25T00:00:00Z",
+      "user": 2,
+      "card": 11
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 120,
+    "fields": {
+      "viewed_at": "2025-01-25T01:00:00Z",
+      "user": 3,
+      "card": 12
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 121,
+    "fields": {
+      "viewed_at": "2025-01-25T02:00:00Z",
+      "user": 4,
+      "card": 13
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 122,
+    "fields": {
+      "viewed_at": "2025-01-25T03:00:00Z",
+      "user": 5,
+      "card": 14
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 123,
+    "fields": {
+      "viewed_at": "2025-01-25T04:00:00Z",
+      "user": 6,
+      "card": 15
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 124,
+    "fields": {
+      "viewed_at": "2025-01-25T05:00:00Z",
+      "user": 7,
+      "card": 16
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 125,
+    "fields": {
+      "viewed_at": "2025-01-25T06:00:00Z",
+      "user": 8,
+      "card": 17
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 126,
+    "fields": {
+      "viewed_at": "2025-01-25T07:00:00Z",
+      "user": 9,
+      "card": 18
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 127,
+    "fields": {
+      "viewed_at": "2025-01-25T08:00:00Z",
+      "user": 10,
+      "card": 19
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 128,
+    "fields": {
+      "viewed_at": "2025-01-25T09:00:00Z",
+      "user": 11,
+      "card": 20
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 129,
+    "fields": {
+      "viewed_at": "2025-01-25T10:00:00Z",
+      "user": 12,
+      "card": 21
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 130,
+    "fields": {
+      "viewed_at": "2025-01-25T11:00:00Z",
+      "user": 13,
+      "card": 22
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 131,
+    "fields": {
+      "viewed_at": "2025-01-25T12:00:00Z",
+      "user": 14,
+      "card": 23
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 132,
+    "fields": {
+      "viewed_at": "2025-01-25T13:00:00Z",
+      "user": 15,
+      "card": 24
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 133,
+    "fields": {
+      "viewed_at": "2025-01-25T14:00:00Z",
+      "user": 16,
+      "card": 25
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 134,
+    "fields": {
+      "viewed_at": "2025-01-25T15:00:00Z",
+      "user": 17,
+      "card": 26
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 135,
+    "fields": {
+      "viewed_at": "2025-01-25T16:00:00Z",
+      "user": 18,
+      "card": 27
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 136,
+    "fields": {
+      "viewed_at": "2025-01-25T17:00:00Z",
+      "user": 19,
+      "card": 28
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 137,
+    "fields": {
+      "viewed_at": "2025-01-25T18:00:00Z",
+      "user": 20,
+      "card": 29
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 138,
+    "fields": {
+      "viewed_at": "2025-01-25T19:00:00Z",
+      "user": 2,
+      "card": 30
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 139,
+    "fields": {
+      "viewed_at": "2025-01-25T20:00:00Z",
+      "user": 3,
+      "card": 31
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 140,
+    "fields": {
+      "viewed_at": "2025-01-25T21:00:00Z",
+      "user": 4,
+      "card": 32
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 141,
+    "fields": {
+      "viewed_at": "2025-01-25T22:00:00Z",
+      "user": 5,
+      "card": 33
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 142,
+    "fields": {
+      "viewed_at": "2025-01-25T23:00:00Z",
+      "user": 6,
+      "card": 34
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 143,
+    "fields": {
+      "viewed_at": "2025-01-26T00:00:00Z",
+      "user": 7,
+      "card": 35
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 144,
+    "fields": {
+      "viewed_at": "2025-01-26T01:00:00Z",
+      "user": 8,
+      "card": 36
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 145,
+    "fields": {
+      "viewed_at": "2025-01-26T02:00:00Z",
+      "user": 9,
+      "card": 37
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 146,
+    "fields": {
+      "viewed_at": "2025-01-26T03:00:00Z",
+      "user": 10,
+      "card": 38
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 147,
+    "fields": {
+      "viewed_at": "2025-01-26T04:00:00Z",
+      "user": 11,
+      "card": 39
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 148,
+    "fields": {
+      "viewed_at": "2025-01-26T05:00:00Z",
+      "user": 12,
+      "card": 40
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 149,
+    "fields": {
+      "viewed_at": "2025-01-26T06:00:00Z",
+      "user": 13,
+      "card": 41
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 150,
+    "fields": {
+      "viewed_at": "2025-01-26T07:00:00Z",
+      "user": 14,
+      "card": 42
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 151,
+    "fields": {
+      "viewed_at": "2025-01-26T08:00:00Z",
+      "user": 15,
+      "card": 43
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 152,
+    "fields": {
+      "viewed_at": "2025-01-26T09:00:00Z",
+      "user": 16,
+      "card": 44
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 153,
+    "fields": {
+      "viewed_at": "2025-01-26T10:00:00Z",
+      "user": 17,
+      "card": 45
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 154,
+    "fields": {
+      "viewed_at": "2025-01-26T11:00:00Z",
+      "user": 18,
+      "card": 46
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 155,
+    "fields": {
+      "viewed_at": "2025-01-26T12:00:00Z",
+      "user": 19,
+      "card": 47
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 156,
+    "fields": {
+      "viewed_at": "2025-01-26T13:00:00Z",
+      "user": 20,
+      "card": 48
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 157,
+    "fields": {
+      "viewed_at": "2025-01-26T14:00:00Z",
+      "user": 2,
+      "card": 49
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 158,
+    "fields": {
+      "viewed_at": "2025-01-26T15:00:00Z",
+      "user": 3,
+      "card": 50
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 159,
+    "fields": {
+      "viewed_at": "2025-01-26T16:00:00Z",
+      "user": 4,
+      "card": 51
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 160,
+    "fields": {
+      "viewed_at": "2025-01-26T17:00:00Z",
+      "user": 5,
+      "card": 52
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 161,
+    "fields": {
+      "viewed_at": "2025-01-26T18:00:00Z",
+      "user": 6,
+      "card": 53
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 162,
+    "fields": {
+      "viewed_at": "2025-01-26T19:00:00Z",
+      "user": 7,
+      "card": 54
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 163,
+    "fields": {
+      "viewed_at": "2025-01-26T20:00:00Z",
+      "user": 8,
+      "card": 55
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 164,
+    "fields": {
+      "viewed_at": "2025-01-26T21:00:00Z",
+      "user": 9,
+      "card": 56
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 165,
+    "fields": {
+      "viewed_at": "2025-01-26T22:00:00Z",
+      "user": 10,
+      "card": 57
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 166,
+    "fields": {
+      "viewed_at": "2025-01-26T23:00:00Z",
+      "user": 11,
+      "card": 58
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 167,
+    "fields": {
+      "viewed_at": "2025-01-27T00:00:00Z",
+      "user": 12,
+      "card": 59
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 168,
+    "fields": {
+      "viewed_at": "2025-01-27T01:00:00Z",
+      "user": 13,
+      "card": 60
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 169,
+    "fields": {
+      "viewed_at": "2025-01-27T02:00:00Z",
+      "user": 14,
+      "card": 61
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 170,
+    "fields": {
+      "viewed_at": "2025-01-27T03:00:00Z",
+      "user": 15,
+      "card": 62
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 171,
+    "fields": {
+      "viewed_at": "2025-01-27T04:00:00Z",
+      "user": 16,
+      "card": 63
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 172,
+    "fields": {
+      "viewed_at": "2025-01-27T05:00:00Z",
+      "user": 17,
+      "card": 64
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 173,
+    "fields": {
+      "viewed_at": "2025-01-27T06:00:00Z",
+      "user": 18,
+      "card": 65
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 174,
+    "fields": {
+      "viewed_at": "2025-01-27T07:00:00Z",
+      "user": 19,
+      "card": 66
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 175,
+    "fields": {
+      "viewed_at": "2025-01-27T08:00:00Z",
+      "user": 20,
+      "card": 67
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 176,
+    "fields": {
+      "viewed_at": "2025-01-27T09:00:00Z",
+      "user": 2,
+      "card": 68
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 177,
+    "fields": {
+      "viewed_at": "2025-01-27T10:00:00Z",
+      "user": 3,
+      "card": 69
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 178,
+    "fields": {
+      "viewed_at": "2025-01-27T11:00:00Z",
+      "user": 4,
+      "card": 70
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 179,
+    "fields": {
+      "viewed_at": "2025-01-27T12:00:00Z",
+      "user": 5,
+      "card": 71
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 180,
+    "fields": {
+      "viewed_at": "2025-01-27T13:00:00Z",
+      "user": 6,
+      "card": 72
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 181,
+    "fields": {
+      "viewed_at": "2025-01-27T14:00:00Z",
+      "user": 7,
+      "card": 73
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 182,
+    "fields": {
+      "viewed_at": "2025-01-27T15:00:00Z",
+      "user": 8,
+      "card": 74
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 183,
+    "fields": {
+      "viewed_at": "2025-01-27T16:00:00Z",
+      "user": 9,
+      "card": 75
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 184,
+    "fields": {
+      "viewed_at": "2025-01-27T17:00:00Z",
+      "user": 10,
+      "card": 76
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 185,
+    "fields": {
+      "viewed_at": "2025-01-27T18:00:00Z",
+      "user": 11,
+      "card": 77
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 186,
+    "fields": {
+      "viewed_at": "2025-01-27T19:00:00Z",
+      "user": 12,
+      "card": 78
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 187,
+    "fields": {
+      "viewed_at": "2025-01-27T20:00:00Z",
+      "user": 13,
+      "card": 79
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 188,
+    "fields": {
+      "viewed_at": "2025-01-27T21:00:00Z",
+      "user": 14,
+      "card": 80
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 189,
+    "fields": {
+      "viewed_at": "2025-01-27T22:00:00Z",
+      "user": 15,
+      "card": 81
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 190,
+    "fields": {
+      "viewed_at": "2025-01-27T23:00:00Z",
+      "user": 16,
+      "card": 82
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 191,
+    "fields": {
+      "viewed_at": "2025-01-28T00:00:00Z",
+      "user": 17,
+      "card": 83
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 192,
+    "fields": {
+      "viewed_at": "2025-01-28T01:00:00Z",
+      "user": 18,
+      "card": 84
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 193,
+    "fields": {
+      "viewed_at": "2025-01-28T02:00:00Z",
+      "user": 19,
+      "card": 85
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 194,
+    "fields": {
+      "viewed_at": "2025-01-28T03:00:00Z",
+      "user": 20,
+      "card": 86
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 195,
+    "fields": {
+      "viewed_at": "2025-01-28T04:00:00Z",
+      "user": 2,
+      "card": 87
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 196,
+    "fields": {
+      "viewed_at": "2025-01-28T05:00:00Z",
+      "user": 2,
+      "card": 88
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 197,
+    "fields": {
+      "viewed_at": "2025-01-28T06:00:00Z",
+      "user": 3,
+      "card": 89
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 198,
+    "fields": {
+      "viewed_at": "2025-01-28T07:00:00Z",
+      "user": 4,
+      "card": 90
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 199,
+    "fields": {
+      "viewed_at": "2025-01-28T08:00:00Z",
+      "user": 5,
+      "card": 91
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 200,
+    "fields": {
+      "viewed_at": "2025-01-28T09:00:00Z",
+      "user": 6,
+      "card": 92
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 201,
+    "fields": {
+      "viewed_at": "2025-01-28T10:00:00Z",
+      "user": 7,
+      "card": 93
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 202,
+    "fields": {
+      "viewed_at": "2025-01-28T11:00:00Z",
+      "user": 8,
+      "card": 94
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 203,
+    "fields": {
+      "viewed_at": "2025-01-28T12:00:00Z",
+      "user": 9,
+      "card": 95
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 204,
+    "fields": {
+      "viewed_at": "2025-01-28T13:00:00Z",
+      "user": 10,
+      "card": 96
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 205,
+    "fields": {
+      "viewed_at": "2025-01-28T14:00:00Z",
+      "user": 11,
+      "card": 97
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 206,
+    "fields": {
+      "viewed_at": "2025-01-28T15:00:00Z",
+      "user": 12,
+      "card": 98
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 207,
+    "fields": {
+      "viewed_at": "2025-01-28T16:00:00Z",
+      "user": 13,
+      "card": 99
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 208,
+    "fields": {
+      "viewed_at": "2025-01-28T17:00:00Z",
+      "user": 14,
+      "card": 100
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 209,
+    "fields": {
+      "viewed_at": "2025-01-28T18:00:00Z",
+      "user": 15,
+      "card": 101
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 210,
+    "fields": {
+      "viewed_at": "2025-01-28T19:00:00Z",
+      "user": 16,
+      "card": 102
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 211,
+    "fields": {
+      "viewed_at": "2025-01-28T20:00:00Z",
+      "user": 17,
+      "card": 103
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 212,
+    "fields": {
+      "viewed_at": "2025-01-28T21:00:00Z",
+      "user": 18,
+      "card": 104
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 213,
+    "fields": {
+      "viewed_at": "2025-01-28T22:00:00Z",
+      "user": 19,
+      "card": 105
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 214,
+    "fields": {
+      "viewed_at": "2025-01-28T23:00:00Z",
+      "user": 20,
+      "card": 106
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 215,
+    "fields": {
+      "viewed_at": "2025-01-29T00:00:00Z",
+      "user": 2,
+      "card": 107
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 216,
+    "fields": {
+      "viewed_at": "2025-01-29T01:00:00Z",
+      "user": 3,
+      "card": 108
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 217,
+    "fields": {
+      "viewed_at": "2025-01-29T02:00:00Z",
+      "user": 4,
+      "card": 109
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 218,
+    "fields": {
+      "viewed_at": "2025-01-29T03:00:00Z",
+      "user": 5,
+      "card": 110
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 219,
+    "fields": {
+      "viewed_at": "2025-01-29T04:00:00Z",
+      "user": 6,
+      "card": 1
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 220,
+    "fields": {
+      "viewed_at": "2025-01-29T05:00:00Z",
+      "user": 7,
+      "card": 2
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 221,
+    "fields": {
+      "viewed_at": "2025-01-29T06:00:00Z",
+      "user": 8,
+      "card": 3
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 222,
+    "fields": {
+      "viewed_at": "2025-01-29T07:00:00Z",
+      "user": 9,
+      "card": 4
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 223,
+    "fields": {
+      "viewed_at": "2025-01-29T08:00:00Z",
+      "user": 10,
+      "card": 5
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 224,
+    "fields": {
+      "viewed_at": "2025-01-29T09:00:00Z",
+      "user": 11,
+      "card": 6
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 225,
+    "fields": {
+      "viewed_at": "2025-01-29T10:00:00Z",
+      "user": 12,
+      "card": 7
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 226,
+    "fields": {
+      "viewed_at": "2025-01-29T11:00:00Z",
+      "user": 13,
+      "card": 8
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 227,
+    "fields": {
+      "viewed_at": "2025-01-29T12:00:00Z",
+      "user": 14,
+      "card": 9
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 228,
+    "fields": {
+      "viewed_at": "2025-01-29T13:00:00Z",
+      "user": 15,
+      "card": 10
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 229,
+    "fields": {
+      "viewed_at": "2025-01-29T14:00:00Z",
+      "user": 16,
+      "card": 11
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 230,
+    "fields": {
+      "viewed_at": "2025-01-29T15:00:00Z",
+      "user": 17,
+      "card": 12
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 231,
+    "fields": {
+      "viewed_at": "2025-01-29T16:00:00Z",
+      "user": 18,
+      "card": 13
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 232,
+    "fields": {
+      "viewed_at": "2025-01-29T17:00:00Z",
+      "user": 19,
+      "card": 14
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 233,
+    "fields": {
+      "viewed_at": "2025-01-29T18:00:00Z",
+      "user": 20,
+      "card": 15
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 234,
+    "fields": {
+      "viewed_at": "2025-01-29T19:00:00Z",
+      "user": 2,
+      "card": 16
+    }
+  },
+  {
+    "model": "cards.cardview",
+    "pk": 235,
+    "fields": {
+      "viewed_at": "2025-01-29T20:00:00Z",
+      "user": 3,
+      "card": 17
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 1,
+    "fields": {
+      "name": "Książki"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 2,
+    "fields": {
+      "name": "Podróże"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 3,
+    "fields": {
+      "name": "Fotografia"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 4,
+    "fields": {
+      "name": "Zdrowie"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 5,
+    "fields": {
+      "name": "Gotowanie"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 6,
+    "fields": {
+      "name": "Sport"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 7,
+    "fields": {
+      "name": "Moda"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 8,
+    "fields": {
+      "name": "Technologia"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 9,
+    "fields": {
+      "name": "Muzyka"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 10,
+    "fields": {
+      "name": "Fitness"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 11,
+    "fields": {
+      "name": "Film"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 12,
+    "fields": {
+      "name": "Motoryzacja"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 13,
+    "fields": {
+      "name": "Ekologia"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 14,
+    "fields": {
+      "name": "Sztuka"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 15,
+    "fields": {
+      "name": "Kawa"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 16,
+    "fields": {
+      "name": "Nauka"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 17,
+    "fields": {
+      "name": "Rower"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 18,
+    "fields": {
+      "name": "Taniec"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 19,
+    "fields": {
+      "name": "Zdrowa Żywność"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 20,
+    "fields": {
+      "name": "Języki Obce"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 21,
+    "fields": {
+      "name": "Python"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 22,
+    "fields": {
+      "name": "Psychologia"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 23,
+    "fields": {
+      "name": "Historia"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 24,
+    "fields": {
+      "name": "Filozofia"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 25,
+    "fields": {
+      "name": "Zwierzęta"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 26,
+    "fields": {
+      "name": "Podcasts"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 27,
+    "fields": {
+      "name": "DIY"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 28,
+    "fields": {
+      "name": "Hobby"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 29,
+    "fields": {
+      "name": "Relaks"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 30,
+    "fields": {
+      "name": "Malarstwo"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 31,
+    "fields": {
+      "name": "Architektura"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 32,
+    "fields": {
+      "name": "Gry planszowe"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 33,
+    "fields": {
+      "name": "Programy TV"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 34,
+    "fields": {
+      "name": "Edukacja"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 35,
+    "fields": {
+      "name": "Fotomodeling"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 36,
+    "fields": {
+      "name": "Teatr"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 37,
+    "fields": {
+      "name": "Joga"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 38,
+    "fields": {
+      "name": "Astronomia"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 39,
+    "fields": {
+      "name": "Kolarstwo"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 40,
+    "fields": {
+      "name": "Wspinaczka"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 41,
+    "fields": {
+      "name": "Ogrodnictwo"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 42,
+    "fields": {
+      "name": "Fotoreportaż"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 43,
+    "fields": {
+      "name": "JavaScript"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 44,
+    "fields": {
+      "name": "React"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 45,
+    "fields": {
+      "name": "Java"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 46,
+    "fields": {
+      "name": "C++"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 47,
+    "fields": {
+      "name": "Data Science"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 48,
+    "fields": {
+      "name": "Sztuczna Inteligencja"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 49,
+    "fields": {
+      "name": "Blockchain"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 50,
+    "fields": {
+      "name": "Cyberbezpieczeństwo"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 51,
+    "fields": {
+      "name": "No code"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 52,
+    "fields": {
+      "name": "PHP"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 53,
+    "fields": {
+      "name": "UX/UI"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 54,
+    "fields": {
+      "name": "Grafika komputerowa"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 55,
+    "fields": {
+      "name": "Animacja"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 56,
+    "fields": {
+      "name": "Gry komputerowe"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 57,
+    "fields": {
+      "name": "Machine Learning"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 58,
+    "fields": {
+      "name": "Arduino"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 59,
+    "fields": {
+      "name": "Robotyka"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 60,
+    "fields": {
+      "name": "Chmura obliczeniowa"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 61,
+    "fields": {
+      "name": "Python Django"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 62,
+    "fields": {
+      "name": "Flutter"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 63,
+    "fields": {
+      "name": "Fotografia cyfrowa"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 64,
+    "fields": {
+      "name": "Kulinarne podróże"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 65,
+    "fields": {
+      "name": "Projektowanie wnętrz"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 66,
+    "fields": {
+      "name": "Gry karciane"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 67,
+    "fields": {
+      "name": "Wspinaczka wysokogórska"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 68,
+    "fields": {
+      "name": "Psychoterapia"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 69,
+    "fields": {
+      "name": "Tworzenie stron internetowych"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 70,
+    "fields": {
+      "name": "Odnawialne źródła energii"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 71,
+    "fields": {
+      "name": "Wirtualna rzeczywistość"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 72,
+    "fields": {
+      "name": "Zarządzanie czasem"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 73,
+    "fields": {
+      "name": "Genealogia"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 74,
+    "fields": {
+      "name": "Lego"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 75,
+    "fields": {
+      "name": "Astronautyka"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 76,
+    "fields": {
+      "name": "Gry fabularne"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 77,
+    "fields": {
+      "name": "Pszczelarstwo"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 78,
+    "fields": {
+      "name": "Robotyka przemysłowa"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 79,
+    "fields": {
+      "name": "Stolarstwo"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 80,
+    "fields": {
+      "name": "Projektowanie gier"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 81,
+    "fields": {
+      "name": "Szkicowanie"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 82,
+    "fields": {
+      "name": "Fotografia ślubna"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 83,
+    "fields": {
+      "name": "Grafika 3D"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 84,
+    "fields": {
+      "name": "Ekonomia"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 85,
+    "fields": {
+      "name": "Szermierka"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 86,
+    "fields": {
+      "name": "Ogrody miejskie"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 87,
+    "fields": {
+      "name": "Bieganie"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 88,
+    "fields": {
+      "name": "Tworzenie aplikacji mobilnych"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 89,
+    "fields": {
+      "name": "Sztuka współczesna"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 90,
+    "fields": {
+      "name": "Biotechnologia"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 91,
+    "fields": {
+      "name": "Rzeźba"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 92,
+    "fields": {
+      "name": "Turystyka górska"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 93,
+    "fields": {
+      "name": "Nurkowanie"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 94,
+    "fields": {
+      "name": "Kitesurfing"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 95,
+    "fields": {
+      "name": "Robotyka edukacyjna"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 96,
+    "fields": {
+      "name": "Analiza danych"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 97,
+    "fields": {
+      "name": "Badminton"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 98,
+    "fields": {
+      "name": "Tuning samochodów"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 99,
+    "fields": {
+      "name": "Pielęgniarstwo"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 100,
+    "fields": {
+      "name": "Szydełkowanie"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 101,
+    "fields": {
+      "name": "Astrofizyka"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 102,
+    "fields": {
+      "name": "Kolekcjonerstwo"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 103,
+    "fields": {
+      "name": "Announcement"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 104,
+    "fields": {
+      "name": "Finance"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 105,
+    "fields": {
+      "name": "Wiadomość"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 106,
+    "fields": {
+      "name": "Zmiany"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 107,
+    "fields": {
+      "name": "Finanse"
+    }
+  },
+  {
+    "model": "cards.tag",
+    "pk": 108,
+    "fields": {
+      "name": "Programowanie"
+    }
+  }
+]

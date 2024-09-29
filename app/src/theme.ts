@@ -4,10 +4,10 @@ export const themeLight = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: '#4459A9',
+      main: '#253160',
     },
     secondary: {
-      main: '#005B7A',
+      main: '#fbb916',
     },
     success: {
       main: '#7CB928',
@@ -16,12 +16,12 @@ export const themeLight = createTheme({
       main: '#BA1A1A',
     },
     text: {
-      primary: '#0D2878',
-      secondary: '#7F8C8D',
+      primary: '#2d4e9c',
+      secondary: 'rgba(0,0,0,0.6)',
     },
     background: {
-      default: '#FFFBFF',
-      paper: '#fddf9b',
+      default: '#ffffff',
+      paper: '#fef2c0',
     },
   },
 });
@@ -30,16 +30,16 @@ export const themeDark = createTheme({
   palette: {
     mode: 'dark',
     primary: {
-      main: '#B7C4FF',
+      main: '#253160',
     },
     secondary: {
-      main: '#61CCFF',
+      main: '#fbb916',
     },
     success: {
-      main: '#00FF99',
+      main: '#7CB928',
     },
     warning: {
-      main: '#FFB4AB',
+      main: '#BA1A1A',
     },
     text: {
       primary: '#FFFFFF',
@@ -47,7 +47,7 @@ export const themeDark = createTheme({
     },
     background: {
       default: '#1C1B1F',
-      paper: '#fddf9b',
+      paper: '#2c2c2c',
     },
   },
 });

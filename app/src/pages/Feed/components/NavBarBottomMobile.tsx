@@ -5,34 +5,26 @@ import CategoryIcon from '@mui/icons-material/Category';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import SettingsIcon from '@mui/icons-material/Settings';
+import { Link } from 'react-router-dom';
 
 const NavBarBottomMobile: React.FC = () => {
   return (
-    <AppBar position="fixed" sx={{ top: 'auto', bottom: 0 }}>
+    <AppBar position="fixed" sx={{ top: 'auto', bottom: 0, backgroundColor: 'primary.main' }}>
       <Toolbar sx={{ display: 'flex', justifyContent: 'space-around' }}>
-        <IconButton aria-label="feed" href="/">
+        <IconButton component={Link} to="/" aria-label="feed">
           <HomeIcon sx={{ color: 'white' }} />
         </IconButton>
-        <IconButton aria-label="categories" href="/categories">
+        <IconButton component={Link} to="/categories" aria-label="categories">
           <CategoryIcon sx={{ color: 'white' }} />
         </IconButton>
-        <IconButton aria-label="add post" size="large" href="/add-post">
-          <AddCircleIcon
-            sx={{
-              color: 'white',
-              fontSize: 80,
-              position: 'absolute',
-              transform: 'translatey(-20%)',
-              backgroundColor: 'secondary.main',
-              borderRadius: '20rem',
-            }}
-          />
-        </IconButton>
-        <IconButton aria-label="my feed" href="/my-profile">
+        <IconButton component={Link} to="/my-profile" aria-label="my feed">
           <AccountCircleIcon sx={{ color: 'white' }} />
         </IconButton>
-        <IconButton aria-label="settings" href="/settings">
+        <IconButton component={Link} to="/settings" aria-label="settings">
           <SettingsIcon sx={{ color: 'white' }} />
+        </IconButton>
+        <IconButton component={Link} to="/add-post" aria-label="add post">
+          <AddCircleIcon sx={{ color: 'secondary.main', fontSize: 40 }} />
         </IconButton>
       </Toolbar>
     </AppBar>
