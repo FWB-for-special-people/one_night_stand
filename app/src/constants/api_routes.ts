@@ -3,6 +3,7 @@ export const API = {
     cardLike: (cardId: number) => `/cards/${cardId}/like`,
     cardView: (cardId: number) => `/cards/${cardId}/view`,
     cardComments: (cardId: number) => `/cards/${cardId}/comments`,
+    cardContent: `/cards/content/`,
 
     channels: "/channels/",
     channelsFollow: (channelId: number) => `/channels/${channelId}/follow`,
@@ -20,4 +21,5 @@ const BASE_URL = '/api/v1';
 export const PrefixedAPI = {
   login: `${BASE_URL}/token/`,
   loginDemo: `${BASE_URL}/token/demo`,
+ cardContent: `${BASE_URL}/cards/content/`,
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { List, ListItemIcon, ListItemText, AppBar, Toolbar, ListItemButton, IconButton } from '@mui/material';
+import {List, ListItemIcon, ListItemText, AppBar, Toolbar, ListItemButton, IconButton} from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
 import CategoryIcon from '@mui/icons-material/Category';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
@@ -7,6 +7,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import SettingsIcon from '@mui/icons-material/Settings';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import {Link} from "react-router-dom";
 
 interface NavBarBottomDesktopProps {
   handleToggle: () => void;
@@ -59,13 +60,16 @@ const NavBarBottomDesktop: React.FC<NavBarBottomDesktopProps> = ({handleToggle, 
               {!isCollapsed && <ListItemText primary="Kategorie" sx={{...menuTextStyle}} />}
             </ListItemButton>
 
-            <ListItemButton sx={{ justifyContent: isCollapsed ? 'center' : 'flex-start', padding: '0.5rem 1rem' }}
-                            component="a" href="/add-post">
-              <ListItemIcon sx={{ minWidth: '3rem', justifyContent: 'center' }}>
-                <AddCircleIcon sx={{ color: 'white' }} />
-              </ListItemIcon>
-              {!isCollapsed && <ListItemText primary="Dodaj Post" sx={{...menuTextStyle}} />}
-            </ListItemButton>
+            <ListItemButton
+                        sx={{ justifyContent: isCollapsed ? 'center' : 'flex-start', padding: '0.5rem 1rem' }}
+                        component={Link}
+                        to="/add-post"
+                    >
+                        <ListItemIcon sx={{ minWidth: '3rem', justifyContent: 'center' }}>
+                            <AddCircleIcon sx={{ color: 'white' }} />
+                        </ListItemIcon>
+                        {!isCollapsed && <ListItemText primary="Dodaj Post" sx={{ ...menuTextStyle }} />}
+                    </ListItemButton>
 
             <ListItemButton sx={{ justifyContent: isCollapsed ? 'center' : 'flex-start', padding: '0.5rem 1rem' }}
                             component="a" href="/my-profile">
