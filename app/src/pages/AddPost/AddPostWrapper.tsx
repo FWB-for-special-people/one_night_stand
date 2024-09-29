@@ -7,6 +7,9 @@ import AddButton from './components/AddButton.tsx';
 import SpeechToText from "src/pages/AddPost/components/SpeechToText.tsx";
 import Carousel from "src/pages/AddPost/Carousel.tsx";
 import OverlappingCarousel from "src/pages/AddPost/Carousel.tsx";
+import { useAtom } from 'jotai';
+import { darkModeAtom } from 'src/atoms.ts';
+import { themeLight } from 'src/theme.ts';
 
 const AddPost: React.FC = () => {
     const [postQuestionText] = useState('');
@@ -15,6 +18,7 @@ const AddPost: React.FC = () => {
     const [backendImages, setBackendImages] = useState<string[]>([]);
     const [callAPI, setCallAPI] = useState(false);
     const [text, setText] = useState('');
+    const [isDarkMode] = useAtom(darkModeAtom)
 
     const handleSavePost = (isPublic: boolean) => {
         console.log('Tekst posta:', postQuestionText);
@@ -42,14 +46,14 @@ const AddPost: React.FC = () => {
                 justifyContent: 'center',
                 alignItems: 'center',
                 height: '100vh',
-                backgroundColor: 'primary.main',
+                backgroundColor: 'background.default',
             }}
         >
             <Box
                 sx={{
                     width: '320px',
                     height: '320px',
-                    backgroundColor: 'rgba(255, 255, 255, 0.15)',
+                    backgroundColor: isDarkMode ? 'text.secondary' : 'background.default',
                     backdropFilter: 'blur(30px)',
                     borderRadius: '50%',
                     boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)',

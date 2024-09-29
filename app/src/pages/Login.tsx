@@ -19,6 +19,8 @@ export default function Login() {
     const setAccessToken = useSetAtom(accessTokenAtom)
     const navigate = useNavigate();
 
+    const logoImage = '../public/welcomeLogo.png'
+
     return (
         <Container maxWidth="sm">
             <Box
@@ -37,6 +39,14 @@ export default function Login() {
                     },
                 }}
             >
+              <Box
+                component={"img"}
+                src={logoImage}
+                sx={{
+                  width: '10rem',
+                  marginBottom: '1rem'
+                }}
+                />
                 <Typography variant="h4">
                     Zaloguj się
                 </Typography>
