@@ -34,6 +34,7 @@ class CustomUser(AbstractUser):
     last_name = models.CharField(max_length=150, null=True, verbose_name="Nazwisko")
     bio = models.TextField(null=True, blank=True, verbose_name="Opis użytkownika")
     avatar = models.FileField(upload_to="avatars", null=True, blank=True, verbose_name="Avatar")
+    preferences = models.ManyToManyField("cards.Tag", verbose_name="Upodobania", blank=True)
 
     USERNAME_FIELD: str = "email"
     REQUIRED_FIELDS: list[str] = ["first_name", "last_name"]

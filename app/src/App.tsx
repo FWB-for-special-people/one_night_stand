@@ -1,44 +1,27 @@
-import { ErrorBoundary } from 'react-error-boundary';
-import { QueryClient, QueryClientProvider } from 'react-query';
-import { Outlet } from 'react-router-dom';
-import { CssBaseline, ThemeProvider, useMediaQuery } from '@mui/material';
-import { useSelector } from 'react-redux';
-import { useMemo } from 'react';
-import { themeDark, themeHighContrast, themeLight } from './theme.ts';
-import Login from 'src/pages/Login.tsx';
-
-interface RootState {
-  themeMode: {
-    mode: 'dark' | 'contrast' | 'light';
-  };
-}
+import {ErrorBoundary} from 'react-error-boundary';
+import {Outlet, RouterProvider} from 'react-router-dom';
+import {CssBaseline} from '@mui/material';
+// import Login from 'src/pages/Login.tsx';
+import {QueryClient, QueryClientProvider} from 'react-query';
+import {router} from 'src/router';
+// import {useAtomValue} from 'jotai';
+// import {darkModeAtom} from 'src/atoms.ts';
+import ErrorScreen from "src/pages/ErrorScreen.tsx";
 
 const queryClient = new QueryClient();
 
-const App = () => {
-  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
-  const themeMode = useSelector((state: RootState) => state.themeMode.mode);
+export default function App() {
+    // const theme = useAtomValue(darkModeAtom);
 
-  const theme = useMemo(() => {
-    if (themeMode === 'dark') {
-      return themeDark;
-    }
-    if (themeMode === 'contrast') {
-      return themeHighContrast;
-    }
-    return themeLight;
-  }, [prefersDarkMode, themeMode]);
-
-  return (
-    <ErrorBoundary fallback={<Login />}>
-      <ThemeProvider theme={theme}>
+    return (
         <QueryClientProvider client={queryClient}>
-          <CssBaseline />
-          <Outlet />
+            {/*<ThemeProvider theme={theme}>*/}
+                <ErrorBoundary fallback={<ErrorScreen/>}>
+                    <RouterProvider router={router}/>
+                    <CssBaseline/>
+                    <Outlet/>
+                </ErrorBoundary>
+            {/*</ThemeProvider>*/}
         </QueryClientProvider>
-      </ThemeProvider>
-    </ErrorBoundary>
-  );
+    );
 };
-
-export default App;

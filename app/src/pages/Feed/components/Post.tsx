@@ -1,25 +1,20 @@
 import React, { useState } from 'react';
 import { Box, Typography, IconButton, Button, useMediaQuery, useTheme } from '@mui/material';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import MessageIcon from '@mui/icons-material/Message';
 import ShareIcon from '@mui/icons-material/Share';
-import { useSelector } from 'react-redux';
-import { RootState } from 'src/store/store.ts';
-import Avatar from "src/Feed/components/Avatar.tsx";
+import { isSideMenuCollapsedAtom } from 'src/atoms.ts';
+import { useAtom } from 'jotai';
 
 interface PostProps {
   image: string;
   text: string;
-  userId: string;
-  userName: string;
-  userAvatar: string;
 }
 
-const Post: React.FC<PostProps> = ({ image, text, userId, userName, userAvatar }) => {
+const Post: React.FC<PostProps> = ({ image, text }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-  const isCollapsed = useSelector((state: RootState) => state.ui.isCollapsed);
+  const [isSideMenuCollapsed] = useAtom(isSideMenuCollapsedAtom);
   const handleToggleExpand = () => {
     setIsExpanded(!isExpanded);
   };
@@ -27,29 +22,19 @@ const Post: React.FC<PostProps> = ({ image, text, userId, userName, userAvatar }
   return (
     <Box
       sx={{
-        backgroundColor: 'rgba(255, 255, 255, 0.15)',
-        backdropFilter: 'blur(10px)',
-        WebkitBackdropFilter: 'blur(10px)',
-        borderRadius: '1rem',
-        padding: '1rem',
-        pb: '1rem',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
         marginX: '1rem',
         color: 'text.primary',
-        boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
         height: isMobile ? '80vh' : '90vh',
         maxHeight: '90vh',
-        width: isMobile ? '100%' : isCollapsed ? '90%' : '80%',
-        border: '1px solid rgba(255, 255, 255, 0.3)',
-        position: 'relative'
+        width: isMobile ? '100%' : isSideMenuCollapsed ? '90%' : '80%',
       }}
     >
       <Box
         sx={{
-          borderRadius: '1rem',
           backgroundImage: `url(${image})`,
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
@@ -100,26 +85,17 @@ const Post: React.FC<PostProps> = ({ image, text, userId, userName, userAvatar }
 
       <Box
         sx={{
-          position: 'absolute',
-          top: '50%',
-          right: '1rem',
-          transform: 'translateY(-50%)',
           display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          // gap: '1rem',
-          paddingRight: '1rem',
+          justifyContent: 'space-around',
+          width: '100%',
+          padding: '1rem',
         }}
       >
-        <Avatar id={userId} name={userName} avatar={userAvatar}/>
-        <IconButton>
-          <MessageIcon sx={{ color: 'secondary.main', fontSize: '2.5rem', marginTop: '2rem' }} />
-        </IconButton>
         <IconButton aria-label="like">
-          <FavoriteIcon sx={{ color: 'secondary.main', fontSize: '2.5rem' }} />
+          <FavoriteIcon sx={{ color: 'secondary.main' }} />
         </IconButton>
         <IconButton aria-label="share">
-          <ShareIcon sx={{ color: 'secondary.main', fontSize: '2.5rem' }} />
+          <ShareIcon sx={{ color: 'secondary.main' }} />
         </IconButton>
       </Box>
     </Box>

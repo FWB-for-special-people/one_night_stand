@@ -10,7 +10,7 @@ const NavBarBottomMobile: React.FC = () => {
   return (
     <AppBar position="fixed" sx={{ top: 'auto', bottom: 0 }}>
       <Toolbar sx={{ display: 'flex', justifyContent: 'space-around' }}>
-        <IconButton aria-label="feed" href="/feed">
+        <IconButton aria-label="feed" href="/">
           <HomeIcon sx={{ color: 'white' }} />
         </IconButton>
         <IconButton aria-label="categories" href="/categories">

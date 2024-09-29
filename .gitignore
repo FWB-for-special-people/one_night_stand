@@ -4,4 +4,4 @@
 venv
 **/*.pyc
 *.env
-/.k8s
+.DS_store
