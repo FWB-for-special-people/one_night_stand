@@ -7,7 +7,7 @@ import {useUserFollowers} from "src/queries/useUserFollowers.ts";
 const allPosts = [...myPosts, ...sharedPosts];
 export default function Dashboard() {
   // const {data} = useCardsQuery()
-  useUserFollowers()
+  // useUserFollowers()
 
   return (
     <Box>
