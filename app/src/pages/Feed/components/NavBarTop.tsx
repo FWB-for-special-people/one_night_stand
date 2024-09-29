@@ -11,15 +11,12 @@ const NavBarTop: React.FC = () => {
             src="welcomeLogo.png"
             alt="Logo"
             sx={{
-              height: '3.5rem',
+              height: '2.5rem',
               maxWidth: 'auto',
               width: 'auto',
             }}
           />
         </Box>
-        <Typography variant="h6" component="div">
-          Azeno
-        </Typography>
       </Toolbar>
     </AppBar>
   );
