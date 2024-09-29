@@ -15,3 +15,7 @@ export type Channel = {
     description: string;
     members: User[]
 }
+
+export type Card = {
+    'theme': string;
+}
