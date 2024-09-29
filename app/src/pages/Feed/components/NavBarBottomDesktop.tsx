@@ -7,6 +7,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import SettingsIcon from '@mui/icons-material/Settings';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import {Link} from "react-router-dom";
 
 interface NavBarBottomDesktopProps {
   handleToggle: () => void;
@@ -46,45 +47,57 @@ const NavBarBottomDesktop: React.FC<NavBarBottomDesktopProps> = ({
         }}
       >
         <List sx={{width: '100%', gap: '2rem'}}>
-          <ListItemButton sx={{justifyContent: isCollapsed ? 'center' : 'flex-start', padding: '0.5rem 0rem', height: "3rem"}}
-                          component="a" href="/">
-            <ListItemIcon sx={{minWidth: '3rem', justifyContent: 'center'}}>
-              <HomeIcon sx={{color: 'white'}}/>
-            </ListItemIcon>
-            {!isCollapsed && <ListItemText primary="Strona Główna" sx={{...menuTextStyle}}/>}
-          </ListItemButton>
+          <Link to="/">
+            <ListItemButton
+              sx={{justifyContent: isCollapsed ? 'center' : 'flex-start', padding: '0.5rem 0rem', height: "3rem"}}>
+              <ListItemIcon sx={{minWidth: '3rem', justifyContent: 'center'}}>
+                <HomeIcon sx={{color: 'white'}}/>
+              </ListItemIcon>
+              {!isCollapsed && <ListItemText primary="Strona Główna" sx={{...menuTextStyle}}/>}
+            </ListItemButton>
+          </Link>
 
-          <ListItemButton sx={{justifyContent: isCollapsed ? 'center' : 'flex-start', padding: '0.5rem 0rem', height: "3rem"}}
-                          component="a" href="/categories">
-            <ListItemIcon sx={{minWidth: '3rem', justifyContent: 'center'}}>
-              <CategoryIcon sx={{color: 'white'}}/>
-            </ListItemIcon>
-            {!isCollapsed && <ListItemText primary="Kategorie" sx={{...menuTextStyle}}/>}
-          </ListItemButton>
+          <Link to="/categories">
+            <ListItemButton
+              sx={{justifyContent: isCollapsed ? 'center' : 'flex-start', padding: '0.5rem 0rem', height: "3rem"}}>
+              <ListItemIcon sx={{minWidth: '3rem', justifyContent: 'center'}}>
+                <CategoryIcon sx={{color: 'white'}}/>
+              </ListItemIcon>
+              {!isCollapsed && <ListItemText primary="Kategorie" sx={{...menuTextStyle}}/>}
+            </ListItemButton>
+          </Link>
 
-          <ListItemButton sx={{justifyContent: isCollapsed ? 'center' : 'flex-start', padding: '0.5rem 0rem', height: "3rem"}}
-                          component="a" href="/add-post">
-            <ListItemIcon sx={{minWidth: '3rem', justifyContent: 'center'}}>
-              <AddCircleIcon sx={{color: 'white'}}/>
-            </ListItemIcon>
-            {!isCollapsed && <ListItemText primary="Dodaj Post" sx={{...menuTextStyle}}/>}
-          </ListItemButton>
+          <Link to="/add-post">
+            <ListItemButton
+              sx={{justifyContent: isCollapsed ? 'center' : 'flex-start', padding: '0.5rem 0rem', height: "3rem"}}>
+              <ListItemIcon sx={{minWidth: '3rem', justifyContent: 'center'}}>
+                <AddCircleIcon sx={{color: 'white'}}/>
+              </ListItemIcon>
+              {!isCollapsed && <ListItemText primary="Dodaj Post" sx={{...menuTextStyle}}/>}
+            </ListItemButton>
+          </Link>
 
-          <ListItemButton sx={{justifyContent: isCollapsed ? 'center' : 'flex-start', padding: '0.5rem 0rem', height: "3rem"}}
-                          component="a" href="/my-profile">
-            <ListItemIcon sx={{minWidth: '3rem', justifyContent: 'center'}}>
-              <AccountCircleIcon sx={{color: 'white'}}/>
-            </ListItemIcon>
-            {!isCollapsed && <ListItemText primary="Mój Profil" sx={{...menuTextStyle}}/>}
-          </ListItemButton>
+          <Link to="/my-profile">
+            <ListItemButton
+              sx={{justifyContent: isCollapsed ? 'center' : 'flex-start', padding: '0.5rem 0rem', height: "3rem"}}
+              component="a" href="">
+              <ListItemIcon sx={{minWidth: '3rem', justifyContent: 'center'}}>
+                <AccountCircleIcon sx={{color: 'white'}}/>
+              </ListItemIcon>
+              {!isCollapsed && <ListItemText primary="Mój Profil" sx={{...menuTextStyle}}/>}
+            </ListItemButton>
+          </Link>
 
-          <ListItemButton sx={{justifyContent: isCollapsed ? 'center' : 'flex-start', padding: '0.5rem 0rem', height: "3rem"}}
-                          component="a" href="/settings">
-            <ListItemIcon sx={{minWidth: '3rem', justifyContent: 'center'}}>
-              <SettingsIcon sx={{color: 'white'}}/>
-            </ListItemIcon>
-            {!isCollapsed && <ListItemText primary="Ustawienia" sx={{...menuTextStyle}}/>}
-          </ListItemButton>
+          <Link to="/settings">
+            <ListItemButton
+              sx={{justifyContent: isCollapsed ? 'center' : 'flex-start', padding: '0.5rem 0rem', height: "3rem"}}>
+              <ListItemIcon sx={{minWidth: '3rem', justifyContent: 'center'}}>
+                <SettingsIcon sx={{color: 'white'}}/>
+              </ListItemIcon>
+              {!isCollapsed && <ListItemText primary="Ustawienia" sx={{...menuTextStyle}}/>}
+            </ListItemButton>
+          </Link>
+
         </List>
         <IconButton
           onClick={handleToggle}
@@ -99,10 +112,8 @@ const NavBarBottomDesktop: React.FC<NavBarBottomDesktopProps> = ({
           {isCollapsed ? <ChevronRightIcon fontSize={"large"}/> : <ChevronLeftIcon fontSize={"large"}/>}
         </IconButton>
       </Toolbar>
-
-
     </AppBar>
-  );
+);
 };
 
 export default NavBarBottomDesktop;

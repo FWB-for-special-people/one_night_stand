@@ -1,7 +1,7 @@
 export const API = {
   cards: "/cards/",
-  cardLike: (cardId: number) => `/cards/${cardId}/like`,
-  cardView: (cardId: number) => `/cards/${cardId}/view`,
+  cardLike: (cardId: number) => `/cards/${cardId}/like/`,
+  cardView: (cardId: number) => `/cards/${cardId}/view/`,
   cardComments: (cardId: number) => `/cards/${cardId}/comments`,
   cardTags: "/cards/tags",
 

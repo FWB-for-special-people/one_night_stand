@@ -13,9 +13,6 @@ import ThemeSwitcher from './components/ThemeSwitcher';
 import {useUpdateUserQuery, useUserQuery} from "src/queries/useUserQuery.ts";
 import {useState} from "react";
 import {useTagsQuery} from "src/queries/useTagsQuery.ts";
-import {useMutation} from "react-query";
-import {atom, useAtom} from "jotai";
-import {atomWithStorage} from "jotai/utils";
 import {useAxios} from "src/hooks/useAxios.ts";
 import {API} from "src/constants/api_routes.ts";
 import {User} from "src/types.ts";
@@ -96,8 +93,6 @@ export default function Settings() {
     </Box>
   );
 };
-
-const tagsAtom = atomWithStorage<string[]>("selectedTags", [])
 
 function PreferencesList() {
   const axios = useAxios();
