@@ -6,13 +6,15 @@ import response from '../../assets/response.json';
 import AddButton from './components/AddButton.tsx';
 import SpeechToText from "src/pages/AddPost/components/SpeechToText.tsx";
 import Carousel from "src/pages/AddPost/Carousel.tsx";
+import OverlappingCarousel from "src/pages/AddPost/Carousel.tsx";
 
 const AddPost: React.FC = () => {
     const [postQuestionText] = useState('');
     const [backendAnswerText, setBackendAnswerText] = useState('');
     const [backendQuestionText, setBackendQuestionText] = useState('');
     const [backendImages, setBackendImages] = useState<string[]>([]);
-    const [callAPI, setCallAPI] = useState(true);
+    const [callAPI, setCallAPI] = useState(false);
+    const [text, setText] = useState('');
 
     const handleSavePost = (isPublic: boolean) => {
         console.log('Tekst posta:', postQuestionText);
@@ -31,8 +33,9 @@ const AddPost: React.FC = () => {
     }, []);
 
     const addButtonDisabled = !answer || !question || !images_b64;
+    console.log(text)
 
-    return callAPI ? <Carousel /> : (
+    return callAPI ? <OverlappingCarousel text={text} /> : (
         <Box
             sx={{
                 display: 'flex',
@@ -70,7 +73,7 @@ const AddPost: React.FC = () => {
                         border: '2px solid rgba(255, 255, 255, 0.4)',
                     }}
                 />
-                <SpeechToText setCallAPI={setCallAPI}/>
+                <SpeechToText setCallAPI={setCallAPI} setText={setText}/>
             </Box>
         </Box>
     );

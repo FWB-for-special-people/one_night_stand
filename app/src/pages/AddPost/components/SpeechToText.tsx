@@ -6,7 +6,7 @@ import {useEffect, useState} from "react";
 import {Box, IconButton} from "@mui/material";
 import MicIcon from "@mui/icons-material/Mic";
 
-const SpeechToText: React.FC = ({setCallAPI}) => {
+const SpeechToText: React.FC = ({setCallAPI, setText}) => {
   const axiosInstance = useAxios();
   const [isSending, setIsSending] = useState(false);
   const { transcript, startRecording, stopRecording } = useWhisper({
@@ -30,7 +30,7 @@ const SpeechToText: React.FC = ({setCallAPI}) => {
         try {
           const response = await axiosInstance.post(API.cardContent, { theme: transcript.text });
           setCallAPI(true);
-          console.log("Response from API:", response.data);
+          setText(response.data.text)
         } catch (error) {
           console.error("Failed to send transcript to server:", error);
         } finally {

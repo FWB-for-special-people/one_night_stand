@@ -4,6 +4,7 @@ from json import JSONDecodeError
 import logging
 import random
 
+from django.db.models import Q
 from django.core.exceptions import BadRequest
 from attr import filters
 from django.db.models import Count

@@ -1,77 +1,105 @@
 // @ts-nocheck
 import React from 'react';
-import { Box, Card, CardContent, Typography, Button } from '@mui/material';
+import { Box, Card, Typography } from '@mui/material';
 import { styled } from '@mui/system';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useCardsImagesQuery } from "src/queries/useCardsImagesQuery.ts";
+import axios from "axios";
+import {API, PrefixedAPI} from "src/constants/api_routes.ts";
+import {useAxios} from "src/hooks/useAxios.ts";
+import { useNavigate } from 'react-router-dom';
 
-// Przykładowe dane kart
-const cards = [
-  { id: 1, title: 'Card 1', description: 'This is card number 1' },
-  { id: 2, title: 'Card 2', description: 'This is card number 2' },
-  { id: 3, title: 'Card 3', description: 'This is card number 3' },
-  { id: 4, title: 'Card 4', description: 'This is card number 4' },
-  { id: 5, title: 'Card 5', description: 'This is card number 5' },
-];
 
-// Styled components dla karty z efektem nakładania się
+const decodeUnicode = (text) => {
+  try {
+    return decodeURIComponent(JSON.parse(`"${text}"`));
+  } catch (e) {
+    return text;
+  }
+};
+
+
+
+
 const OverlapCard = styled(Card)(({ theme, active }) => ({
-  width: '85%', // Ustaw szerokość karty na 100% kontenera
-  maxWidth: '350px', // Maksymalna szerokość karty
-  height: '75vh', // Wysokość karty
-  margin: '0 20px',
+  width: '90%',
+  maxWidth: '600px',
+  height: '500px',
+  margin: '0 15px',
   transition: 'transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out',
   borderRadius: '20px',
   position: 'relative',
-  boxShadow: active
-    ? '0 16px 48px rgba(0, 0, 0, 0.3)' // Mocniejszy cień dla aktywnej karty
-    : '0 8px 24px rgba(0, 0, 0, 0.1)',
-  transform: active ? 'scale(1.0)' : 'scale(0.8)',
+  // boxShadow: active ? '0 16px 48px rgba(0, 0, 0, 0.3)' : '0 8px 24px rgba(0, 0, 0, 0.1)',
+  transform: active ? 'scale(1.0)' : 'scale(0.9)',
   zIndex: active ? 10 : 1,
-  backgroundColor: active ? '#e3f2fd' : '#fff', // Subtelna zmiana tła
+  backgroundColor: active ? '#e3f2fd' : '#fff',
+  overflow: 'hidden',
   '&:hover': {
-    transform: active ? 'scale(0.9)' : 'scale(0.8)', // Dodatkowe powiększenie przy hover
+    transform: 'scale(0.95)',
     boxShadow: '0 12px 36px rgba(0, 0, 0, 0.2)',
+  },
+
+  '@media (max-width: 1024px)': {
+    height: '550px',
+    maxWidth: '500px',
+  },
+  '@media (max-width: 768px)': {
+    height: '550px',
+    maxWidth: '400px',
+  },
+  '@media (max-width: 480px)': {
+    height: '350px',
+    maxWidth: '300px',
   },
 }));
 
-const OverlappingCarousel = () => {
+const Carousel = ({ text }) => {
+  const { data, isLoading, isError } = useCardsImagesQuery();
+  const [newCard, setNewCard] = React.useState({});
+  const axiosInstance = useAxios();
+  const navigate = useNavigate();
+
+
+
   const settings = {
     dots: true,
+    arrows: true,
     infinite: true,
-    speed: 600,
-    slidesToShow: 3,
+    speed: 500,
+    slidesToShow: 2,
     slidesToScroll: 1,
-    centerMode: true,
-    centerPadding: '0px',
+    centerMode: false,
+    vertical: false,
     focusOnSelect: true,
     beforeChange: (current, next) => setActiveIndex(next),
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
         },
       },
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2, // Wyświetlaj jedną kartę na tabletach
-          centerPadding: '0px',
+          slidesToShow: 1,
         },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          centerPadding: '0px',
         },
       },
     ],
   };
 
   const [activeIndex, setActiveIndex] = React.useState(2);
+
+
+  const flattenedCards = data?.pages?.reduce((acc, page) => acc.concat(page), []) || [];
 
   return (
     <Box
@@ -82,48 +110,110 @@ const OverlappingCarousel = () => {
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#f0f4f8',
-        padding: 0, // Usuń padding z głównego kontenera
-        overflow: 'hidden', // Dodaj overflow hidden, aby nic nie wychodziło poza kontener
+        padding: 0,
+        overflow: 'hidden',
       }}
     >
       <Box
         sx={{
-          width: '100%', // Kontener zajmuje 100% szerokości
-          maxWidth: '1200px', // Maksymalna szerokość kontenera
+          width: '100%',
+          maxWidth: '1400px',
           margin: '0 auto',
           position: 'relative',
-          overflow: 'hidden', // Ukryj nadmiar treści wychodzącej poza kontener
+          overflow: 'hidden',
+          '@media (max-width: 1024px)': {
+            maxWidth: '1000px',
+          },
+          '@media (max-width: 768px)': {
+            maxWidth: '600px',
+          },
+          '@media (max-width: 480px)': {
+            maxWidth: '320px',
+          },
         }}
       >
         <Slider {...settings}>
-          {cards.map((card, index) => (
-            <OverlapCard key={card.id} active={index === activeIndex}>
-              <CardContent
-                sx={{
-                  textAlign: 'center',
-                  height: '100%',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'center',
-                }}
-              >
-                <Typography variant="h4" gutterBottom>
-                  {card.title}
-                </Typography>
-                <Typography variant="h6" color="text.secondary" sx={{ marginBottom: '1.5rem' }}>
-                  {card.description}
-                </Typography>
-                <Button
-                  variant="contained"
-                  color="primary"
+          {flattenedCards.map((card, index) => (
+            <OverlapCard key={card.id} active={(index === activeIndex).toString()}
+            onClick={async () => {
+                const response = await axiosInstance.post<TokenResponse>(API.cards, {image_id: card.id, text: text, tags: ["python", "js"]})
+                navigate("/")
+
+            }}>
+
+              <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+
+                <Box
                   sx={{
-                    backgroundColor: activeIndex === index ? '#1565c0' : '#1976d2',
-                    '&:hover': { backgroundColor: '#0d47a1' },
+                    height: '70%',
+                    overflow: 'hidden',
                   }}
                 >
-                  Learn More
-                </Button>
-              </CardContent>
+                  <img
+                    src={card.image}
+                    alt={card.title}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      borderRadius: '20px 20px 0 0',
+                    }}
+                  />
+                </Box>
+                <Box
+                  sx={{
+                    height: '30%',
+                    padding: '1rem',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                    whiteSpace: 'nowrap',
+                  }}
+                >
+                  <Typography
+                    variant="h5"
+                    gutterBottom
+                    sx={{
+                      overflow: 'hidden',
+                      textOverflow: 'ellipsis',
+                      whiteSpace: 'nowrap',
+                    }}
+                  >
+                    {card.title}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                    sx={{
+                      marginBottom: '0.5rem',
+                      overflow: 'hidden',
+                      textOverflow: 'ellipsis',
+                      whiteSpace: 'nowrap',
+                    }}
+                  >
+                    {card.description}
+                  </Typography>
+
+                  <Typography
+                    variant="body1"
+                    color="primary"
+                    sx={{
+                      overflow: 'hidden',
+                      display: '-webkit-box',
+                      WebkitBoxOrient: 'vertical',
+                      WebkitLineClamp: 4,
+                      textOverflow: 'ellipsis',
+                      whiteSpace: 'normal',
+                      maxHeight: '7.2em',
+                    }}
+                  >
+                    {decodeUnicode(text)}
+                  </Typography>
+                </Box>
+              </Box>
             </OverlapCard>
           ))}
         </Slider>
@@ -132,4 +222,4 @@ const OverlappingCarousel = () => {
   );
 };
 
-export default OverlappingCarousel;
+export default Carousel;
