@@ -12,14 +12,14 @@ def add_default_image(apps, _):
     User = apps.get_model(settings.AUTH_USER_MODEL)
     Card = apps.get_model('cards', 'Card')
 
-    user = User.objects.first()
+    # user = User.objects.first()
 
-    image_path = Path(settings.BASE_DIR) / "assets" / "universal_bg_20240929T012848082.jpg"
-    with open(image_path, "rb") as file:
-        card_image = CardImage(created_by=user, is_public=True)
-        card_image.image.save(image_path.stem, File(file), save=True)
+    # image_path = Path(settings.BASE_DIR) / "assets" / "universal_bg_20240929T012848082.jpg"
+    # with open(image_path, "rb") as file:
+    #     card_image = CardImage(created_by=user, is_public=True)
+    #     card_image.image.save(image_path.stem, File(file), save=True)
 
-    Card.objects.filter(image__isnull=True).update(image=card_image)
+    # Card.objects.filter(image__isnull=True).update(image=card_image)
 
 
 class Migration(migrations.Migration):

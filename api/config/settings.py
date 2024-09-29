@@ -245,6 +245,7 @@ STORAGES['default'] = {
         'azure_container': AZURE_CONTAINER,
     },
 
+
     # 'staticfiles': {
     #     'BACKEND': 'storages.backends.azure_storage.AzureStorage',
     #     'OPTIONS': {
