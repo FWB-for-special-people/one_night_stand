@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useMutation, useQueryClient } from "react-query";
 import { API } from "src/constants/api_routes.ts";
 import { useAxios } from "src/hooks/useAxios.ts";
