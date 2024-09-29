@@ -9,6 +9,7 @@ import { darkModeAtom, isSideMenuCollapsedAtom } from 'src/atoms.ts';
 import { Avatar } from 'src/pages/Feed/components/Avatar.tsx';
 import { useAxios } from 'src/hooks/useAxios.ts';
 import { API } from 'src/constants/api_routes.ts';
+import CommentSection from 'src/pages/Feed/components/CommentSection.tsx';
 
 interface PostProps {
   id: number;
@@ -17,16 +18,17 @@ interface PostProps {
   userId?: string;
   userName?: string;
   userAvatar?: string;
+  avatar?: string;
 }
 
-const Post: React.FC<PostProps> = ({ id, image, text, userName='Użytkownik Anonimowy' }) => {
+const Post: React.FC<PostProps> = ({ id, image, text, userName='Użytkownik Anonimowy', avatar }) => {
 
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const [isSideMenuCollapsed] = useAtom(isSideMenuCollapsedAtom);
   const [isDarkMode] = useAtom(darkModeAtom);
   const [isLiked, setIsLiked] = useState(false);
-  const [isComment, setIsComment] = useState(false);
+  const [showComment, setShowComment] = useState(false);
 
   const axios = useAxios();
 
@@ -42,7 +44,7 @@ const Post: React.FC<PostProps> = ({ id, image, text, userName='Użytkownik Anon
   };
 
   const handleComment = () => {
-    setIsComment(!isComment);
+    setShowComment(!showComment);
   }
 
   return (
@@ -136,6 +138,7 @@ const Post: React.FC<PostProps> = ({ id, image, text, userName='Użytkownik Anon
           <MessageIcon sx={{ color: isDarkMode ? 'text.primary' : 'primary.main', fontSize: '1.5rem' }} />
         </IconButton>
       </Box>
+      {showComment && <CommentSection postId={id} />}
     </Box>
   );
 };

@@ -6,7 +6,14 @@ import { Paginated } from 'src/types.ts';
 type Card = {
   id: number;
   text: string;
-  created_by: number;
+  created_by: {
+    id: number;
+    first_name: string;
+    last_name: string;
+    full_name: string;
+    bio: string;
+    avatar: string;
+  };
   created_at: string;
   tags: string[];
   like_count: number;

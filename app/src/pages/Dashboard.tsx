@@ -8,7 +8,8 @@ export default function Dashboard() {
   const mappedCards = cardsData?.pages?.flatMap(page => page.map(post => ({
     id: post.id,
     text: post.text,
-    createdBy: post.created_by,
+    createdBy: post.created_by.full_name,
+    avatar: post.created_by.avatar,
     createdAt: post.created_at,
     likeCount: post.like_count,
     viewCount: post.view_count,
@@ -29,7 +30,7 @@ export default function Dashboard() {
             paddingX: '.5rem',
           }}
         >
-          <Post id={post?.id} image={post?.imageUrl} text={post?.text} userName={post?.createdBy} />
+          <Post id={post?.id} image={post?.imageUrl} text={post?.text} userName={post?.createdBy} avatar={post?.avatar}/>
         </Box>
       ))}
     </Box>
