@@ -64,7 +64,7 @@ const NavBarBottomDesktop: React.FC<NavBarBottomDesktopProps> = ({
           </ListItemButton>
 
             <ListItemButton
-                        sx={{ justifyContent: isCollapsed ? 'center' : 'flex-start', padding: '0.5rem 1rem' }}
+                        sx={{ justifyContent: isCollapsed ? 'center' : 'flex-start', padding: '0.5rem 0rem' }}
                         component={Link}
                         to="/add-post"
                     >
